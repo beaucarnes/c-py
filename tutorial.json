@@ -1,0 +1,137 @@
+{
+  "version": "0.1.0",
+  "summary": {
+    "title": "Learn Python Basics by Building a Blackjack Game",
+    "description": "You are going to build a blackjack card game in Python.\n\nEvery card in blackjack has a suit, rank, and value. For example, the king of hearts has a rank of \"king\", a suit of \"hearts\", and a value of 10 (In blackjack, face cards are worth 10)."
+  },
+  "config": {
+    "testRunner": {
+      "command": "python3 -m tap tests/*_test.py",
+      "args": {
+        "tap": ""
+      },
+      "setup": {
+        "commands": [
+          "pip3 install tap.py==3.0",
+          "cd .. && sed -i \"s/HISTCONTROL=ignoreboth/#/\" .bashrc && echo placeholder >> .bashrc && sed -i \"s/placeholder/PROMPT_COMMAND='echo \"\\$PWD\" >> ~\\/project\\/tests\\/\\.cwd; history -a'/\" .bashrc",
+          "source ~/.bashrc"
+        ],
+        "commits": [
+          "9030d24905888235c33202ed6fb510524e1e9206"
+        ]
+      }
+    },
+    "repo": {
+      "uri": "https://github.com/beaucarnes/c-py",
+      "branch": "v0.1.0"
+    }
+  },
+  "levels": [
+    {
+      "id": "10",
+      "title": "Create a string variable",
+      "summary": "[placeholder]",
+      "content": "[placeholder]",
+      "steps": [
+        {
+          "id": "10.1",
+          "setup": {
+            "files": [
+              "blackjack.py"
+            ],
+            "commits": [
+              "662a132c713318146b4e1eac3ce7190f5f88697c"
+            ]
+          },
+          "content": "Let's represent the king of hearts with Python code. Variables store data. The code already has a variable named `suit` that is set to the value of \"hearts\". Add a variable named `rank` and set it to the value of \"K\" (for king).",
+          "hints": [
+            "Check your spacing and capitalization."
+          ],
+          "solution": {
+            "commits": [
+              "b1a61ca24db1991153c4c7e64380252e6877b2f1"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "20",
+      "title": "Create a number variable",
+      "summary": "[placeholder]",
+      "content": "[placeholder]",
+      "steps": [
+        {
+          "id": "20.1",
+          "setup": {
+            "files": [
+              "blackjack.py"
+            ],
+            "commits": [
+              "9cab70c619f34416ee8de5060255b95f8acd04cc"
+            ]
+          },
+          "content": "When variables are set to equal a string, the string should be surrounded by quotation marks. If a variable equals a number, quotation marks are not used around the number. Add a variable named `value` and set it to 10.",
+          "hints": [
+            "Check your spacing and capitalization."
+          ],
+          "solution": {
+            "commits": [
+              "5e46bc572983f6848df403091d47ca2f8a8ebbcb"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "30",
+      "title": "Print to console",
+      "summary": "[placeholder]",
+      "content": "[placeholder]",
+      "steps": [
+        {
+          "id": "30.1",
+          "setup": {
+            "files": [
+              "blackjack.py"
+            ],
+            "commits": [
+              "22e1ab1e45bba13b16a88b9dbc8d895d321c808c"
+            ]
+          },
+          "content": "The code `print(\"Hello world\")` calls the `print()` function and prints the text \"Hello World\" to the console. Print the the text \"Your card is:\" to the console.",
+          "solution": {
+            "commits": [
+              "6fa3ced1000b3ecf157cac089b71cf6c7b4d247c"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "40",
+      "title": "Run the blackjack.py file",
+      "summary": "[placeholder]",
+      "content": "[placeholder]",
+      "steps": [
+        {
+          "id": "40.1",
+          "setup": {
+            "watchers": [
+              "../.bash_history"
+            ],
+            "commits": [
+              "5e8c5fb8094cd0d386cdebde1cbf348223b98897"
+            ]
+          },
+          "content": "Most of the time you will be typing into the `blackjack.py` file window. When you want to run your program you will have to type into the terminal window. To run your code so far, enter `python blackjack.py` into the terminal and press enter.",
+          "solution": {
+            "commits": [
+              "d41a003980441d516a5a256f5289ef726754c998"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
