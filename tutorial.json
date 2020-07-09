@@ -182,12 +182,19 @@
             "files": [
               "blackjack.py"
             ],
-            "commits": []
+            "commits": [
+              "c2d1a47afd8c2755a2cfb2ccccedccee891bcc5f"
+            ]
           },
           "content": "The `+` operator can concatenate strings and/or variables together. Update your code so that the `print()` function is only called one time. It should print the following text to the console, using a variable for the rank: \"Your card is: K\"",
           "hints": [
             "```  \nname = \"Quincy\"  \nprint(\"My name is \" + name)  \n```  \nThat would print \"My name is Quincy\" to the console."
-          ]
+          ],
+          "solution": {
+            "commits": [
+              "11238b3797c5eff30d053ad225c51fd164d9128c"
+            ]
+          }
         }
       ]
     }
