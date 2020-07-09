@@ -52,3 +52,21 @@ levels:
         setup:
           files:
             - blackjack.py
+  - id: '70'
+    steps:
+      - id: '70.1'
+        setup:
+          files:
+            - blackjack.py
+  - id: '80'
+    steps:
+      - id: '80.1'
+        setup:
+          files:
+            - blackjack.py
+  - id: '90'
+    steps:
+      - id: '90.1'
+        setup:
+          files:
+            - blackjack.py

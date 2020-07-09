@@ -54,10 +54,11 @@ For terminal tests to work, you will have to run the following line once before 
 
 ### 50.1
 
-Instead of passing in a string to the `print()` function (i.e. "Your card is:"), you can also pass in a variable and the value of the variable will print to the console. Print the value of the `rank` variable to the console.
+Instead of passing in a string to the `print()` function (i.e. "Your card is:"), you can also pass in a variable and the value of the variable will print to the console. On a new line, print the value of the `rank` variable to the console.
 
 #### HINTS
 
+- The code should have two print statements. The first should print "Your card is:" and the second should print the rank variable.
 - The variable name should not have parenthesis around it.
 
 ## 60. Concatenate strings with +
@@ -79,7 +80,7 @@ print("Name: " + name)
 
 ### 70.1
 
-You can concatenate as many strings and variables as you want. Update your code so that the `print()` function prints the following text to the console, using variables for the rank and suit: "Your card is: K of hearts"
+You can concatenate as many strings and variables as you want. Update your code so that the `print()` function prints the following text to the console, using variables for the rank and suit: "Your card is: K of hearts".
 
 #### HINTS
 
@@ -89,7 +90,7 @@ You can concatenate as many strings and variables as you want. Update your code 
 
 ### 80.1
 
-You can use a list in python to store multiple values or items at a time. Here is an example of a list of strings: `place = ["first", "second", "third"]`. Below the `suit` variable, create a `suits` variable and assign it to a list of suits (spades, clubs, hearts, diamonds).
+You can use a list in python to store multiple values or items at a time. Here is an example of a list of strings: `place = ["first", "second", "third"]`. Above the `suit` variable, create a `suits` variable and assign it to a list of suits (spades, clubs, hearts, diamonds).
 
 #### HINTS
 
@@ -106,7 +107,7 @@ place = ["first", "second", "third"]
 which = place[0]
 print(which)
 ```
-Update the `suit` variable so that the value of "hearts" comes from the `suits` list.
+Update the `suit` variable so that the value of "clubs" comes from the `suits` list.
 
 #### HINTS
 
