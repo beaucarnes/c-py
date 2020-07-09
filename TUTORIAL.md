@@ -68,9 +68,46 @@ The `+` operator can concatenate strings and/or variables together. Update your 
 
 #### HINTS
 
-- ```  
-name = "Quincy"  
-print("My name is " + name)  
+- This code will print "Name: Quincy" to the console.  
 ```  
-That would print "My name is Quincy" to the console.
+name = "Quincy"  
+print("Name: " + name)  
+```  
 - Make sure there is a space after the colon inside the string.
+
+## 70. Concatenate multiple strings
+
+### 70.1
+
+You can concatenate as many strings and variables as you want. Update your code so that the `print()` function prints the following text to the console, using variables for the rank and suit: "Your card is: K of hearts"
+
+#### HINTS
+
+- Make sure you include the appropriate spaces in your strings.
+
+## 80. Create a list
+
+### 80.1
+
+You can use a list in python to store multiple values or items at a time. Here is an example of a list of strings: `place = ["first", "second", "third"]`. Below the `suit` variable, create a `suits` variable and assign it to a list of suits (spades, clubs, hearts, diamonds).
+
+#### HINTS
+
+- There should be quotation marks around each element in the list.
+- Make sure to add a closing bracket at the end (`]`).
+
+## 90. Access list items
+
+### 90.1
+
+The bracket operator can be used to access a specific element in a list. The number inside the bracket specifies the index of the list to access (indices start at 0). For example, the following code prints "first" to the console:
+```
+place = ["first", "second", "third"]
+which = place[0]
+print(which)
+```
+Update the `suit` variable so that the value of "hearts" comes from the `suits` list.
+
+#### HINTS
+
+- The third item in a list is at index 2.
