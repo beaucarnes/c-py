@@ -73,4 +73,4 @@ name = "Quincy"
 print("My name is " + name)  
 ```  
 That would print "My name is Quincy" to the console.
-
+- Make sure there is a space after the colon inside the string.
