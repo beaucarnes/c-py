@@ -188,7 +188,8 @@
           },
           "content": "The `+` operator can concatenate strings and/or variables together. Update your code so that the `print()` function is only called one time. It should print the following text to the console, using a variable for the rank: \"Your card is: K\"",
           "hints": [
-            "```  \nname = \"Quincy\"  \nprint(\"My name is \" + name)  \n```  \nThat would print \"My name is Quincy\" to the console."
+            "```  \nname = \"Quincy\"  \nprint(\"My name is \" + name)  \n```  \nThat would print \"My name is Quincy\" to the console.",
+            "Make sure there is a space after the colon inside the string."
           ],
           "solution": {
             "commits": [
