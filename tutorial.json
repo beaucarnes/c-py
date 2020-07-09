@@ -98,7 +98,7 @@
               "blackjack.py"
             ],
             "commits": [
-              "bb597dd3d534f13335e78014ff01407a4251c5f5"
+              "934f2f9d050eeb1c0a18a3e6a6f988500957493a"
             ]
           },
           "content": "The code `print(\"Hello world\")` calls the `print()` function and prints the text \"Hello World\" to the console. Print the the text \"Your card is:\" to the console.",
@@ -108,7 +108,7 @@
           ],
           "solution": {
             "commits": [
-              "4c3f7f7a209d20448bf2e991f3116c06fddfab9b"
+              "37abe72ef014e507ca410fa418285b08fde1e120"
             ]
           }
         }
@@ -127,7 +127,7 @@
               "../.bash_history"
             ],
             "commits": [
-              "433de4df6e53f3f0d795fae0437cdb4ae9c7330c"
+              "a63f083133e0392a1dd32f5bdb6e2b2a03ea0a76"
             ]
           },
           "content": "Most of the time you will be typing into the `blackjack.py` file window. When you want to run your program you will have to type into the terminal window. To run your code so far, enter `python blackjack.py` into the terminal and press enter.\n\nFor terminal tests to work, you will have to run the following line once before any other commands: `source ~/.bashrc`",
@@ -136,7 +136,7 @@
           ],
           "solution": {
             "commits": [
-              "7cef89d830960b524a910bbf9c29334ec4dfbc71"
+              "e1671ca515f11f886286e3ce275009e7fedc038a"
             ]
           }
         }
@@ -155,7 +155,7 @@
               "blackjack.py"
             ],
             "commits": [
-              "e46e2213ef4787ce94bcbe650d438451b7fefcf5"
+              "abf44ac538570c1ff98ecd586e4df104f93c7092"
             ]
           },
           "content": "Instead of passing in a string to the `print()` function (i.e. \"Your card is:\"), you can also pass in a variable and the value of the variable will print to the console. Print the value of the `rank` variable to the console.",
@@ -164,7 +164,7 @@
           ],
           "solution": {
             "commits": [
-              "0b3331751dae652e3c5fda19e1cc260bef64d052"
+              "5e8dc7740888350b5364cbf7053ad6f81da2c661"
             ]
           }
         }
