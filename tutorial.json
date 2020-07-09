@@ -150,10 +150,23 @@
       "steps": [
         {
           "id": "50.1",
+          "setup": {
+            "files": [
+              "blackjack.py"
+            ],
+            "commits": [
+              "e1a20c919c553a7c3578581d1ee538cf3bf4d6cc"
+            ]
+          },
           "content": "Instead of passing in a string to the `print()` function (i.e. \"Your card is:\"), you can also pass in a variable and the value of the variable will print to the console. Print the value of the `rank` variable to the console.",
           "hints": [
             "The variable name should not have parenthesis around it."
-          ]
+          ],
+          "solution": {
+            "commits": [
+              "a472b785deb11178439b5a0a5c804e668bc89c32"
+            ]
+          }
         }
       ]
     },
@@ -165,6 +178,12 @@
       "steps": [
         {
           "id": "60.1",
+          "setup": {
+            "files": [
+              "blackjack.py"
+            ],
+            "commits": []
+          },
           "content": "The `+` operator can concatenate strings and/or variables together. Update your code so that the `print()` function is only called one time. It should print the following text to the console, using a variable for the rank: \"Your card is: K\"",
           "hints": [
             "```  \nname = \"Quincy\"  \nprint(\"My name is \" + name)  \n```  \nThat would print \"My name is Quincy\" to the console."
