@@ -45,7 +45,8 @@
           },
           "content": "Let's represent the king of hearts with Python code. Variables store data. The code already has a variable named `suit` that is set to the value of \"hearts\". Add a variable named `rank` and set it to the value of \"K\" (for king).",
           "hints": [
-            "Check your spacing and capitalization."
+            "Check your spacing and capitalization.",
+            "Spelling must be exact."
           ],
           "solution": {
             "commits": [
@@ -73,6 +74,7 @@
           },
           "content": "When variables are set to equal a string, the string should be surrounded by quotation marks. If a variable equals a number, quotation marks are not used around the number. Add a variable named `value` and set it to 10.",
           "hints": [
+            "Numbers don't need quotation marks around them.",
             "Check your spacing and capitalization."
           ],
           "solution": {
@@ -100,6 +102,10 @@
             ]
           },
           "content": "The code `print(\"Hello world\")` calls the `print()` function and prints the text \"Hello World\" to the console. Print the the text \"Your card is:\" to the console.",
+          "hints": [
+            "Make sure you are printing this string exactly: \"Your card is:\"",
+            "The string must be in quotation marks and inside parenthesis."
+          ],
           "solution": {
             "commits": [
               "e0adc4544306bb196d90c24c5aeb9f2a3a33cc4b"
@@ -125,11 +131,44 @@
             ]
           },
           "content": "Most of the time you will be typing into the `blackjack.py` file window. When you want to run your program you will have to type into the terminal window. To run your code so far, enter `python blackjack.py` into the terminal and press enter.\n\nFor terminal tests to work, you will have to run the following line once before any other commands: `source ~/.bashrc`",
+          "hints": [
+            "Make sure you're in the `project` folder."
+          ],
           "solution": {
             "commits": [
               "ddd2ce030a93eeff0cabf34b084a0ece456434fa"
             ]
           }
+        }
+      ]
+    },
+    {
+      "id": "50",
+      "title": "Print a variable",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "50.1",
+          "content": "Instead of passing in a string to the `print()` function (i.e. \"Your card is:\"), you can also pass in a variable and the value of the variable will print to the console. Print the value of the `rank` variable to the console.",
+          "hints": [
+            "The variable name should not have parenthesis around it."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "60",
+      "title": "Concatenate strings with +",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "60.1",
+          "content": "The `+` operator can concatenate strings and/or variables together. Update your code so that the `print()` function is only called one time. It should print the following text to the console, using a variable for the rank: \"Your card is: K\"",
+          "hints": [
+            "```  \nname = \"Quincy\"  \nprint(\"My name is \" + name)  \n```  \nThat would print \"My name is Quincy\" to the console."
+          ]
         }
       ]
     }

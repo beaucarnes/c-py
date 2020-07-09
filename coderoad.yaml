@@ -40,3 +40,15 @@ levels:
         setup:
           watchers:
             - ../.bash_history
+  - id: '50'
+    steps:
+      - id: '50.1'
+        setup:
+          files:
+            - blackjack.py
+  - id: '60'
+    steps:
+      - id: '60.1'
+        setup:
+          files:
+            - blackjack.py
