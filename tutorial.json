@@ -96,13 +96,13 @@
               "blackjack.py"
             ],
             "commits": [
-              "0a73067721ba038c5764fba5261d050021822d33"
+              "04b350f7ad5f1d1feeb588bb827a2f0ad5cb955f"
             ]
           },
           "content": "The code `print(\"Hello world\")` calls the `print()` function and prints the text \"Hello World\" to the console. Print the the text \"Your card is:\" to the console.",
           "solution": {
             "commits": [
-              "7a7746581b7fae1eeb7c28767f489e7b1951ee08"
+              "e0adc4544306bb196d90c24c5aeb9f2a3a33cc4b"
             ]
           }
         }
@@ -121,13 +121,13 @@
               "../.bash_history"
             ],
             "commits": [
-              "a926d1d25b5dcaead62afb903a05fdc4da79e63b"
+              "299545a5372f4f18c07cb8c376261dd244cfb0ac"
             ]
           },
           "content": "Most of the time you will be typing into the `blackjack.py` file window. When you want to run your program you will have to type into the terminal window. To run your code so far, enter `python blackjack.py` into the terminal and press enter.\n\nFor terminal tests to work, you will have to run the following line once before any other commands: `source ~/.bashrc`",
           "solution": {
             "commits": [
-              "27cdd7e7e6d4a99e64689090bf772eb3bcf1e6c0"
+              "ddd2ce030a93eeff0cabf34b084a0ece456434fa"
             ]
           }
         }
