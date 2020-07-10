@@ -12,6 +12,7 @@ def shuffle():
 
 def deal():
     card = cards.pop()
+    return card
 
 shuffle()
 print(cards)
