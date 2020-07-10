@@ -4,9 +4,9 @@ You are going to build a blackjack card game in Python.
 
 Every card in blackjack has a suit, rank, and value. For example, the king of hearts has a rank of "king", a suit of "hearts", and a value of 10 (In blackjack, face cards are worth 10).
 
-## 10. Create a string variable
+## 20. Create a string variable
 
-### 10.1
+### 20.1
 
 Let's represent the king of hearts with Python code. Variables store data. The code already has a variable named `suit` that is set to the value of "hearts". Add a variable named `rank` and set it to the value of "K" (for king).
 
@@ -113,14 +113,14 @@ Update the `suit` variable so that the value of "clubs" comes from the `suits` l
 
 - The second item in a list is at index 1.
 
-## 100. Create a for loop
+## 200. Create a for loop
 
-### 100.1
+### 200.1
 
 You can use a `for` loop go through each item in a list:
 
 ```py
-friends = ['Kris', 'Tom', 'Oliver']
+friends = ["Kris", "Tom", "Oliver"]
 for friend in friends:
     print(friend)
 ```
@@ -132,9 +132,9 @@ The above code goes through each item in the `friends` list, stores the value in
 - Indent the `print` statement in the `for` loop four spaces.
 - Make sure there is a colon at the end of the `for` loop.
 
-## 110. Append to a list
+## 210. Append to a list
 
-### 110.1
+### 210.1
 
 Let's add another item to the `suits` list, just to see how it works. You can add a new value at the end of a list with `append`. For instance, here is how to add a new name to the `friends` list: `friends.append("Beau")`. Add the string "snakes" to the end of the `suits` list using `append`. Add the new line of code before the `for` loop so the loop will print the list with the new element.
 
@@ -143,9 +143,9 @@ Let's add another item to the `suits` list, just to see how it works. You can ad
 - Use `suits.append()` and put the item to append in the parenthesis.
 - If your code is not working, try running your code to see what it does.
 
-## 120. Refactor code
+## 220. Refactor code
 
-### 120.1
+### 220.1
 
 Now you will start the process of representing a full deck of cards with Python code. Keep the first line and the last two lines but delete everything else. It won't be needed for the deck. Changing or improving previously written code is called refactoring.
 
@@ -158,9 +158,9 @@ for suit in suits:
     print(suit)  
 ```
 
-## 130. Create a list of ranks
+## 230. Create a list of ranks
 
-### 130.1
+### 230.1
 
 You have the list of suits. After that line create a list of ranks. (A, 2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, K)
 
@@ -168,12 +168,202 @@ You have the list of suits. After that line create a list of ranks. (A, 2, 3, 4,
 
 - Make sure to surround each item with quotation marks.
 
-## 140. Create an empty list
+## 240. Create an empty list
 
-### 140.1
+### 240.1
 
 Before the `suits` list, create a new variable called `cards` and assign an empty list (`[]`) to the variable.
 
 #### HINTS
 
 - Nothing should be inside the brackets.
+
+## 250. Print a list in a loop
+
+### 250.1
+
+In the `cards` list, there should be an item for each card in the deck. Each item in the `suits` list should be combined with each item in the `ranks` list for a total of 52 items (cards). We'll work our way up to that. Update the `print` statement in the `for` loop so that it prints a list with two elements. The first element should be `suit` and the second should be the first element of the `ranks` list. This will print an ace ("A") in every suit.
+
+#### HINTS
+
+- The first element in the `ranks` list is at index 0.
+- Do not put quotation marks around any element in the list.
+
+## 260. Create nested for loops
+
+### 260.1
+
+Now, instead of just printing an ace in every suit, let's print every rank in every suit. This can be done easily with a `for` loop nested within another `for` loop. Inside the `for` loop, add another `for` loop that loops through the `ranks`. The `print` command should then be inside the second `for` loop instead of the first `for` loop (the `print` command should be indented 8 spaces from the beginning of the line, instead of 4).
+
+#### HINTS
+
+- Pay special attention to how everything is indented.
+
+## 270. Access items from nested loops
+
+### 270.1
+
+If you run the code by typing `python blackjack.py` in the terminal, you will see that it isn't quite what we want. It doesn't print all the ranks because the print command specifies the exact same rank in every iteration. Change `ranks[0]` to `rank`.
+
+## 280. Append items from nested loops
+
+### 280.1
+
+Great! Now all 52 cards are printed as two-item lists. An element in a list can be another list. Instead of printing 52 two-item lists, `append` those 52 lists to the `cards` list.
+
+#### HINTS
+
+- Just change `print` to `cards.append`.
+
+## 290. Print cards
+
+### 290.1
+
+Check what the `cards` list looks like by printing it out at the end of your code. If you run the code by typing `python blackjack.py` in the terminal, you can see the result. Remember, run the code by typing `python blackjack.py` into the terminal.
+
+#### HINTS
+
+- Add `print(cards)` as the last line.
+
+## 200. Import a module
+
+### 200.1
+
+You may notice that all the cards are in order in the `cards` list. For a game like this, the cards must be shuffled. To help with this, add `import random` as the first line in your code. This imports the `random` module, which contains a variety of things related to random number generation. When you import a Python module, it allows you to use additional commands in your code.
+
+#### HINTS
+
+- Only add the line `import random`. Make sure it is the first line in your program.
+
+## 210. Use the random.shuffle() function
+
+### 210.1
+
+Now you can call the `random.shuffle()` function. Call that function right above the `print` command and put `cards` in between the parenthesis to pass the `cards` list into the function. If you run your code afterwards, you should notice that the cards have been shuffled.
+
+#### HINTS
+
+- When `cards` is passed in to the function, the code will look like this: `random.shuffle(cards)`
+
+## 220. Use pop to remove an element from a list.
+
+### 220.1
+
+Let's remove a single element from the `cards` list. This is similar to dealing a card from a deck. This can be done with the `pop` method. Consider this code:
+```py
+people = ["abbey", "mrugesh", "miya"]
+person = people.pop()
+```
+After running that code, `person` equals "miya" and `people` equals `["abbey", "mrugesh"]`.
+After shuffling the cards, remove the last item from the `cards` list and store it in a variable named `card`.
+
+#### HINTS
+
+- Remove the last item in the `cards` list with `cards.pop()`.
+
+## 230. Define a function
+
+### 230.1
+
+When you call the `random.shuffle()` function, the program is running a sequence of statements (i.e. lines of code) to performs a computation. You can't see the sequence of statements but they are there inside the `random` module. You can create your own functions that will run the same sequence of statements every time they are called. Here is an example of how to define a function called `greeting` that prints "Hi" every time it is called (`def` is short for "define").
+```py
+def greeting():
+    print("Hi")
+```
+Put the line that shuffles the cards into a function called `shuffle`.
+
+#### HINTS
+
+- Lines indented underneath a function definition are inside the function. Make sure the line `random.shuffle(cards)` is indented four spaces underneath the function definition.
+- Define the shuffle function like this: `def shuffle():`
+
+## 240. Call a function
+
+### 240.1
+
+Right before the `print` statement, call the `shuffle` function. The code inside a function will not run until it is called. Here is how you would call a function named "greeting": `greeting()`
+
+#### HINTS
+
+- Call the shuffle function with `shuffle()`.
+- Make sure to call the function right before the `print` statment.
+
+## 250. Print a list in a loop
+
+### 250.1
+
+Create a function named `deal` and put the line `card = cards.pop()` into the function.
+
+#### HINTS
+
+- Define the `deal` function like this: `def deal():`.
+- Make sure to indent the line `card = cards.pop()` right after the function definition to put the line inside the function.
+
+## 260. Return a value from a function
+
+### 260.1
+
+Variables can only be accessed in the context they were created. The `card` variable will not be available outside of the `deal` function. You can get a value out of a function by returning a result using the `return` statement. At the end of the `deal` function add `return card`. Every line in a function must be indented the same number of spaces (in this case, 4 spaces).
+
+#### HINTS
+
+- Make sure `return card` is indented correctly.
+
+## 270. Assign a returned value to a variable
+
+### 270.1
+
+After the `shuffle` function is called, call the `deal` function and assign the returned value to a variable named `card`. Then update the `print` function to print `card` instead of `cards`.
+
+- You can call the `deal` function and assign it to variable `card` all with one line with `card = deal()`.
+
+## 280. Add an argument to a function
+
+### 280.1
+
+What if you want the `deal` function to deal more than one card? Let's refactor the `deal` function to accept an argument. Any number of arguments can appear inside the parentheses when a function is created, separated by commas. Inside the function, the arguments are assigned to variables called parameters. Here is an example of a function that takes an argument:
+```py
+def print_twice(bruce):
+    print(bruce)
+    print(bruce)
+```
+This function assigns the argument to a parameter named `bruce`. When the function is called, it prints the value of the parameter (whatever it is) twice. Make it so the `deal` function takes an argument named `number`. Then, call the function with the new parameter by updating the last two lines of your code to:
+```py
+cards_delt = deal(2)
+print(cards_delt)
+```
+
+#### HINTS
+
+- Put the word "number" inside the parenthesis of the `deal` function definition.
+- Make sure to replace the last two lines of the program with the given code.
+
+## 290. Return a different value from a function
+
+### 290.1
+
+The `deal` function is now going to return a list of cards instead of a single card. In the first line of the function create an empty list named `cards_delt`. Then update the last line of the function to `return cards_delt`.
+
+#### HINTS
+
+- Here is how to create an empty list: `cards_delt = []`.
+
+## 300. Use the range function in a for loop
+
+### 300.1
+
+The `range` function can be used in a `for` loop to determine the number of loops. The following code will print "Hi" six times:
+```py
+for x in range(6):
+    print("Hi")
+```
+Put the line `card = cards.pop()` into a for loop that also `append`s the `card` onto the `cards_delt` list. The loop should run the amount of times equal to the `number` parameter.
+
+#### HINTS
+
+- Make sure every line in the `for` loop is indented four spaces.
+- Inside the `for` loop add these lines:  
+```py  
+card = cards.pop()  
+cards_delt.append(card)  
+```
