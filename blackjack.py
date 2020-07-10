@@ -12,4 +12,5 @@ def shuffle():
 
 card = cards.pop()
 
+shuffle()
 print(cards)
