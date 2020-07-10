@@ -11,8 +11,9 @@ def shuffle():
     random.shuffle(cards)
 
 def deal(number):
+    cards_delt = []
     card = cards.pop()
-    return card
+    return cards_delt
 
 shuffle()
 cards_delt = deal(2)
