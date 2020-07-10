@@ -28,19 +28,19 @@
   },
   "levels": [
     {
-      "id": "10",
+      "id": "20",
       "title": "Create a string variable",
       "summary": "",
       "content": "",
       "steps": [
         {
-          "id": "10.1",
+          "id": "20.1",
           "setup": {
             "files": [
               "blackjack.py"
             ],
             "commits": [
-              "662a132c713318146b4e1eac3ce7190f5f88697c"
+              "9cab70c619f34416ee8de5060255b95f8acd04cc"
             ]
           },
           "content": "Let's represent the king of hearts with Python code. Variables store data. The code already has a variable named `suit` that is set to the value of \"hearts\". Add a variable named `rank` and set it to the value of \"K\" (for king).",
@@ -50,7 +50,7 @@
           ],
           "solution": {
             "commits": [
-              "b1a61ca24db1991153c4c7e64380252e6877b2f1"
+              "5e46bc572983f6848df403091d47ca2f8a8ebbcb"
             ]
           }
         }
@@ -301,7 +301,7 @@
               "d5cfa1c7c751d2815b9a3fb277395da2b87fce74"
             ]
           },
-          "content": "You can use a `for` loop go through each item in a list:\n\n```py\nfriends = ['Kris', 'Tom', 'Oliver']\nfor friend in friends:\n    print(friend)\n```\n\nThe above code goes through each item in the `friends` list, stores the value in the `friend` variable on each iteration, then prints it. Add a `for` loop to the end of your code that prints each suit.",
+          "content": "You can use a `for` loop go through each item in a list:\n\n```py\nfriends = [\"Kris\", \"Tom\", \"Oliver\"]\nfor friend in friends:\n    print(friend)\n```\n\nThe above code goes through each item in the `friends` list, stores the value in the `friend` variable on each iteration, then prints it. Add a `for` loop to the end of your code that prints each suit.",
           "hints": [
             "Indent the `print` statement in the `for` loop four spaces.",
             "Make sure there is a colon at the end of the `for` loop."
@@ -416,9 +416,460 @@
             ]
           },
           "content": "Before the `suits` list, create a new variable called `cards` and assign an empty list (`[]`) to the variable.",
+          "hints": [
+            "Nothing should be inside the brackets."
+          ],
           "solution": {
             "commits": [
               "341b23c15e3bd7bc9b4a4e96801f5d4aa4391ffb"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "150",
+      "title": "Print a list in a loop",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "150.1",
+          "setup": {
+            "files": [
+              "blackjack.py"
+            ],
+            "commits": [
+              "f9e5885f057e7361113537128aced631335dfaaa"
+            ]
+          },
+          "content": "In the `cards` list, there should be an item for each card in the deck. Each item in the `suits` list should be combined with each item in the `ranks` list for a total of 52 items (cards). We'll work our way up to that. Update the `print` statement in the `for` loop so that it prints a list with two elements. The first element should be `suit` and the second should be the first element of the `ranks` list. This will print an ace (\"A\") in every suit.",
+          "hints": [
+            "The first element in the `ranks` list is at index 0.",
+            "Do not put quotation marks around any element in the list."
+          ],
+          "solution": {
+            "commits": [
+              "88a9ef9a5c475187f11198fb77a614e597542639"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "160",
+      "title": "Create nested for loops",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "160.1",
+          "setup": {
+            "files": [
+              "blackjack.py"
+            ],
+            "commits": [
+              "29d25ebf985d5c0820a72826a79c3837c9b0ddb1"
+            ]
+          },
+          "content": "Now, instead of just printing an ace in every suit, let's print every rank in every suit. This can be done easily with a `for` loop nested within another `for` loop. Inside the `for` loop, add another `for` loop that loops through the `ranks`. The `print` command should then be inside the second `for` loop instead of the first `for` loop (the `print` command should be indented 8 spaces from the beginning of the line, instead of 4).",
+          "hints": [
+            "Pay special attention to how everything is indented."
+          ],
+          "solution": {
+            "commits": [
+              "9c6a06de644611c905f9295f591d8381b0c492a7"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "170",
+      "title": "Access items from nested loops",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "170.1",
+          "setup": {
+            "files": [
+              "blackjack.py"
+            ],
+            "commits": [
+              "42599d13426fc8c5b72724e0176a8384bda9ad05"
+            ]
+          },
+          "content": "If you run the code by typing `python blackjack.py` in the terminal, you will see that it isn't quite what we want. It doesn't print all the ranks because the print command specifies the exact same rank in every iteration. Change `ranks[0]` to `rank`.",
+          "solution": {
+            "commits": [
+              "609f9bc9b243cc49885db42453f3cc05e7722696"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "180",
+      "title": "Append items from nested loops",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "180.1",
+          "setup": {
+            "files": [
+              "blackjack.py"
+            ],
+            "commits": [
+              "55e2dfc4f1285b8c96a549af334d403fd1c4f506"
+            ]
+          },
+          "content": "Great! Now all 52 cards are printed as two-item lists. An element in a list can be another list. Instead of printing 52 two-item lists, `append` those 52 lists to the `cards` list.",
+          "hints": [
+            "Just change `print` to `cards.append`."
+          ],
+          "solution": {
+            "commits": [
+              "c65d8ce973181950b1345fb178162fdbc26f0444"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "190",
+      "title": "Print cards",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "190.1",
+          "setup": {
+            "files": [
+              "blackjack.py"
+            ],
+            "commits": [
+              "6ec762474e9ec6acd77fbbae1d499978f842e9a7"
+            ]
+          },
+          "content": "Check what the `cards` list looks like by printing it out at the end of your code. If you run the code by typing `python blackjack.py` in the terminal, you can see the result. Remember, run the code by typing `python blackjack.py` into the terminal.",
+          "hints": [
+            "Add `print(cards)` as the last line."
+          ],
+          "solution": {
+            "commits": [
+              "b22ebb501c5cccb41fd6966d1d01e2eba9c288f6"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "200",
+      "title": "Import a module",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "200.1",
+          "setup": {
+            "files": [
+              "blackjack.py"
+            ],
+            "commits": [
+              "e29be12a15ce21f0df17d73a579712d29772591b"
+            ]
+          },
+          "content": "You may notice that all the cards are in order in the `cards` list. For a game like this, the cards must be shuffled. To help with this, add `import random` as the first line in your code. This imports the `random` module, which contains a variety of things related to random number generation. When you import a Python module, it allows you to use additional commands in your code.",
+          "hints": [
+            "Only add the line `import random`. Make sure it is the first line in your program."
+          ],
+          "solution": {
+            "commits": [
+              "fd42b69d3b469766c9f766acff87379b51f3db5f"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "210",
+      "title": "Use the random.shuffle() function",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "210.1",
+          "setup": {
+            "files": [
+              "blackjack.py"
+            ],
+            "commits": [
+              "4e2ee76b57d63fba340a93a5cf56336d233a2b25"
+            ]
+          },
+          "content": "Now you can call the `random.shuffle()` function. Call that function right above the `print` command and put `cards` in between the parenthesis to pass the `cards` list into the function. If you run your code afterwards, you should notice that the cards have been shuffled.",
+          "hints": [
+            "When `cards` is passed in to the function, the code will look like this: `random.shuffle(cards)`"
+          ],
+          "solution": {
+            "commits": [
+              "ed79476c0fcc58d2ae3a333351627b3789628f53"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "220",
+      "title": "Use pop to remove an element from a list.",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "220.1",
+          "setup": {
+            "files": [
+              "blackjack.py"
+            ],
+            "commits": [
+              "f7e70646539b97dc91d9f34ecd86e45ce8271ddc"
+            ]
+          },
+          "content": "Let's remove a single element from the `cards` list. This is similar to dealing a card from a deck. This can be done with the `pop` method. Consider this code:\n```py\npeople = [\"abbey\", \"mrugesh\", \"miya\"]\nperson = people.pop()\n```\nAfter running that code, `person` equals \"miya\" and `people` equals `[\"abbey\", \"mrugesh\"]`.\nAfter shuffling the cards, remove the last item from the `cards` list and store it in a variable named `card`.",
+          "hints": [
+            "Remove the last item in the `cards` list with `cards.pop()`."
+          ],
+          "solution": {
+            "commits": [
+              "1d9f8f4894f84fec37817d80745d460146e47332"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "230",
+      "title": "Define a function",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "230.1",
+          "setup": {
+            "files": [
+              "blackjack.py"
+            ],
+            "commits": [
+              "605ac78ed6b30289e50d045627c7a171a0e457be"
+            ]
+          },
+          "content": "When you call the `random.shuffle()` function, the program is running a sequence of statements (i.e. lines of code) to performs a computation. You can't see the sequence of statements but they are there inside the `random` module. You can create your own functions that will run the same sequence of statements every time they are called. Here is an example of how to define a function called `greeting` that prints \"Hi\" every time it is called (`def` is short for \"define\").\n```py\ndef greeting():\n    print(\"Hi\")\n```\nPut the line that shuffles the cards into a function called `shuffle`.",
+          "hints": [
+            "Lines indented underneath a function definition are inside the function. Make sure the line `random.shuffle(cards)` is indented four spaces underneath the function definition.",
+            "Define the shuffle function like this: `def shuffle():`"
+          ],
+          "solution": {
+            "commits": [
+              "5003d8474a20616b295964b031966e80efa14be4"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "240",
+      "title": "Call a function",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "240.1",
+          "setup": {
+            "files": [
+              "blackjack.py"
+            ],
+            "commits": [
+              "94a5ede913dd042e71af0727f1342a1ba29281c0"
+            ]
+          },
+          "content": "Right before the `print` statement, call the `shuffle` function. The code inside a function will not run until it is called. Here is how you would call a function named \"greeting\": `greeting()`",
+          "hints": [
+            "Call the shuffle function with `shuffle()`.",
+            "Make sure to call the function right before the `print` statement."
+          ],
+          "solution": {
+            "commits": [
+              "09dae5a60a69b4f28667c48b47e2d2e2f1a80413"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "250",
+      "title": "Print a list in a loop",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "250.1",
+          "setup": {
+            "files": [
+              "blackjack.py"
+            ],
+            "commits": [
+              "88501afdc536aa1d19aab31f6ef43b4511fcd2c0"
+            ]
+          },
+          "content": "Create a function named `deal` and put the line `card = cards.pop()` into the function.",
+          "hints": [
+            "Define the `deal` function like this: `def deal():`.",
+            "Make sure to indent the line `card = cards.pop()` right after the function definition to put the line inside the function."
+          ],
+          "solution": {
+            "commits": [
+              "506f9a7ce14b3ff30f3bce82cc949047b18f3d4e"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "260",
+      "title": "Return a value from a function",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "260.1",
+          "setup": {
+            "files": [
+              "blackjack.py"
+            ],
+            "commits": [
+              "2efc1da753a13c0ec8b82f060e1e4612f8723de2"
+            ]
+          },
+          "content": "Variables can only be accessed in the context they were created. The `card` variable will not be available outside of the `deal` function. You can get a value out of a function by returning a result using the `return` statement. At the end of the `deal` function add `return card`. Every line in a function must be indented the same number of spaces (in this case, 4 spaces).",
+          "hints": [
+            "Make sure `return card` is indented correctly."
+          ],
+          "solution": {
+            "commits": [
+              "e3f51e12c22eb5ceaf8e59169ca0bbb811511467"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "270",
+      "title": "Assign a returned value to a variable",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "270.1",
+          "setup": {
+            "files": [
+              "blackjack.py"
+            ],
+            "commits": [
+              "f0018f4857ed4979e306bb60893d0b844bdeb373"
+            ]
+          },
+          "content": "After the `shuffle` function is called, call the `deal` function and assign the returned value to a variable named `card`. Then update the `print` function to print `card` instead of `cards`.\n\n- You can call the `deal` function and assign it to variable `card` all with one line with `card = deal()`.",
+          "solution": {
+            "commits": [
+              "9933cf9b1c3b69eb729161bc061b786854b0a547"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "280",
+      "title": "Add an argument to a function",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "280.1",
+          "setup": {
+            "files": [
+              "blackjack.py"
+            ],
+            "commits": [
+              "5cd0c814062b10c0b0448550b3b0e5d09cd11176"
+            ]
+          },
+          "content": "What if you want the `deal` function to deal more than one card? Let's refactor the `deal` function to accept an argument. Any number of arguments can appear inside the parentheses when a function is created, separated by commas. Inside the function, the arguments are assigned to variables called parameters. Here is an example of a function that takes an argument:\n```py\ndef print_twice(bruce):\n    print(bruce)\n    print(bruce)\n```\nThis function assigns the argument to a parameter named `bruce`. When the function is called, it prints the value of the parameter (whatever it is) twice. Make it so the `deal` function takes an argument named `number`. Then, call the function with the new parameter by updating the last two lines of your code to:\n```py\ncards_delt = deal(2)\nprint(cards_delt)\n```",
+          "hints": [
+            "Put the word \"number\" inside the parenthesis of the `deal` function definition.",
+            "Make sure to replace the last two lines of the program with the given code."
+          ],
+          "solution": {
+            "commits": [
+              "bf3e0897c2472d86996e6478916183af5802a610"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "290",
+      "title": "Return a different value from a function",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "290.1",
+          "setup": {
+            "files": [
+              "blackjack.py"
+            ],
+            "commits": [
+              "b6bbe2926053e96f057dbde6ac4e4dbd3d62b566"
+            ]
+          },
+          "content": "The `deal` function is now going to return a list of cards instead of a single card. In the first line of the function create an empty list named `cards_delt`. Then update the last line of the function to `return cards_delt`.",
+          "hints": [
+            "Here is how to create an empty list: `cards_delt = []`."
+          ],
+          "solution": {
+            "commits": [
+              "adb4c753f995c0c13ec985f85e40409d4b5fc19b"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "300",
+      "title": "Use the range function in a for loop",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "300.1",
+          "setup": {
+            "files": [
+              "blackjack.py"
+            ],
+            "commits": [
+              "acd80377008dada1d478492152978dc9af8e5f2d"
+            ]
+          },
+          "content": "The `range` function can be used in a `for` loop to determine the number of loops. The following code will print \"Hi\" six times:\n```py\nfor x in range(6):\n    print(\"Hi\")\n```\nPut the line `card = cards.pop()` into a for loop that also `append`s the `card` onto the `cards_delt` list. The loop should run the amount of times equal to the `number` parameter.",
+          "hints": [
+            "Make sure every line in the `for` loop is indented four spaces.",
+            "Inside the `for` loop add these lines:  \n```py  \ncard = cards.pop()  \ncards_delt.append(card)  \n```"
+          ],
+          "solution": {
+            "commits": [
+              "3fa9d4b1bacc919049eb81ee582c394d72f2c2e1"
             ]
           }
         }

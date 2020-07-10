@@ -245,7 +245,7 @@ Now you can call the `random.shuffle()` function. Call that function right above
 
 - When `cards` is passed in to the function, the code will look like this: `random.shuffle(cards)`
 
-## 220. Use pop to remove an element from a list.
+## 220. Use pop to remove an item from a list
 
 ### 220.1
 
