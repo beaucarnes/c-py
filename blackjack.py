@@ -10,7 +10,8 @@ for suit in suits:
 def shuffle():
     random.shuffle(cards)
 
-card = cards.pop()
+def deal():
+    card = cards.pop()
 
 shuffle()
 print(cards)
