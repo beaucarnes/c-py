@@ -244,7 +244,7 @@
               "c9ec110549699a051f00755a0821b2b7220c35d0"
             ]
           },
-          "content": "You can use a list in python to store multiple values or items at a time. Here is an example of a list of strings: `place = [\"first\", \"second\", \"third\"]`. Above the `suit` variable, create a `suits` variable and assign it to a list of suits (spades, clubs, hearts, diamonds).",
+          "content": "You can use a list in Python to store multiple values or items at a time. Here is an example of a list of strings: `place = [\"first\", \"second\", \"third\"]`. Above the `suit` variable, create a `suits` variable and assign it to a list of suits (spades, clubs, hearts, diamonds).",
           "hints": [
             "There should be quotation marks around each element in the list.",
             "Make sure to add a closing bracket at the end (`]`)."
@@ -273,7 +273,7 @@
               "b4288427712ca15b823a8ea7ac24d9d934242664"
             ]
           },
-          "content": "The bracket operator can be used to access a specific element in a list. The number inside the bracket specifies the index of the list to access (indices start at 0). For example, the following code prints \"first\" to the console:\n```\nplace = [\"first\", \"second\", \"third\"]\nwhich = place[0]\nprint(which)\n```\nUpdate the `suit` variable so that the value of \"clubs\" comes from the `suits` list.",
+          "content": "The bracket operator can be used to access a specific element in a list. The number inside the bracket specifies the index of the list to access (indices start at 0). For example, the following code prints \"first\" to the console:\n```py\nplace = [\"first\", \"second\", \"third\"]\nwhich = place[0]\nprint(which)\n```\nUpdate the `suit` variable so that the value of \"clubs\" comes from the `suits` list.",
           "hints": [
             "The second item in a list is at index 1."
           ],
@@ -287,7 +287,7 @@
     },
     {
       "id": "100",
-      "title": "Access list items",
+      "title": "Create a for loop",
       "summary": "",
       "content": "",
       "steps": [
@@ -298,17 +298,17 @@
               "blackjack.py"
             ],
             "commits": [
-              "c9deb22cc9196fb036d6d5698e6acdbe65f10aa8"
+              "d5cfa1c7c751d2815b9a3fb277395da2b87fce74"
             ]
           },
           "content": "You can use a `for` loop go through each item in a list:\n\n```py\nfriends = ['Kris', 'Tom', 'Oliver']\nfor friend in friends:\n    print(friend)\n```\n\nThe above code goes through each item in the `friends` list, stores the value in the `friend` variable on each iteration, then prints it. Add a `for` loop to the end of your code that prints each suit.",
           "hints": [
-            "Indent the print `statement` in the `for` loop four spaces.",
+            "Indent the `print` statement in the `for` loop four spaces.",
             "Make sure there is a colon at the end of the `for` loop."
           ],
           "solution": {
             "commits": [
-              "073df4ace4184e0b6cba06d66ba0962dd768a7e7"
+              "b00b55b2f4ee8b946c5d38c54d80f2dbd0c26e14"
             ]
           }
         }
@@ -316,7 +316,7 @@
     },
     {
       "id": "110",
-      "title": "Access list items",
+      "title": "Append to a list",
       "summary": "",
       "content": "",
       "steps": [
@@ -327,7 +327,7 @@
               "blackjack.py"
             ],
             "commits": [
-              "f80ae92dfab55a3ef834846093f8207847c8fc86"
+              "0e211301efdb0ebc841c6fcc62ed3131b88be3fd"
             ]
           },
           "content": "Let's add another item to the `suits` list, just to see how it works. You can add a new value at the end of a list with `append`. For instance, here is how to add a new name to the `friends` list: `friends.append(\"Beau\")`. Add the string \"snakes\" to the end of the `suits` list using `append`. Add the new line of code before the `for` loop so the loop will print the list with the new element.",
@@ -337,7 +337,7 @@
           ],
           "solution": {
             "commits": [
-              "0aa288ce321a7998648d1747f77efef0e1364485"
+              "c0ddb869f329064f098933d2886fae454cf249a2"
             ]
           }
         }
@@ -345,7 +345,7 @@
     },
     {
       "id": "120",
-      "title": "Access list items",
+      "title": "Refactor code",
       "summary": "",
       "content": "",
       "steps": [
@@ -356,7 +356,7 @@
               "blackjack.py"
             ],
             "commits": [
-              "135c83e91ca40160b72039f96549b858b2a65712"
+              "f72d1fdc216bd4a18869d64389abbcf31fd1a1a1"
             ]
           },
           "content": "Now you will start the process of representing a full deck of cards with Python code. Keep the first line and the last two lines but delete everything else. It won't be needed for the deck. Changing or improving previously written code is called refactoring.",
@@ -365,7 +365,7 @@
           ],
           "solution": {
             "commits": [
-              "c1e12225e4b742f29a1044c755575f230c1e1011"
+              "93e306150fc7383f977dab79c9ae5f1db00fec50"
             ]
           }
         }
@@ -373,7 +373,7 @@
     },
     {
       "id": "130",
-      "title": "Access list items",
+      "title": "Create a list of ranks",
       "summary": "",
       "content": "",
       "steps": [
@@ -384,16 +384,16 @@
               "blackjack.py"
             ],
             "commits": [
-              "57093601db0473b0f7076989a24e5e24921e03f8"
+              "9931d0574aba3b529dea6813eb842a533639e3df"
             ]
           },
           "content": "You have the list of suits. After that line create a list of ranks. (A, 2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, K)",
           "hints": [
-            "Make sure to surround each item with parenthesis."
+            "Make sure to surround each item with quotation marks."
           ],
           "solution": {
             "commits": [
-              "22b4a82bcd43b90e0022d9df6e389724d164f1d1"
+              "e631b00dfefe606a08a82c936b0111fdd37400af"
             ]
           }
         }
@@ -401,7 +401,7 @@
     },
     {
       "id": "140",
-      "title": "Access list items",
+      "title": "Create an empty list",
       "summary": "",
       "content": "",
       "steps": [
@@ -412,13 +412,13 @@
               "blackjack.py"
             ],
             "commits": [
-              "142472951c21ddbb2c339190429babbf8ac9aad2"
+              "9d8a8ee52d79769193755dccf9e7d42b3e70bea1"
             ]
           },
           "content": "Before the `suits` list, create a new variable called `cards` and assign an empty list (`[]`) to the variable.",
           "solution": {
             "commits": [
-              "7bd11bb57622cfc1a41acf2332be9bec5f3c0000"
+              "341b23c15e3bd7bc9b4a4e96801f5d4aa4391ffb"
             ]
           }
         }
