@@ -15,4 +15,5 @@ def deal():
     return card
 
 shuffle()
-print(cards)
+card = deal()
+print(card)
