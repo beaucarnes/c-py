@@ -90,7 +90,7 @@ You can concatenate as many strings and variables as you want. Update your code 
 
 ### 80.1
 
-You can use a list in python to store multiple values or items at a time. Here is an example of a list of strings: `place = ["first", "second", "third"]`. Above the `suit` variable, create a `suits` variable and assign it to a list of suits (spades, clubs, hearts, diamonds).
+You can use a list in Python to store multiple values or items at a time. Here is an example of a list of strings: `place = ["first", "second", "third"]`. Above the `suit` variable, create a `suits` variable and assign it to a list of suits (spades, clubs, hearts, diamonds).
 
 #### HINTS
 
@@ -102,7 +102,7 @@ You can use a list in python to store multiple values or items at a time. Here i
 ### 90.1
 
 The bracket operator can be used to access a specific element in a list. The number inside the bracket specifies the index of the list to access (indices start at 0). For example, the following code prints "first" to the console:
-```
+```py
 place = ["first", "second", "third"]
 which = place[0]
 print(which)
@@ -113,7 +113,7 @@ Update the `suit` variable so that the value of "clubs" comes from the `suits` l
 
 - The second item in a list is at index 1.
 
-## 100. Access list items
+## 100. Create a for loop
 
 ### 100.1
 
@@ -129,10 +129,10 @@ The above code goes through each item in the `friends` list, stores the value in
 
 #### HINTS
 
-- Indent the print `statement` in the `for` loop four spaces.
+- Indent the `print` statement in the `for` loop four spaces.
 - Make sure there is a colon at the end of the `for` loop.
 
-## 110. Access list items
+## 110. Append to a list
 
 ### 110.1
 
@@ -143,7 +143,7 @@ Let's add another item to the `suits` list, just to see how it works. You can ad
 - Use `suits.append()` and put the item to append in the parenthesis.
 - If your code is not working, try running your code to see what it does.
 
-## 120. Access list items
+## 120. Refactor code
 
 ### 120.1
 
@@ -158,7 +158,7 @@ for suit in suits:
     print(suit)  
 ```
 
-## 130. Access list items
+## 130. Create a list of ranks
 
 ### 130.1
 
@@ -168,7 +168,7 @@ You have the list of suits. After that line create a list of ranks. (A, 2, 3, 4,
 
 - Make sure to surround each item with parenthesis.
 
-## 140. Access list items
+## 140. Create an empty list
 
 ### 140.1
 
