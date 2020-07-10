@@ -166,7 +166,7 @@ You have the list of suits. After that line create a list of ranks. (A, 2, 3, 4,
 
 #### HINTS
 
-- Make sure to surround each item with parenthesis.
+- Make sure to surround each item with quotation marks.
 
 ## 140. Create an empty list
 
