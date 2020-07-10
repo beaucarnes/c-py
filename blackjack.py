@@ -12,7 +12,9 @@ def shuffle():
 
 def deal(number):
     cards_delt = []
-    card = cards.pop()
+    for x in range(number):
+        card = cards.pop()
+        cards_delt.append(card)
     return cards_delt
 
 shuffle()
