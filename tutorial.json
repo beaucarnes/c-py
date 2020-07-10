@@ -158,8 +158,9 @@
               "abf44ac538570c1ff98ecd586e4df104f93c7092"
             ]
           },
-          "content": "Instead of passing in a string to the `print()` function (i.e. \"Your card is:\"), you can also pass in a variable and the value of the variable will print to the console. Print the value of the `rank` variable to the console.",
+          "content": "Instead of passing in a string to the `print()` function (i.e. \"Your card is:\"), you can also pass in a variable and the value of the variable will print to the console. On a new line, print the value of the `rank` variable to the console.",
           "hints": [
+            "The code should have two print statements. The first should print \"Your card is:\" and the second should print the rank variable.",
             "The variable name should not have parenthesis around it."
           ],
           "solution": {
@@ -188,12 +189,94 @@
           },
           "content": "The `+` operator can concatenate strings and/or variables together. Update your code so that the `print()` function is only called one time. It should print the following text to the console, using a variable for the rank: \"Your card is: K\"",
           "hints": [
-            "```  \nname = \"Quincy\"  \nprint(\"My name is \" + name)  \n```  \nThat would print \"My name is Quincy\" to the console.",
+            "This code will print \"Name: Quincy\" to the console.  \n```  \nname = \"Quincy\"  \nprint(\"Name: \" + name)  \n```",
             "Make sure there is a space after the colon inside the string."
           ],
           "solution": {
             "commits": [
               "3c2c4f9e3106eff8007b491ddaa7fbf56b37a877"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "70",
+      "title": "Concatenate multiple strings",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "70.1",
+          "setup": {
+            "files": [
+              "blackjack.py"
+            ],
+            "commits": [
+              "91f6c3d396287e700cc8ce5cde27899304fcd5d5"
+            ]
+          },
+          "content": "You can concatenate as many strings and variables as you want. Update your code so that the `print()` function prints the following text to the console, using variables for the rank and suit: \"Your card is: K of hearts\".",
+          "hints": [
+            "Make sure you include the appropriate spaces in your strings."
+          ],
+          "solution": {
+            "commits": [
+              "e73b0d778374bf0bce4a9e4ef523b265fd75dab5"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "80",
+      "title": "Create a list",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "80.1",
+          "setup": {
+            "files": [
+              "blackjack.py"
+            ],
+            "commits": [
+              "c9ec110549699a051f00755a0821b2b7220c35d0"
+            ]
+          },
+          "content": "You can use a list in python to store multiple values or items at a time. Here is an example of a list of strings: `place = [\"first\", \"second\", \"third\"]`. Above the `suit` variable, create a `suits` variable and assign it to a list of suits (spades, clubs, hearts, diamonds).",
+          "hints": [
+            "There should be quotation marks around each element in the list.",
+            "Make sure to add a closing bracket at the end (`]`)."
+          ],
+          "solution": {
+            "commits": [
+              "9d80d29d02ce4abe956fe527f478e2766c5694f9"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "90",
+      "title": "Access list items",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "90.1",
+          "setup": {
+            "files": [
+              "blackjack.py"
+            ],
+            "commits": [
+              "b4288427712ca15b823a8ea7ac24d9d934242664"
+            ]
+          },
+          "content": "The bracket operator can be used to access a specific element in a list. The number inside the bracket specifies the index of the list to access (indices start at 0). For example, the following code prints \"first\" to the console:\n```\nplace = [\"first\", \"second\", \"third\"]\nwhich = place[0]\nprint(which)\n```\nUpdate the `suit` variable so that the value of \"clubs\" comes from the `suits` list.",
+          "solution": {
+            "commits": [
+              "dce8fe096c944c3bc0ce23ced7742086369ae9e4"
             ]
           }
         }

@@ -111,4 +111,69 @@ Update the `suit` variable so that the value of "clubs" comes from the `suits` l
 
 #### HINTS
 
-- The third item in a list is at index 2.
+- The second item in a list is at index 1.
+
+## 100. Access list items
+
+### 100.1
+
+You can use a `for` loop go through each item in a list:
+
+```py
+friends = ['Kris', 'Tom', 'Oliver']
+for friend in friends:
+    print(friend)
+```
+
+The above code goes through each item in the `friends` list, stores the value in the `friend` variable on each iteration, then prints it. Add a `for` loop to the end of your code that prints each suit.
+
+#### HINTS
+
+- Indent the print `statement` in the `for` loop four spaces.
+- Make sure there is a colon at the end of the `for` loop.
+
+## 110. Access list items
+
+### 110.1
+
+Let's add another item to the `suits` list, just to see how it works. You can add a new value at the end of a list with `append`. For instance, here is how to add a new name to the `friends` list: `friends.append("Beau")`. Add the string "snakes" to the end of the `suits` list using `append`. Add the new line of code before the `for` loop so the loop will print the list with the new element.
+
+#### HINTS
+
+- Use `suits.append()` and put the item to append in the parenthesis.
+- If your code is not working, try running your code to see what it does.
+
+## 120. Access list items
+
+### 120.1
+
+Now you will start the process of representing a full deck of cards with Python code. Keep the first line and the last two lines but delete everything else. It won't be needed for the deck. Changing or improving previously written code is called refactoring.
+
+#### HINTS
+
+- Your code should look like this now:  
+```py  
+suits = ["spades", "clubs", "hearts", "diamonds"]  
+for suit in suits:  
+    print(suit)  
+```
+
+## 130. Access list items
+
+### 130.1
+
+You have the list of suits. After that line create a list of ranks. (A, 2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, K)
+
+#### HINTS
+
+- Make sure to surround each item with parenthesis.
+
+## 140. Access list items
+
+### 140.1
+
+Before the `suits` list, create a new variable called `cards` and assign an empty list (`[]`) to the variable.
+
+#### HINTS
+
+- Nothing should be inside the brackets.
