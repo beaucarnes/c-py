@@ -100,3 +100,153 @@ levels:
         setup:
           files:
             - blackjack.py
+  - id: '150'
+    steps:
+      - id: '150.1'
+        setup:
+          files:
+            - blackjack.py
+  - id: '160'
+    steps:
+      - id: '160.1'
+        setup:
+          files:
+            - blackjack.py
+  - id: '170'
+    steps:
+      - id: '170.1'
+        setup:
+          files:
+            - blackjack.py
+  - id: '180'
+    steps:
+      - id: '180.1'
+        setup:
+          files:
+            - blackjack.py
+  - id: '190'
+    steps:
+      - id: '190.1'
+        setup:
+          files:
+            - blackjack.py
+  - id: '200'
+    steps:
+      - id: '200.1'
+        setup:
+          files:
+            - blackjack.py
+  - id: '210'
+    steps:
+      - id: '210.1'
+        setup:
+          files:
+            - blackjack.py
+  - id: '220'
+    steps:
+      - id: '220.1'
+        setup:
+          files:
+            - blackjack.py
+  - id: '230'
+    steps:
+      - id: '230.1'
+        setup:
+          files:
+            - blackjack.py
+  - id: '240'
+    steps:
+      - id: '240.1'
+        setup:
+          files:
+            - blackjack.py
+  - id: '250'
+    steps:
+      - id: '250.1'
+        setup:
+          files:
+            - blackjack.py
+  - id: '260'
+    steps:
+      - id: '260.1'
+        setup:
+          files:
+            - blackjack.py
+  - id: '270'
+    steps:
+      - id: '270.1'
+        setup:
+          files:
+            - blackjack.py
+  - id: '280'
+    steps:
+      - id: '280.1'
+        setup:
+          files:
+            - blackjack.py
+  - id: '290'
+    steps:
+      - id: '290.1'
+        setup:
+          files:
+            - blackjack.py
+  - id: '300'
+    steps:
+      - id: '300.1'
+        setup:
+          files:
+            - blackjack.py
+  # - id: '310'
+  #   steps:
+  #     - id: '310.1'
+  #       setup:
+  #         files:
+  #           - blackjack.py
+  # - id: '320'
+  #   steps:
+  #     - id: '320.1'
+  #       setup:
+  #         files:
+  #           - blackjack.py
+  # - id: '330'
+  #   steps:
+  #     - id: '330.1'
+  #       setup:
+  #         files:
+  #           - blackjack.py
+  # - id: '340'
+  #   steps:
+  #     - id: '340.1'
+  #       setup:
+  #         files:
+  #           - blackjack.py
+  # - id: '350'
+  #   steps:
+  #     - id: '350.1'
+  #       setup:
+  #         files:
+  #           - blackjack.py
+  # - id: '360'
+  #   steps:
+  #     - id: '360.1'
+  #       setup:
+  #         files:
+  #           - blackjack.py
+  # - id: '370'
+  #   steps:
+  #     - id: '370.1'
+  #       setup:
+  #         files:
+  #           - blackjack.py
+  # - id: '380'
+  #   steps:
+  #     - id: '380.1'
+  #       setup:
+  #         files:
+  #           - blackjack.py
+  # - id: '390'
+  #   steps:
+  #     - id: '390.1'
+  #       setup:
+  #         files:
+  #           - blackjack.py

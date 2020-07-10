@@ -113,9 +113,9 @@ Update the `suit` variable so that the value of "clubs" comes from the `suits` l
 
 - The second item in a list is at index 1.
 
-## 200. Create a for loop
+## 100. Create a for loop
 
-### 200.1
+### 100.1
 
 You can use a `for` loop go through each item in a list:
 
@@ -132,9 +132,9 @@ The above code goes through each item in the `friends` list, stores the value in
 - Indent the `print` statement in the `for` loop four spaces.
 - Make sure there is a colon at the end of the `for` loop.
 
-## 210. Append to a list
+## 110. Append to a list
 
-### 210.1
+### 110.1
 
 Let's add another item to the `suits` list, just to see how it works. You can add a new value at the end of a list with `append`. For instance, here is how to add a new name to the `friends` list: `friends.append("Beau")`. Add the string "snakes" to the end of the `suits` list using `append`. Add the new line of code before the `for` loop so the loop will print the list with the new element.
 
@@ -143,9 +143,9 @@ Let's add another item to the `suits` list, just to see how it works. You can ad
 - Use `suits.append()` and put the item to append in the parenthesis.
 - If your code is not working, try running your code to see what it does.
 
-## 220. Refactor code
+## 120. Refactor code
 
-### 220.1
+### 120.1
 
 Now you will start the process of representing a full deck of cards with Python code. Keep the first line and the last two lines but delete everything else. It won't be needed for the deck. Changing or improving previously written code is called refactoring.
 
@@ -158,9 +158,9 @@ for suit in suits:
     print(suit)  
 ```
 
-## 230. Create a list of ranks
+## 130. Create a list of ranks
 
-### 230.1
+### 130.1
 
 You have the list of suits. After that line create a list of ranks. (A, 2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, K)
 
@@ -168,9 +168,9 @@ You have the list of suits. After that line create a list of ranks. (A, 2, 3, 4,
 
 - Make sure to surround each item with quotation marks.
 
-## 240. Create an empty list
+## 140. Create an empty list
 
-### 240.1
+### 140.1
 
 Before the `suits` list, create a new variable called `cards` and assign an empty list (`[]`) to the variable.
 
@@ -178,9 +178,9 @@ Before the `suits` list, create a new variable called `cards` and assign an empt
 
 - Nothing should be inside the brackets.
 
-## 250. Print a list in a loop
+## 150. Print a list in a loop
 
-### 250.1
+### 150.1
 
 In the `cards` list, there should be an item for each card in the deck. Each item in the `suits` list should be combined with each item in the `ranks` list for a total of 52 items (cards). We'll work our way up to that. Update the `print` statement in the `for` loop so that it prints a list with two elements. The first element should be `suit` and the second should be the first element of the `ranks` list. This will print an ace ("A") in every suit.
 
@@ -189,9 +189,9 @@ In the `cards` list, there should be an item for each card in the deck. Each ite
 - The first element in the `ranks` list is at index 0.
 - Do not put quotation marks around any element in the list.
 
-## 260. Create nested for loops
+## 160. Create nested for loops
 
-### 260.1
+### 160.1
 
 Now, instead of just printing an ace in every suit, let's print every rank in every suit. This can be done easily with a `for` loop nested within another `for` loop. Inside the `for` loop, add another `for` loop that loops through the `ranks`. The `print` command should then be inside the second `for` loop instead of the first `for` loop (the `print` command should be indented 8 spaces from the beginning of the line, instead of 4).
 
@@ -199,15 +199,15 @@ Now, instead of just printing an ace in every suit, let's print every rank in ev
 
 - Pay special attention to how everything is indented.
 
-## 270. Access items from nested loops
+## 170. Access items from nested loops
 
-### 270.1
+### 170.1
 
 If you run the code by typing `python blackjack.py` in the terminal, you will see that it isn't quite what we want. It doesn't print all the ranks because the print command specifies the exact same rank in every iteration. Change `ranks[0]` to `rank`.
 
-## 280. Append items from nested loops
+## 180. Append items from nested loops
 
-### 280.1
+### 180.1
 
 Great! Now all 52 cards are printed as two-item lists. An element in a list can be another list. Instead of printing 52 two-item lists, `append` those 52 lists to the `cards` list.
 
@@ -215,9 +215,9 @@ Great! Now all 52 cards are printed as two-item lists. An element in a list can 
 
 - Just change `print` to `cards.append`.
 
-## 290. Print cards
+## 190. Print cards
 
-### 290.1
+### 190.1
 
 Check what the `cards` list looks like by printing it out at the end of your code. If you run the code by typing `python blackjack.py` in the terminal, you can see the result. Remember, run the code by typing `python blackjack.py` into the terminal.
 
@@ -286,7 +286,7 @@ Right before the `print` statement, call the `shuffle` function. The code inside
 #### HINTS
 
 - Call the shuffle function with `shuffle()`.
-- Make sure to call the function right before the `print` statment.
+- Make sure to call the function right before the `print` statement.
 
 ## 250. Print a list in a loop
 
