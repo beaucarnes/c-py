@@ -274,9 +274,151 @@
             ]
           },
           "content": "The bracket operator can be used to access a specific element in a list. The number inside the bracket specifies the index of the list to access (indices start at 0). For example, the following code prints \"first\" to the console:\n```\nplace = [\"first\", \"second\", \"third\"]\nwhich = place[0]\nprint(which)\n```\nUpdate the `suit` variable so that the value of \"clubs\" comes from the `suits` list.",
+          "hints": [
+            "The second item in a list is at index 1."
+          ],
           "solution": {
             "commits": [
               "dce8fe096c944c3bc0ce23ced7742086369ae9e4"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "100",
+      "title": "Access list items",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "100.1",
+          "setup": {
+            "files": [
+              "blackjack.py"
+            ],
+            "commits": [
+              "c9deb22cc9196fb036d6d5698e6acdbe65f10aa8"
+            ]
+          },
+          "content": "You can use a `for` loop go through each item in a list:\n\n```py\nfriends = ['Kris', 'Tom', 'Oliver']\nfor friend in friends:\n    print(friend)\n```\n\nThe above code goes through each item in the `friends` list, stores the value in the `friend` variable on each iteration, then prints it. Add a `for` loop to the end of your code that prints each suit.",
+          "hints": [
+            "Indent the print `statement` in the `for` loop four spaces.",
+            "Make sure there is a colon at the end of the `for` loop."
+          ],
+          "solution": {
+            "commits": [
+              "073df4ace4184e0b6cba06d66ba0962dd768a7e7"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "110",
+      "title": "Access list items",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "110.1",
+          "setup": {
+            "files": [
+              "blackjack.py"
+            ],
+            "commits": [
+              "f80ae92dfab55a3ef834846093f8207847c8fc86"
+            ]
+          },
+          "content": "Let's add another item to the `suits` list, just to see how it works. You can add a new value at the end of a list with `append`. For instance, here is how to add a new name to the `friends` list: `friends.append(\"Beau\")`. Add the string \"snakes\" to the end of the `suits` list using `append`. Add the new line of code before the `for` loop so the loop will print the list with the new element.",
+          "hints": [
+            "Use `suits.append()` and put the item to append in the parenthesis.",
+            "If your code is not working, try running your code to see what it does."
+          ],
+          "solution": {
+            "commits": [
+              "0aa288ce321a7998648d1747f77efef0e1364485"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "120",
+      "title": "Access list items",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "120.1",
+          "setup": {
+            "files": [
+              "blackjack.py"
+            ],
+            "commits": [
+              "135c83e91ca40160b72039f96549b858b2a65712"
+            ]
+          },
+          "content": "Now you will start the process of representing a full deck of cards with Python code. Keep the first line and the last two lines but delete everything else. It won't be needed for the deck. Changing or improving previously written code is called refactoring.",
+          "hints": [
+            "Your code should look like this now:  \n```py  \nsuits = [\"spades\", \"clubs\", \"hearts\", \"diamonds\"]  \nfor suit in suits:  \n    print(suit)  \n```"
+          ],
+          "solution": {
+            "commits": [
+              "c1e12225e4b742f29a1044c755575f230c1e1011"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "130",
+      "title": "Access list items",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "130.1",
+          "setup": {
+            "files": [
+              "blackjack.py"
+            ],
+            "commits": [
+              "57093601db0473b0f7076989a24e5e24921e03f8"
+            ]
+          },
+          "content": "You have the list of suits. After that line create a list of ranks. (A, 2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, K)",
+          "hints": [
+            "Make sure to surround each item with parenthesis."
+          ],
+          "solution": {
+            "commits": [
+              "22b4a82bcd43b90e0022d9df6e389724d164f1d1"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "140",
+      "title": "Access list items",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "140.1",
+          "setup": {
+            "files": [
+              "blackjack.py"
+            ],
+            "commits": [
+              "142472951c21ddbb2c339190429babbf8ac9aad2"
+            ]
+          },
+          "content": "Before the `suits` list, create a new variable called `cards` and assign an empty list (`[]`) to the variable.",
+          "solution": {
+            "commits": [
+              "7bd11bb57622cfc1a41acf2332be9bec5f3c0000"
             ]
           }
         }
