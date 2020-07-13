@@ -11,12 +11,14 @@ def shuffle():
     random.shuffle(cards)
 
 def deal(number):
-    cards_delt = []
+    cards_dealt = []
     for x in range(number):
         card = cards.pop()
-        cards_delt.append(card)
-    return cards_delt
+        cards_dealt.append(card)
+    return cards_dealt
 
 shuffle()
-cards_delt = deal(2)
-print(cards_delt)
+cards_dealt = deal(2)
+print(cards_dealt)
+card = cards_dealt[0]
+print(card)
