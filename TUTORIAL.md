@@ -315,6 +315,8 @@ Variables can only be accessed in the context they were created. The `card` vari
 
 After the `shuffle` function is called, call the `deal` function and assign the returned value to a variable named `card`. Then update the `print` function to print `card` instead of `cards`.
 
+#### HINTS
+
 - You can call the `deal` function and assign it to variable `card` all with one line with `card = deal()`.
 
 ## 280. Add an argument to a function
@@ -329,8 +331,8 @@ def print_twice(bruce):
 ```
 This function assigns the argument to a parameter named `bruce`. When the function is called, it prints the value of the parameter (whatever it is) twice. Make it so the `deal` function takes an argument named `number`. Then, call the function with the new parameter by updating the last two lines of your code to:
 ```py
-cards_delt = deal(2)
-print(cards_delt)
+cards_dealt = deal(2)
+print(cards_dealt)
 ```
 
 #### HINTS
@@ -342,11 +344,11 @@ print(cards_delt)
 
 ### 290.1
 
-The `deal` function is now going to return a list of cards instead of a single card. In the first line of the function create an empty list named `cards_delt`. Then update the last line of the function to `return cards_delt`.
+The `deal` function is now going to return a list of cards instead of a single card. In the first line of the function create an empty list named `cards_dealt`. Then update the last line of the function to `return cards_dealt`.
 
 #### HINTS
 
-- Here is how to create an empty list: `cards_delt = []`.
+- Here is how to create an empty list: `cards_dealt = []`.
 
 ## 300. Use the range function in a for loop
 
@@ -357,7 +359,7 @@ The `range` function can be used in a `for` loop to determine the number of loop
 for x in range(6):
     print("Hi")
 ```
-Put the line `card = cards.pop()` into a for loop that also `append`s the `card` onto the `cards_delt` list. The loop should run the amount of times equal to the `number` parameter.
+Put the line `card = cards.pop()` into a for loop that also `append`s the `card` onto the `cards_dealt` list. The loop should run the amount of times equal to the `number` parameter.
 
 #### HINTS
 
@@ -365,5 +367,134 @@ Put the line `card = cards.pop()` into a for loop that also `append`s the `card`
 - Inside the `for` loop add these lines:  
 ```py  
 card = cards.pop()  
-cards_delt.append(card)  
+cards_dealt.append(card)  
 ```
+
+## 310. Store first item from list in a variable
+
+### 310.1
+
+Let's separate out a single card from the two cards dealt. At the end of your code create a variable called `card` and set it equal to the first item in the `cards` list. Then print the card.
+
+#### HINTS
+
+- To access a certain item in a list, use brackets at the end of the list name with the index number inside the brackets.
+- The index number for the first item in a list is zero.
+
+## 320. Get the rank from a card
+
+### 320.1
+
+Let's separate out the rank part of the single card. After the line where the variable `card` is created, create a variable named `rank` and assign it the rank from `card`. 
+
+#### HINTS
+
+- The rank is at index 1.
+
+## 330. Create an if statement
+
+### 330.1
+
+Each rank has a different value. The value of "A" is 11 (or sometimes 1, but we'll get to that later). "J", "Q", and "K" have the value of 10. The numbers have the value of the number. You need to check what the rank is and set the value depending on the rank. This is the perfect time for a conditional statement, specifically, an `if` statement. Here is an example:
+```py
+if x == y:
+    print('x and y are equal')
+```
+That code will only print 'x and y are equal' IF the variables names `x` and `y` are equal to the same value. Take special note of the double equal sign (`==`). This is used to check if two values are equal. Make sure not to confuse it with a single equal sign (`=`), which is used to assign a value to a variable. 
+
+Before the `print` statement, add an `if` statement to check if `rank == "A"`. If so, assign 11 to a variable named `value`.
+
+#### HINTS
+
+- Make sure to indent the line inside the `if` statement four spaces.
+- Add a colon at the end of the `if` statement.
+
+## 340. Add an elif statement
+
+### 340.1
+
+If `rank` does not equal "A", you'll want to check if it equals "J", "Q", or "K". That can be done with `elif`, which is an abbreviation of “else if.” For example:
+```
+if age < 13:
+    print("You are a kid")
+elif age > 17:
+    print("You are an adult")
+```
+Notice in that example that you can use the greater than (`>`) and less than (`<`) signs in conditional statements. Some other comparison operators include `=!` (not equal to), `<=` (less that or equal to), and `>=` (greater than or equal to).
+
+After the `if` statement, add the line `elif rank == "J":`. Then inside the `elif` statement assign 10 to `value`.
+
+#### HINTS
+
+- `elif` should be indented the same amount as `if`.
+
+## 350. Use logical operators
+
+### 350.1
+
+There are three logical operators: `and`, `or`, and `not`. You can use these operators in conditional statements to check multiple conditions at once. Update `elif rank == "J":` to `elif rank == "J" or rank == "Q" or rank == "K":`.
+
+#### HINTS
+
+- If you want to use `and` or `or`, there should be a full conditional on either side. For example, use `rank == "J" or rank == "Q"` and NOT `rank == "J" or "Q"`.
+
+## 360. Add an else statement
+
+### 360.1
+
+There can be any number of `elif` statements after an `if` statement. At the end, there can be an `else` statement. The block of code in an `else` statement executes if the `if` and all `elif` statements evaluate to `False`. Here is an example:
+```
+if age < 13:
+    print("You are a kid")
+elif age > 17:
+    print("You are an adult")
+else:
+    print("You are a teenager")
+```
+After the `elif` statement, add an `else` statement. Inside, assign `rank` to `value`.
+
+#### HINTS
+
+- An `else` statement should not have a conditional in it.
+
+## 370. Add a print statement and run your code
+
+### 370.1
+
+Update the `print` statement at the end to `print(rank, value)`. Then try running the code a few times. You should see a different result each time. (Note: When multiple values in a print statement are listed with a comma separating them, both values are printed with a space in between.)
+
+#### HINTS
+
+- Run your code by typing `python blackjack.py` into the terminal.
+
+## 380. Create a dictionary
+
+### 380.1
+
+A Python dictionary is like a list, but more general. You can think of a dictionary as a mapping between a set of indices (which are called keys) and a set of values. Each key maps to a value. The association of a key and a value is called a key-value pair or sometimes an item. Here is a dictionary that maps from English to Spanish. They keys are the English words and the values are the Spanish words.
+```py
+eng2sp = {"one": "uno", "two": "dos", "three": "tres"}
+```
+Above the `print` statement, create variable called `rank_dict` and assign to it this dictionary: `{"rank": rank, "value": value}`.
+
+## 390. Access an item in a dictionary
+
+### 390.1
+
+```py
+eng2sp = {"one": "uno", "two": "dos", "three": "tres"}
+print(eng2sp["one"])
+```
+The code above will print "uno". Just like you access an item in a list by specifying the index inside `[]`,  you can access an item in a dictionary by specifying the key inside `[]`. Update the `print` statement so that you are accessing the rank and value from `rank_dict` instead of directly from the variables.
+
+#### HINTS
+
+- You cannot use an index number to specify an item in a dictionary.
+- Make sure to put quotes around the key inside the brackets.
+- Here is the line of code to use: `print(rank_dict["rank"], rank_dict["value"])`
+
+## 400. Delete code after shuffle()
+
+### 400.1
+
+When writing a program, there are many ways to do almost everything. Now you will refactor your code to get the value of each rank without using an `if` statement. Instead, you will store both the rank name and value in the `ranks` list using dictionaries. Delete all the lines of code after `shuffle()`.
