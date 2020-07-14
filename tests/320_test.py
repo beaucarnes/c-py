@@ -8,7 +8,7 @@
 
 # class PythonTest(unittest.TestCase):
 #     def test_python(self):
-#         self.assertEqual(rank, card[1], "rank should be rank from card")
+#         self.assertEqual(rank, '8', "rank should be 'spades'")
 
 # if __name__ == '__main__':
 #     unittest.main() 
