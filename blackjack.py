@@ -27,5 +27,7 @@ if rank == "A":
     value = 11
 elif rank == "J" or rank == "Q" or rank == "K":
     value = 10
+else:
+    value = rank
 
-print(card)
+print(rank, value)
