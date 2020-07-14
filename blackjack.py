@@ -32,4 +32,4 @@ else:
 
 rank_dict = {"rank": rank, "value": value}
 
-print(rank, value)
+print(rank_dict["rank"], rank_dict["value"])
