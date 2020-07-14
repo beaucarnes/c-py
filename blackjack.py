@@ -25,5 +25,7 @@ rank = card[1]
 
 if rank == "A":
     value = 11
+elif rank == "J":
+    value = 10
 
 print(card)
