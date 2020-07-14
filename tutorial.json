@@ -28,19 +28,19 @@
   },
   "levels": [
     {
-      "id": "20",
+      "id": "10",
       "title": "Create a string variable",
       "summary": "",
       "content": "",
       "steps": [
         {
-          "id": "20.1",
+          "id": "10.1",
           "setup": {
             "files": [
               "blackjack.py"
             ],
             "commits": [
-              "9cab70c619f34416ee8de5060255b95f8acd04cc"
+              "662a132c713318146b4e1eac3ce7190f5f88697c"
             ]
           },
           "content": "Let's represent the king of hearts with Python code. Variables store data. The code already has a variable named `suit` that is set to the value of \"hearts\". Add a variable named `rank` and set it to the value of \"K\" (for king).",
@@ -50,7 +50,7 @@
           ],
           "solution": {
             "commits": [
-              "5e46bc572983f6848df403091d47ca2f8a8ebbcb"
+              "b1a61ca24db1991153c4c7e64380252e6877b2f1"
             ]
           }
         }
