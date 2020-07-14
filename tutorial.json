@@ -780,7 +780,10 @@
               "f0018f4857ed4979e306bb60893d0b844bdeb373"
             ]
           },
-          "content": "After the `shuffle` function is called, call the `deal` function and assign the returned value to a variable named `card`. Then update the `print` function to print `card` instead of `cards`.\n\n- You can call the `deal` function and assign it to variable `card` all with one line with `card = deal()`.",
+          "content": "After the `shuffle` function is called, call the `deal` function and assign the returned value to a variable named `card`. Then update the `print` function to print `card` instead of `cards`.",
+          "hints": [
+            "You can call the `deal` function and assign it to variable `card` all with one line with `card = deal()`."
+          ],
           "solution": {
             "commits": [
               "9933cf9b1c3b69eb729161bc061b786854b0a547"
@@ -805,7 +808,7 @@
               "5cd0c814062b10c0b0448550b3b0e5d09cd11176"
             ]
           },
-          "content": "What if you want the `deal` function to deal more than one card? Let's refactor the `deal` function to accept an argument. Any number of arguments can appear inside the parentheses when a function is created, separated by commas. Inside the function, the arguments are assigned to variables called parameters. Here is an example of a function that takes an argument:\n```py\ndef print_twice(bruce):\n    print(bruce)\n    print(bruce)\n```\nThis function assigns the argument to a parameter named `bruce`. When the function is called, it prints the value of the parameter (whatever it is) twice. Make it so the `deal` function takes an argument named `number`. Then, call the function with the new parameter by updating the last two lines of your code to:\n```py\ncards_delt = deal(2)\nprint(cards_delt)\n```",
+          "content": "What if you want the `deal` function to deal more than one card? Let's refactor the `deal` function to accept an argument. Any number of arguments can appear inside the parentheses when a function is created, separated by commas. Inside the function, the arguments are assigned to variables called parameters. Here is an example of a function that takes an argument:\n```py\ndef print_twice(bruce):\n    print(bruce)\n    print(bruce)\n```\nThis function assigns the argument to a parameter named `bruce`. When the function is called, it prints the value of the parameter (whatever it is) twice. Make it so the `deal` function takes an argument named `number`. Then, call the function with the new parameter by updating the last two lines of your code to:\n```py\ncards_dealt = deal(2)\nprint(cards_dealt)\n```",
           "hints": [
             "Put the word \"number\" inside the parenthesis of the `deal` function definition.",
             "Make sure to replace the last two lines of the program with the given code."
@@ -834,9 +837,9 @@
               "b6bbe2926053e96f057dbde6ac4e4dbd3d62b566"
             ]
           },
-          "content": "The `deal` function is now going to return a list of cards instead of a single card. In the first line of the function create an empty list named `cards_delt`. Then update the last line of the function to `return cards_delt`.",
+          "content": "The `deal` function is now going to return a list of cards instead of a single card. In the first line of the function create an empty list named `cards_dealt`. Then update the last line of the function to `return cards_dealt`.",
           "hints": [
-            "Here is how to create an empty list: `cards_delt = []`."
+            "Here is how to create an empty list: `cards_dealt = []`."
           ],
           "solution": {
             "commits": [
@@ -862,14 +865,287 @@
               "acd80377008dada1d478492152978dc9af8e5f2d"
             ]
           },
-          "content": "The `range` function can be used in a `for` loop to determine the number of loops. The following code will print \"Hi\" six times:\n```py\nfor x in range(6):\n    print(\"Hi\")\n```\nPut the line `card = cards.pop()` into a for loop that also `append`s the `card` onto the `cards_delt` list. The loop should run the amount of times equal to the `number` parameter.",
+          "content": "The `range` function can be used in a `for` loop to determine the number of loops. The following code will print \"Hi\" six times:\n```py\nfor x in range(6):\n    print(\"Hi\")\n```\nPut the line `card = cards.pop()` into a for loop that also `append`s the `card` onto the `cards_dealt` list. The loop should run the amount of times equal to the `number` parameter.",
           "hints": [
             "Make sure every line in the `for` loop is indented four spaces.",
-            "Inside the `for` loop add these lines:  \n```py  \ncard = cards.pop()  \ncards_delt.append(card)  \n```"
+            "Inside the `for` loop add these lines:  \n```py  \ncard = cards.pop()  \ncards_dealt.append(card)  \n```"
           ],
           "solution": {
             "commits": [
               "3fa9d4b1bacc919049eb81ee582c394d72f2c2e1"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "310",
+      "title": "Store first item from list in a variable",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "310.1",
+          "setup": {
+            "files": [
+              "blackjack.py"
+            ],
+            "commits": [
+              "56cd824a5a5043e5ea4765da810a7957d9b26088"
+            ]
+          },
+          "content": "Let's separate out a single card from the two cards dealt. At the end of your code create a variable called `card` and set it equal to the first item in the `cards` list. Then print the card.",
+          "hints": [
+            "To access a certain item in a list, use brackets at the end of the list name with the index number inside the brackets.",
+            "The index number for the first item in a list is zero."
+          ],
+          "solution": {
+            "commits": [
+              "e84746fd96c23f47a7132c6f606b463e0a2a070a"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "320",
+      "title": "Get the rank from a card",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "320.1",
+          "setup": {
+            "files": [
+              "blackjack.py"
+            ],
+            "commits": [
+              "67370abbdb95d07cf0b15640ac1b3099a6540d0a"
+            ]
+          },
+          "content": "Let's separate out the rank part of the single card. After the line where the variable `card` is created, create a variable named `rank` and assign it the rank from `card`.",
+          "hints": [
+            "The rank is at index 1."
+          ],
+          "solution": {
+            "commits": [
+              "f66d66c92bb524444b46a75f6223589d36acc0f5"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "330",
+      "title": "Create an if statement",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "330.1",
+          "setup": {
+            "files": [
+              "blackjack.py"
+            ],
+            "commits": [
+              "f2324a33f7dd5d2f2278c8fc3823abc4215fd465"
+            ]
+          },
+          "content": "Each rank has a different value. The value of \"A\" is 11 (or sometimes 1, but we'll get to that later). \"J\", \"Q\", and \"K\" have the value of 10. The numbers have the value of the number. You need to check what the rank is and set the value depending on the rank. This is the perfect time for a conditional statement, specifically, an `if` statement. Here is an example:\n```py\nif x == y:\n    print('x and y are equal')\n```\nThat code will only print 'x and y are equal' IF the variables names `x` and `y` are equal to the same value. Take special note of the double equal sign (`==`). This is used to check if two values are equal. Make sure not to confuse it with a single equal sign (`=`), which is used to assign a value to a variable. \n\nBefore the `print` statement, add an `if` statement to check if `rank == \"A\"`. If so, assign 11 to a variable named `value`.",
+          "hints": [
+            "Make sure to indent the line inside the `if` statement four spaces.",
+            "Add a colon at the end of the `if` statement."
+          ],
+          "solution": {
+            "commits": [
+              "913fc3be7bfe635972cf55c0a04960df0ffffbc6"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "340",
+      "title": "Add an elif statement",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "340.1",
+          "setup": {
+            "files": [
+              "blackjack.py"
+            ],
+            "commits": [
+              "326ed0584e324906fc67dd53e983113b5f4adbaf"
+            ]
+          },
+          "content": "If `rank` does not equal \"A\", you'll want to check if it equals \"J\", \"Q\", or \"K\". That can be done with `elif`, which is an abbreviation of “else if.” For example:\n```\nif age < 13:\n    print(\"You are a kid\")\nelif age > 17:\n    print(\"You are an adult\")\n```\nNotice in that example that you can use the greater than (`>`) and less than (`<`) signs in conditional statements. Some other comparison operators include `=!` (not equal to), `<=` (less that or equal to), and `>=` (greater than or equal to).\n\nAfter the `if` statement, add the line `elif rank == \"J\":`. Then inside the `elif` statement assign 10 to `value`.",
+          "hints": [
+            "`elif` should be indented the same amount as `if`."
+          ],
+          "solution": {
+            "commits": [
+              "0c7c0dc99a09221256f2ccb6aa648d10ece5f74d"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "350",
+      "title": "Use logical operators",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "350.1",
+          "setup": {
+            "files": [
+              "blackjack.py"
+            ],
+            "commits": [
+              "42eec21ffe6c45683a1d569b428cec97741e587c"
+            ]
+          },
+          "content": "There are three logical operators: `and`, `or`, and `not`. You can use these operators in conditional statements to check multiple conditions at once. Update `elif rank == \"J\":` to `elif rank == \"J\" or rank == \"Q\" or rank == \"K\":`.",
+          "hints": [
+            "If you want to use `and` or `or`, there should be a full conditional on either side. For example, use `rank == \"J\" or rank == \"Q\"` and NOT `rank == \"J\" or \"Q\"`."
+          ],
+          "solution": {
+            "commits": [
+              "9658fa30d71fa3a0045bfbc3e3fe0ef3632eb5d7"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "360",
+      "title": "Add an else statement",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "360.1",
+          "setup": {
+            "files": [
+              "blackjack.py"
+            ],
+            "commits": [
+              "9736d6b662e17748700b9200f76c6e961bd5d9df"
+            ]
+          },
+          "content": "There can be any number of `elif` statements after an `if` statement. At the end, there can be an `else` statement. The block of code in an `else` statement executes if the `if` and all `elif` statements evaluate to `False`. Here is an example:\n```\nif age < 13:\n    print(\"You are a kid\")\nelif age > 17:\n    print(\"You are an adult\")\nelse:\n    print(\"You are a teenager\")\n```\nAfter the `elif` statement, add an `else` statement. Inside, assign `rank` to `value`.",
+          "hints": [
+            "An `else` statement should not have a conditional in it."
+          ],
+          "solution": {
+            "commits": [
+              "ebd486c471cb461742c5bad768923fc95ff68fc1"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "370",
+      "title": "Add a print statement and run your code",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "370.1",
+          "setup": {
+            "files": [
+              "blackjack.py"
+            ],
+            "commits": [
+              "d8fe8e5148a57ae955994606003d005913421993"
+            ]
+          },
+          "content": "Update the `print` statement at the end to `print(rank, value)`. Then try running the code a few times. You should see a different result each time. (Note: When multiple values in a print statement are listed with a comma separating them, both values are printed with a space in between.)",
+          "hints": [
+            "Run your code by typing `python blackjack.py` into the terminal."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "380",
+      "title": "Create a dictionary",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "380.1",
+          "setup": {
+            "files": [
+              "blackjack.py"
+            ],
+            "commits": [
+              "211b2111d8a35c9ddc21dfa21030f1dde422ecd7"
+            ]
+          },
+          "content": "A Python dictionary is like a list, but more general. You can think of a dictionary as a mapping between a set of indices (which are called keys) and a set of values. Each key maps to a value. The association of a key and a value is called a key-value pair or sometimes an item. Here is a dictionary that maps from English to Spanish. They keys are the English words and the values are the Spanish words.\n```py\neng2sp = {\"one\": \"uno\", \"two\": \"dos\", \"three\": \"tres\"}\n```\nAbove the `print` statement, create variable called `rank_dict` and assign to it this dictionary: `{\"rank\": rank, \"value\": value}`.",
+          "solution": {
+            "commits": [
+              "46491630deac9d6a61ae18a1f0718e3fe7c12c67"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "390",
+      "title": "Access an item in a dictionary",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "390.1",
+          "setup": {
+            "files": [
+              "blackjack.py"
+            ],
+            "commits": [
+              "43787d93cc100ce6415ee90c46b408f81fc1fc07"
+            ]
+          },
+          "content": "```py\neng2sp = {\"one\": \"uno\", \"two\": \"dos\", \"three\": \"tres\"}\nprint(eng2sp[\"one\"])\n```\nThe code above will print \"uno\". Just like you access an item in a list by specifying the index inside `[]`,  you can access an item in a dictionary by specifying the key inside `[]`. Update the `print` statement so that you are accessing the rank and value from `rank_dict` instead of directly from the variables.",
+          "hints": [
+            "You cannot use an index number to specify an item in a dictionary.",
+            "Make sure to put quotes around the key inside the brackets.",
+            "Here is the line of code to use: `print(rank_dict[\"rank\"], rank_dict[\"value\"])`"
+          ],
+          "solution": {
+            "commits": [
+              "ecab6f06ae670b7042ff16cd5acabc4871dcc2f2"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "400",
+      "title": "Delete code after shuffle()",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "400.1",
+          "setup": {
+            "files": [
+              "blackjack.py"
+            ],
+            "commits": [
+              "61b9167ee3668382ab3042087c491df6c1df5432"
+            ]
+          },
+          "content": "",
+          "solution": {
+            "commits": [
+              "e09a1c5ee9634976cf8f1ae7b45776107e05ee1e"
             ]
           }
         }
