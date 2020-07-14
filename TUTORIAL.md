@@ -498,3 +498,5 @@ The code above will print "uno". Just like you access an item in a list by speci
 ### 400.1
 
 When writing a program, there are many ways to do almost everything. Now you will refactor your code to get the value of each rank without using an `if` statement. Instead, you will store both the rank name and value in the `ranks` list using dictionaries. Delete all the lines of code after `shuffle()`.
+
+
