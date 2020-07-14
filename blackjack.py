@@ -30,4 +30,6 @@ elif rank == "J" or rank == "Q" or rank == "K":
 else:
     value = rank
 
+rank_dict = {"rank": rank, "value": value}
+
 print(rank, value)
