@@ -32,3 +32,5 @@ class Deck:
             card = self.cards.pop()
             cards_dealt.append(card)
         return cards_dealt
+
+deck1 = Deck()
