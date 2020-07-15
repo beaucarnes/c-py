@@ -499,4 +499,114 @@ The code above will print "uno". Just like you access an item in a list by speci
 
 When writing a program, there are many ways to do almost everything. Now you will refactor your code to get the value of each rank without using an `if` statement. Instead, you will store both the rank name and value in the `ranks` list using dictionaries. Delete all the lines of code after `shuffle()`.
 
+## 410. Deal and store a single card in a variable
+
+### 410.1
+
+Get a single card *not* in a list by adding the following line at the end of your code: `card = deal(1)[0]`.
+
+#### HINTS
+
+- Add the exact line of code given at the end of your code.
+
+## 420. Create a list of dictionaries
+
+### 420.1
+
+Now, update the `ranks` list. Each element in the list should be a dictionary. When lists or list elements are long, it is common to put each element on it's own line. Here is the beginning of the new `ranks` list:
+```py
+ranks = [
+        {"rank": "A", "value": 11},
+        {"rank": "2", "value": 2},
+        {"rank": "3", "value": 3},
+        ...
+    ]
+```
+Update `ranks` in your code using the section above as a starting point. Replace "..." with the other ranks and values. 
+
+#### HINTS
+
+- "J", "K", and "Q" have a value of 10 and the numbers have the value of the number.
+- There should be 13 dictionary elements in the list, one for each rank.
+
+## 430. Print a single card
+
+### 430.1
+
+At the end of your code, print `card`. Try running your program to see what prints now that you have updated the `ranks` list.
+
+#### HINTS
+
+- Add `print(card)` as the last line in your code.
+
+## 440. Access a dictionary value inside a list
+
+### 440.1
+
+If you want to get just the rank of `card`, you will first have to access the second element in the list, then you will have to access the `"rank"` item in the dictionary. Because you are accessing something two times, there will be two sets of brackets. Look at this example:
+```py
+card = ["clubs", {"rank": "J", "value": 10}]
+rank = card[1]["rank"]
+```
+In that code, `rank` now equals "J". Think about the code until you understand why.
+Update your code so the `print` statement will print just the "value" in `card`.
+
+#### HINTS
+
+- The example given shows how to access the "rank" in `card`. Use a similar line of code to access the "value" in `card`.
+
+## 450. Create a Deck class
+
+### 450.1
+
+Now you will start defining classes that will be used in order to separate out different aspects of the game. Classes provide a way of bundling data and functionality together. Creating a new class creates a new type of object, allowing new instances of that type to be made. An object can contain a number of functions (which we call methods) as well as data that is used by those functions (called attributes). You will use classes to model three parts of the game: Card, Deck, and Hand. So far, you've mainly worked on elements of the `Deck` class.
+
+Right after the `import` statement at the top, add this line: `class Deck:`. Then, highlight all the code after that line and hit the "Tab" key on your keyboard. This will indent all the code and make it part of the `Deck` class.
+
+#### HINTS
+
+- The `import` statement and `class Deck:` should not be indented. All other lines should be indented four spaces.
+
+## 460. Delete unneeded code in Deck class 
+
+### 460.1
+
+Remove the unneeded code in the `Deck` class by removing the last three lines of code.
+
+## 470. Create an __init__ method
+
+### 470.1
+
+A class is like a template. You can use that class to create an instance of the class, called an object. Then you can use the instance. Each instance keeps it's own state so you can update an instance created from a class and it won't impact other objects created from the same class. Soon, you will see an example of what all this means so it will be easier to understand.
+
+First, let's prepare our class to create an instance from it. When you create an instance of a class, Python automatically calls a funtion (also called a method) in the class named `__init__`. The contents of this method shoud be code that is run one time to initialize the instance. Define this function by adding the following line of code directly under `class Deck:`: `def __init__(self):`. Now indent all the code that is not part of the `shuffle` or `deal` functions so the code will be part of this new function.
+
+#### HINTS
+
+- Run your code by typing `python blackjack.py` into the terminal.
+
+## 480. Add self argument to functions in class
+
+### 480.1
+
+Notice the word "self" in the parenthesis of the function you just added. When defining a function, anything inside the parentheses is called an argument. These are variables passed in from the caller to the function. All functions in a class should receive `self` as an argument. `self` represents the instance of the class. By using the `self` keyword, the function can access the attributes and methods of the class. For example, this would allow you to call the `shuffle` function from within the `__init__` function. Add the `self` as the first item inside the parentheses on the definitions of the `shuffle` and `deal` functions. 
+
+#### HINTS
+
+- The `shuffle` function should start like this: `def shuffle(self):`.
+- The `deal` function should start like this: `def deal(self):`.
+
+## 490. Create instance variables with self
+
+### 490.1
+
+If you look at the variables defined inside the `__init__` function, only `cards` is used in other functions. Inside a class, in order to access a variable in multiple functions (also called methods), the variable has to start with `self.`. Change all instances of `cards` in every function to `self.cards`. 
+
+## 500. Delete code after shuffle()
+
+### 500.1
+
+You can now create an instance (also called object) of the deck class. At the very end of your code add the line `deck1 = Deck()` (with no indentation).
+
+
 
