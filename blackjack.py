@@ -2,7 +2,7 @@ import random
 
 class Deck:
     def __init__(self):
-        cards = []
+        self.cards = []
         suits = ["spades", "clubs", "hearts", "diamonds"]
         ranks = [
                 {"rank": "A", "value": 11},
@@ -21,14 +21,14 @@ class Deck:
             ]
         for suit in suits:
             for rank in ranks:
-                cards.append([suit, rank])
+                self.cards.append([suit, rank])
 
     def shuffle(self):
-        random.shuffle(cards)
+        random.shuffle(self.cards)
 
     def deal(self, number):
         cards_dealt = []
         for x in range(number):
-            card = cards.pop()
+            card = self.cards.pop()
             cards_dealt.append(card)
         return cards_dealt
