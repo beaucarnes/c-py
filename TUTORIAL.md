@@ -590,7 +590,7 @@ Notice the word "self" in the parenthesis of the function you just added. When d
 #### HINTS
 
 - The `shuffle` function should start like this: `def shuffle(self):`.
-- The `deal` function should start like this: `def deal(self):`.
+- The `deal` function should start like this: `def deal(self, number):`.
 
 ## 480. Create instance variables with self
 
