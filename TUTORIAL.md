@@ -563,19 +563,15 @@ Now you will start defining classes that will be used in order to separate out d
 
 Right after the `import` statement at the top, add this line: `class Deck:`. Then, highlight all the code after that line and hit the "Tab" key on your keyboard. This will indent all the code and make it part of the `Deck` class.
 
+After creating the `Deck` class, remove the unneeded code in the class by removing the last three lines of code (starting with the line `shuffle()`)
+
 #### HINTS
 
 - The `import` statement and `class Deck:` should not be indented. All other lines should be indented four spaces.
 
-## 460. Delete unneeded code in Deck class 
+## 460. Create an __init__ method
 
 ### 460.1
-
-Remove the unneeded code in the `Deck` class by removing the last three lines of code.
-
-## 470. Create an __init__ method
-
-### 470.1
 
 A class is like a template. You can use that class to create an instance of the class, called an object. Then you can use the instance. Each instance keeps it's own state so you can update an instance created from a class and it won't impact other objects created from the same class. Soon, you will see an example of what all this means so it will be easier to understand.
 
@@ -585,9 +581,9 @@ First, let's prepare our class to create an instance from it. When you create an
 
 - Run your code by typing `python blackjack.py` into the terminal.
 
-## 480. Add self argument to functions in class
+## 470. Add self argument to functions in class
 
-### 480.1
+### 470.1
 
 Notice the word "self" in the parenthesis of the function you just added. When defining a function, anything inside the parentheses is called an argument. These are variables passed in from the caller to the function. All functions in a class should receive `self` as an argument. `self` represents the instance of the class. By using the `self` keyword, the function can access the attributes and methods of the class. For example, this would allow you to call the `shuffle` function from within the `__init__` function. Add the `self` as the first item inside the parentheses on the definitions of the `shuffle` and `deal` functions. 
 
@@ -596,17 +592,22 @@ Notice the word "self" in the parenthesis of the function you just added. When d
 - The `shuffle` function should start like this: `def shuffle(self):`.
 - The `deal` function should start like this: `def deal(self):`.
 
-## 490. Create instance variables with self
+## 480. Create instance variables with self
 
-### 490.1
+### 480.1
 
 If you look at the variables defined inside the `__init__` function, only `cards` is used in other functions. Inside a class, in order to access a variable in multiple functions (also called methods), the variable has to start with `self.`. Change all instances of `cards` in every function to `self.cards`. 
 
-## 500. Delete code after shuffle()
+## 490. Create a Deck object
 
-### 500.1
+### 490.1
 
 You can now create an instance (also called object) of the deck class. At the very end of your code add the line `deck1 = Deck()` (with no indentation).
 
+## 500. Access an attribute of an instance
+
+### 500.1
+
+If you have an instance of a class named `car` with an attribute named `model`, you can access the value of the attribute with `car.model`. In your code, `cards` is an attribute of the `deck1` instance created from the `Deck` class. Print the `cards` attribute. 
 
 
