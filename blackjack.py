@@ -18,3 +18,4 @@ def deal(number):
     return cards_dealt
 
 shuffle()
+card = deal(1)[0]
