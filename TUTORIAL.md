@@ -575,7 +575,7 @@ After creating the `Deck` class, remove the unneeded code in the class by removi
 
 A class is like a template. You can use that class to create an instance of the class, called an object. Then you can use the instance. Each instance keeps it's own state so you can update an instance created from a class and it won't impact other objects created from the same class. Soon, you will see an example of what all this means so it will be easier to understand.
 
-First, let's prepare our class to create an instance from it. When you create an instance of a class, Python automatically calls a funtion (also called a method) in the class named `__init__`. The contents of this method shoud be code that is run one time to initialize the instance. Define this function by adding the following line of code directly under `class Deck:`: `def __init__(self):`. Now indent all the code that is not part of the `shuffle` or `deal` functions so the code will be part of this new function.
+First, let's prepare our class to create an instance from it. When you create an instance of a class, Python automatically calls a function (also called a method) in the class named `__init__`. The contents of this method should be code that is run one time to initialize the instance. Define this function by adding the following line of code directly under `class Deck:`: `def __init__(self):`. Now indent all the code that is not part of the `shuffle` or `deal` functions so the code will be part of this new function.
 
 #### HINTS
 
@@ -598,7 +598,7 @@ Notice the word "self" in the parenthesis of the function you just added. When d
 
 If you look at the variables defined inside the `__init__` function, only `cards` is used in other functions. Inside a class, in order to access a variable in multiple functions (also called methods), the variable has to start with `self.`. Change all instances of `cards` in every function to `self.cards`. 
 
-## 490. Create a Deck object
+## 490. Create a Deck instance
 
 ### 490.1
 
@@ -610,4 +610,214 @@ You can now create an instance (also called object) of the deck class. At the ve
 
 If you have an instance of a class named `car` with an attribute named `model`, you can access the value of the attribute with `car.model`. In your code, `cards` is an attribute of the `deck1` instance created from the `Deck` class. Print the `cards` attribute. 
 
+## 510. Create a second Deck instance
+
+### 510.1
+
+If you run the code now, you should see the `cards` list from `deck` with the cards in order. You already created an instance of the `Deck` class called `deck1`. Underneath that and before the `print` statement, create another instance of the `Deck` class called `deck2`.
+
+## 520. Call a method of an instance
+
+### 520.1
+
+If you have an instance of a class named `car` with an method named `drive`, you can call the method with `car.drive()`. In your code, `shuffle` is a method of the `deck2` instance created from the `Deck` class. Call that method right before the `print` statement.
+
+#### HINTS
+
+- Call the method with `deck2.shuffle()`.
+
+## 530. Add an if statement inside the deal function
+
+### 530.1
+
+The `Deck` works. Now let's add safeguards to prevent errors. Every time the `deal` function is called, a card is removed from the `cards` list. You can only remove a card if there are cards to remove. So before the program tries to `pop()` a card off of `self.cards`, it should check `if` the length of `self.cards` is greater than (`>`) 0.  You can get the number of items in a list with `len()`. Here is an example: `len(self.cards)`. Inside the `deal` function, put all the code inside the appropriate `if` statement.
+
+#### HINTS
+
+- Make sure to indent all the current code from the `deal` function inside the new `if` statement.
+
+## 540. Add an if statement inside the shuffle function
+
+### 540.1
+
+A deck with only one card does not need to be shuffled. Add the appropriate `if` statement to the `shuffle` function.
+
+#### HINTS
+
+- The `if` statement should check if `len(self.cards) > 1`.
+
+## 550. Create a Card class
+
+### 550.1
+
+Since a "Card" is a separate concept than a "Deck", next you'll make a `Card` class. Using the `Deck` class as an example, create a `Card` class above the `Deck` class. Add an `__init__` function and inside that function set `self.suit` to equal "hearts".
+
+#### HINTS
+
+- Check the indentation. The `__init__` function should be indented four spaces and the code inside the function should be indented four more spaces.
+
+## 560. Create the self.rank variable
+
+### 560.1
+
+Also inside `__init__`, create a variable called `self.rank` and set it to "A".
+
+## 570. Initialize an object with parameters
+
+### 570.1
+
+Currently, anytime a `Card` is created, it will be an Ace of Hearts. Refactor the code so the `suit` and `rank` are specified when a `Card` object is constructed. The `__self__` method can take additional parameters (besides `self`) that are passed into it as the object is constructed. Here is an example of a `Person` class where the `name` and `age` are specified when an object is constructed:
+```py
+class Person:
+   def __init__(self, name, age):
+     self.name = name
+     self.age = age
+
+sally = Person("Sally", 32)
+print("Name: " + sally.name + ", Age: " + sally.age)
+```
+That code prints out "Sally 32".
+
+#### HINTS
+
+- The `__init__` function should start like this: `def __init__(self, suit, rank):`.
+- Set `self.suit` and `self.rank` to the parameters `suit` and `rank`.
+
+## 580. Create a __str__ method
+
+### 580.1
+
+When a class has a `__str__` method, it is called when `print()` is invoked on an object from the class. In the `Card` class, add a `__str__` method. Inside the method add `return self.rank['rank'] + " of " + self.suit` to return what should display when a card is printed.
+
+#### HINTS
+
+- The `__str__` method should start like this: `def __str__(self):`.
+
+## 590. Add code to test out the __str__ method
+
+### 590.1
+
+Try out the new `__str__` method. Delete the last five lines in the code (everything after the `Deck` class). Add the following lines:
+```py
+card1 = Card("diamonds", {"rank": "A", "value": 11})
+card2 = Card("spades", {"rank": "5", "value": 5})
+print(card1)
+print(card2)
+```
+
+## 600. Add an f-string
+
+### 600.1
+
+F-strings allow you to include variables inside of strings so you don't have to concatenate the strings. Here is how you would create an f-string with the variables `name` and `age` inside: `f"My name is {name} and I am {age} years old"`. Notice it begins with "f" and the variables are within curly braces. Update the return statement in `__str__` to use an f-string.
+
+#### HINTS
+
+- `__str__` should return `f"{self.rank['rank']} of {self.suit}"`.
+
+## 610. Append an instance of a class to a list
+
+### 610.1
+
+Currently, in the `Deck` class, the last line of the `__init__` method appends a list as an item to the `cards` list. Instead of appending the list (`[suit, rank]`), create and append an instance of the `Card` class (`Card(suit, rank)`). Afterwards, when a `Deck` is created, it is filled with `Card`s.
+
+#### HINTS
+
+- Here is the line that should be modified: `self.cards.append([suit, rank])`
+- Replace `[suit, rank]` with `Card(suit, rank)`
+
+## 620. Create a Hand class
+
+### 620.1
+
+The `Deck` and `Card` classes could be used for any card game. Now make a `Hand` class after the `Deck` class. This will represent a hand in the game of blackjack. Add a `__init__` method inside the `Hand` class that initializes a variable called `self.cards` that is set to an empty list. Remove the lines of code at the end that are not in a class.
+
+#### HINTS
+
+- The first three lines of the `Hand` class should look exactly like the `Deck` class, except for the class name.
+- Make sure to remove the extra lines of code at the end that are not in a class.
+
+## 630. Create a variable to keep track of the Hand value
+
+### 630.1
+
+Besides keeping track of the `cards`, `Hand` should also keep track of the `value`. Under `self.cards`, create `self.value` and set it to 0.
+
+#### HINTS
+
+- Verify the indentation is correct. The new line should be indented 8 spaces from the beginning of the line so it is in the `__init__` method.
+
+## 640. Add a dealer parameter
+
+### 640.1
+
+In this blackjack game, there will be a human-controlled player and a program-controlled dealer. Add a `dealer` parameter in the `__init__` constructor method of the `Hand` class. When a `Hand` object is created, `dealer` should be set to `True` of `False` to keep track of what type of hand it is.
+
+#### HINTS
+
+- Inside the parentheses of the `__init__` method should be `self, dealer`.
+
+## 650. Assign dealer parameter to a variable
+
+### 650.1
+
+Inside the `__init__` method, create a `self.dealer` variable and set it equal to the `dealer` parameter.
+
+#### HINTS
+
+- Check the indentation.
+
+## 660. Add a default value to a parameter
+
+### 660.1
+
+Function parameters can have default values. Change the parameters `(self, dealer)` to `(self, dealer=False)`. That code sets the default value of `dealer` to `False`. That means a `Hand` object can be constructed with or without passing in the value of `dealer`.
+
+## 670. Create an add_card method
+
+### 670.1
+
+Now a `Hand` can be created. Let's give it some functionality. Add an `add_card` method. The method should take a `card_list` as a parameter. Inside the method, add `self.cards.extend(card_list)`. `extend` will append each item in the `card_list` list onto `cards` (`append` would append the full `card_list` list as a single item onto `cards`).
+
+#### HINTS
+
+- Make sure the first parameter in the `add_card` method is `self`.
+
+## 680. Add code to test out Deck and Hand class
+
+### 680.1
+
+Try out your code so far by adding the following lines of code to the bottom:
+```py
+deck = Deck()
+deck.shuffle()
+
+hand = Hand()
+hand.add_card(deck.deal(2))
+print(hand.cards)
+```
+
+#### HINTS
+
+- Just copy and paste the lines of code into the end of your program
+
+## 690. Create calculate_value method
+
+### 690.1
+
+Now add the ability to calculate the value of a hand. Add a method called `calculate_value` to `Hand`. Inside the method, set `self.value` to 0 since you will add all the values in the hand to this variable.
+
+## 700. Add an f-string
+
+### 700.1
+
+Inside the `calculate_value` method, loop through each card in `self.cards` and get the value of the card. You can do that by adding the following code:
+```py
+for card in self.cards:
+    card_value = card.rank["value"]
+```
+
+#### HINTS
+
+- Just copy and paste the code into the end of the `calculate_value` method.
 
