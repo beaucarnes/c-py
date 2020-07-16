@@ -34,4 +34,5 @@ class Deck:
         return cards_dealt
 
 deck1 = Deck()
+deck2 = Deck()
 print(deck1.cards)
