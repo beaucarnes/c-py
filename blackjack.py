@@ -35,4 +35,5 @@ class Deck:
 
 deck1 = Deck()
 deck2 = Deck()
+deck2.shuffle()
 print(deck1.cards)
