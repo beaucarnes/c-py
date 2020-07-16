@@ -3,6 +3,7 @@ import random
 class Card:
     def __init__(self):
         self.suit = "hearts"
+        self.rank = "A"
 
 class Deck:
     def __init__(self):
