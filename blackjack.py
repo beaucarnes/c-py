@@ -43,8 +43,7 @@ class Deck:
                 cards_dealt.append(card)
         return cards_dealt
 
-deck1 = Deck()
-deck2 = Deck()
-deck2.shuffle()
-print(deck1.cards)
-print(deck2.cards)
+card1 = Card("diamonds", {"rank": "A", "value": 11})
+card2 = Card("spades", {"rank": "5", "value": 5})
+print(card1)
+print(card2)
