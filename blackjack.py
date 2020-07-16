@@ -1,9 +1,9 @@
 import random
 
 class Card:
-    def __init__(self):
-        self.suit = "hearts"
-        self.rank = "A"
+    def __init__(self, suit, rank):
+        self.suit = suit
+        self.rank = rank
 
 class Deck:
     def __init__(self):
