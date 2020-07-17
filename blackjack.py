@@ -6,7 +6,7 @@ class Card:
         self.rank = rank
 
     def __str__(self):
-        return self.rank['rank'] + " of " + self.suit
+        return f"{self.rank['rank']} of {self.suit}"
 
 class Deck:
     def __init__(self):
