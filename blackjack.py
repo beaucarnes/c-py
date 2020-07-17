@@ -47,3 +47,4 @@ class Hand:
     def __init__(self, dealer):
         self.cards = []
         self.value = 0
+        self.dealer = dealer
