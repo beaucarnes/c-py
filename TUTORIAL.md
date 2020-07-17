@@ -647,7 +647,7 @@ cards_dealt.append(card)
 ```
 - The `if` statement should look like this: `if len(self.cards) > 0:`
 
-## 550. Add an if statement inside shuffle function
+## 550. Add if statement inside shuffle function
 
 ### 550.1
 
