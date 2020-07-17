@@ -1153,7 +1153,7 @@
     },
     {
       "id": "410",
-      "title": "Deal and store a single card in a variable",
+      "title": "Deal and store a card in a variable",
       "summary": "",
       "content": "",
       "steps": [
@@ -1479,7 +1479,7 @@
     },
     {
       "id": "530",
-      "title": "Print cards attribute from deck2 instance",
+      "title": "Print cards attribute from deck2",
       "summary": "",
       "content": "",
       "steps": [
@@ -1504,7 +1504,7 @@
     },
     {
       "id": "540",
-      "title": "Add an if statement inside the deal function",
+      "title": "Add if statement inside deal function",
       "summary": "",
       "content": "",
       "steps": [
@@ -1782,7 +1782,7 @@
     },
     {
       "id": "640",
-      "title": "Create a variable to keep track of the Hand value",
+      "title": "Create a value variable",
       "summary": "",
       "content": "",
       "steps": [
@@ -1978,10 +1978,23 @@
       "steps": [
         {
           "id": "710.1",
+          "setup": {
+            "files": [
+              "blackjack.py"
+            ],
+            "commits": [
+              "a3383740b00f37086667c48c263d5b3620dc131e"
+            ]
+          },
           "content": "Inside the `calculate_value` method, loop through each card in `self.cards` and get the value of the card. You can do that by adding the following code:\n```py\nfor card in self.cards:\n    card_value = card.rank[\"value\"]\n```",
           "hints": [
             "Just copy and paste the code into the end of the `calculate_value` method."
-          ]
+          ],
+          "solution": {
+            "commits": [
+              "48771114eaef174276b0b4013fadabe745c83ba5"
+            ]
+          }
         }
       ]
     }
