@@ -43,7 +43,6 @@ class Deck:
                 cards_dealt.append(card)
         return cards_dealt
 
-card1 = Card("diamonds", {"rank": "A", "value": 11})
-card2 = Card("spades", {"rank": "5", "value": 5})
-print(card1)
-print(card2)
+class Hand:
+    def __init__(self):
+        self.cards = []
