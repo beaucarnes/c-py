@@ -52,6 +52,9 @@ class Hand:
     def add_card(self, card_list):
         self.cards.extend(card_list)
 
+    def calculate_value(self):
+        self.value = 0
+
 deck = Deck()
 deck.shuffle()
 
