@@ -44,6 +44,6 @@ class Deck:
         return cards_dealt
 
 class Hand:
-    def __init__(self):
+    def __init__(self, dealer):
         self.cards = []
         self.value = 0
