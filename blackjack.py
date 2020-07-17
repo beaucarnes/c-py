@@ -55,6 +55,9 @@ class Hand:
     def calculate_value(self):
         self.value = 0
 
+        for card in self.cards:
+            card_value = card.rank["value"]
+
 deck = Deck()
 deck.shuffle()
 
