@@ -499,7 +499,7 @@ The code above will print "uno". Just like you access an item in a list by speci
 
 When writing a program, there are many ways to do almost everything. Now you will refactor your code to get the value of each rank without using an `if` statement. Instead, you will store both the rank name and value in the `ranks` list using dictionaries. Delete all the lines of code after `shuffle()`.
 
-## 410. Deal and store a single card in a variable
+## 410. Deal and store a card in a variable
 
 ### 410.1
 
@@ -626,13 +626,13 @@ If you have an instance of a class named `car` with an method named `drive`, you
 
 - Call the method with `deck2.shuffle()`.
 
-## 530. Print cards attribute from deck2 instance
+## 530. Print cards attribute from deck2 
 
 ### 530.1
 
 At the end of your code, print the `cards` attribute from the `deck2` instance. If you run the code, you will see that the order of the `cards` list is different each time it is printed. That is because each instance stores the state of it's variables separately. In the `deck2` instance, the cards were shuffled. In the `deck1` instance, the cards were not shuffled.
 
-## 540. Add an if statement inside the deal function
+## 540. Add if statement inside deal function
 
 ### 540.1
 
@@ -748,7 +748,7 @@ The `Deck` and `Card` classes could be used for any card game. Now make a `Hand`
 - The first three lines of the `Hand` class should look exactly like the `Deck` class, except for the class name.
 - Make sure to remove the extra lines of code at the end that are not in a class.
 
-## 640. Create a variable to keep track of the Hand value
+## 640. Create a value variable
 
 ### 640.1
 

@@ -436,3 +436,9 @@ levels:
         setup:
           files:
             - blackjack.py
+  - id: '710'
+    steps:
+      - id: '710.1'
+        setup:
+          files:
+            - blackjack.py

@@ -1150,6 +1150,840 @@
           }
         }
       ]
+    },
+    {
+      "id": "410",
+      "title": "Deal and store a single card in a variable",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "410.1",
+          "setup": {
+            "files": [
+              "blackjack.py"
+            ],
+            "commits": [
+              "940779697704788a336e7c74126f4643f257d921"
+            ]
+          },
+          "content": "Get a single card *not* in a list by adding the following line at the end of your code: `card = deal(1)[0]`.",
+          "hints": [
+            "Add the exact line of code given at the end of your code."
+          ],
+          "solution": {
+            "commits": [
+              "45a6a6e0b8d232fe3c0625674b8a97541a607690"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "420",
+      "title": "Create a list of dictionaries",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "420.1",
+          "setup": {
+            "files": [
+              "blackjack.py"
+            ],
+            "commits": [
+              "1cb37e87b89754a245a5899dc88864b7793b024d"
+            ]
+          },
+          "content": "Now, update the `ranks` list. Each element in the list should be a dictionary. When lists or list elements are long, it is common to put each element on it's own line. Here is the beginning of the new `ranks` list:\n```py\nranks = [\n        {\"rank\": \"A\", \"value\": 11},\n        {\"rank\": \"2\", \"value\": 2},\n        {\"rank\": \"3\", \"value\": 3},\n        ...\n    ]\n```\nUpdate `ranks` in your code using the section above as a starting point. Replace \"...\" with the other ranks and values.",
+          "hints": [
+            "\"J\", \"K\", and \"Q\" have a value of 10 and the numbers have the value of the number.",
+            "There should be 13 dictionary elements in the list, one for each rank."
+          ],
+          "solution": {
+            "commits": [
+              "4cd37da23d79adc70e507bd9672acfcc3704314f"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "430",
+      "title": "Print a single card",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "430.1",
+          "setup": {
+            "files": [
+              "blackjack.py"
+            ],
+            "commits": [
+              "08b260e6fd61b8030f61cd1e684c605f1f54b1d1"
+            ]
+          },
+          "content": "At the end of your code, print `card`. Try running your program to see what prints now that you have updated the `ranks` list.",
+          "hints": [
+            "Add `print(card)` as the last line in your code."
+          ],
+          "solution": {
+            "commits": [
+              "8838af4fb3f981cbdb2c30a968316da0e370002c"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "440",
+      "title": "Access a dictionary value inside a list",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "440.1",
+          "setup": {
+            "files": [
+              "blackjack.py"
+            ],
+            "commits": [
+              "740ebadc2dff5d66a1188477f1ec90f8485b6a64"
+            ]
+          },
+          "content": "If you want to get just the rank of `card`, you will first have to access the second element in the list, then you will have to access the `\"rank\"` item in the dictionary. Because you are accessing something two times, there will be two sets of brackets. Look at this example:\n```py\ncard = [\"clubs\", {\"rank\": \"J\", \"value\": 10}]\nrank = card[1][\"rank\"]\n```\nIn that code, `rank` now equals \"J\". Think about the code until you understand why.\nUpdate your code so the `print` statement will print just the \"value\" in `card`.",
+          "hints": [
+            "The example given shows how to access the \"rank\" in `card`. Use a similar line of code to access the \"value\" in `card`."
+          ],
+          "solution": {
+            "commits": [
+              "a6c7902b4a20c2e66938a09c88580249e37886f7"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "450",
+      "title": "Create a Deck class",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "450.1",
+          "setup": {
+            "files": [
+              "blackjack.py"
+            ],
+            "commits": [
+              "c30606c4cfb7d219cde8a4caefa84e29dd542f45"
+            ]
+          },
+          "content": "Now you will start defining classes that will be used in order to separate out different aspects of the game. Classes provide a way of bundling data and functionality together. Creating a new class creates a new type of object, allowing new instances of that type to be made. An object can contain a number of functions (which we call methods) as well as data that is used by those functions (called attributes). You will use classes to model three parts of the game: Card, Deck, and Hand. So far, you've mainly worked on elements of the `Deck` class.\n\nRight after the `import` statement at the top, add this line: `class Deck:`. Then, highlight all the code after that line and hit the \"Tab\" key on your keyboard. This will indent all the code and make it part of the `Deck` class.\n\nAfter creating the `Deck` class, remove the unneeded code in the class by removing the last three lines of code (starting with the line `shuffle()`)",
+          "hints": [
+            "The `import` statement and `class Deck:` should not be indented. All other lines should be indented four spaces."
+          ],
+          "solution": {
+            "commits": [
+              "ea9fae4a680036f6cbed3890b1d365d3b7b7e646"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "460",
+      "title": "Create an __init__ method",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "460.1",
+          "setup": {
+            "files": [
+              "blackjack.py"
+            ],
+            "commits": [
+              "ede8c84cf38a51e9d51f66b8e3cbdda57dde20f6"
+            ]
+          },
+          "content": "A class is like a template. You can use that class to create an instance of the class, called an object. Then you can use the instance. Each instance keeps it's own state so you can update an instance created from a class and it won't impact other objects created from the same class. Soon, you will see an example of what all this means so it will be easier to understand.\n\nFirst, let's prepare our class to create an instance from it. When you create an instance of a class, Python automatically calls a function (also called a method) in the class named `__init__`. The contents of this method should be code that is run one time to initialize the instance. Define this function by adding the following line of code directly under `class Deck:`: `def __init__(self):`. Now indent all the code that is not part of the `shuffle` or `deal` functions so the code will be part of this new function.",
+          "hints": [
+            "Run your code by typing `python blackjack.py` into the terminal."
+          ],
+          "solution": {
+            "commits": [
+              "e473a6b9375111160cfcde22f5537fd531024210"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "470",
+      "title": "Add self argument to functions in class",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "470.1",
+          "setup": {
+            "files": [
+              "blackjack.py"
+            ],
+            "commits": [
+              "1ae91d280cfd38922cf38cda02e8a961c7c4dc6c"
+            ]
+          },
+          "content": "Notice the word \"self\" in the parenthesis of the function you just added. When defining a function, anything inside the parentheses is called an argument. These are variables passed in from the caller to the function. All functions in a class should receive `self` as an argument. `self` represents the instance of the class. By using the `self` keyword, the function can access the attributes and methods of the class. For example, this would allow you to call the `shuffle` function from within the `__init__` function. Add the `self` as the first item inside the parentheses on the definitions of the `shuffle` and `deal` functions.",
+          "hints": [
+            "The `shuffle` function should start like this: `def shuffle(self):`.",
+            "The `deal` function should start like this: `def deal(self, number):`."
+          ],
+          "solution": {
+            "commits": [
+              "ac6c9adf9d62387f0fb4a5aedc5bf891770d8a0d"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "480",
+      "title": "Create instance variables with self",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "480.1",
+          "setup": {
+            "files": [
+              "blackjack.py"
+            ],
+            "commits": [
+              "8250bd6794acc73b07204e3ab34f94a6c6e56d4a"
+            ]
+          },
+          "content": "If you look at the variables defined inside the `__init__` function, only `cards` is used in other functions. Inside a class, in order to access a variable in multiple functions (also called methods), the variable has to start with `self.`. Change all instances of `cards` in every function to `self.cards`.",
+          "solution": {
+            "commits": [
+              "f0d635df52194b8704f27b49d0c57c6d7f72ba7f"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "490",
+      "title": "Create a Deck instance",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "490.1",
+          "setup": {
+            "files": [
+              "blackjack.py"
+            ],
+            "commits": [
+              "8a1755b3e6044c0438d318800fc03464c1524544"
+            ]
+          },
+          "content": "You can now create an instance (also called object) of the deck class. At the very end of your code add the line `deck1 = Deck()` (with no indentation).",
+          "solution": {
+            "commits": [
+              "272fb115131e1c5431d9b9316e211747060cb61e"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "500",
+      "title": "Access an attribute of an instance",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "500.1",
+          "setup": {
+            "files": [
+              "blackjack.py"
+            ],
+            "commits": [
+              "428f731fd64fe1dc1ef3ad675bc58b07d07fb8c7"
+            ]
+          },
+          "content": "If you have an instance of a class named `car` with an attribute named `model`, you can access the value of the attribute with `car.model`. In your code, `cards` is an attribute of the `deck1` instance created from the `Deck` class. Print the `cards` attribute.",
+          "solution": {
+            "commits": [
+              "1c17ead694c1b10af70f217bcc851aaff3ad8432"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "510",
+      "title": "Create a second Deck instance",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "510.1",
+          "setup": {
+            "files": [
+              "blackjack.py"
+            ],
+            "commits": [
+              "98d3556468116392a724751828697176fd0fa41d"
+            ]
+          },
+          "content": "If you run the code now, you should see the `cards` list from `deck` with the cards in order. You already created an instance of the `Deck` class called `deck1`. Underneath that and before the `print` statement, create another instance of the `Deck` class called `deck2`.",
+          "solution": {
+            "commits": [
+              "8f21ee0a26d02a71079b68ffd091d23f82342586"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "520",
+      "title": "Call a method of an instance",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "520.1",
+          "setup": {
+            "files": [
+              "blackjack.py"
+            ],
+            "commits": [
+              "9fc2cfbde1dcd019d0f8e901c15b51f4bd2cc507"
+            ]
+          },
+          "content": "If you have an instance of a class named `car` with an method named `drive`, you can call the method with `car.drive()`. In your code, `shuffle` is a method of the `deck2` instance created from the `Deck` class. Call that method right before the `print` statement.",
+          "hints": [
+            "Call the method with `deck2.shuffle()`."
+          ],
+          "solution": {
+            "commits": [
+              "58dadb69e1749ebff1a6947a794b36b7a7314038"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "530",
+      "title": "Print cards attribute from deck2 instance",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "530.1",
+          "setup": {
+            "files": [
+              "blackjack.py"
+            ],
+            "commits": [
+              "f69b61cb705c43fc6cc65bf7b0e9a9257113a383"
+            ]
+          },
+          "content": "At the end of your code, print the `cards` attribute from the `deck2` instance. If you run the code, you will see that the order of the `cards` list is different each time it is printed. That is because each instance stores the state of it's variables separately. In the `deck2` instance, the cards were shuffled. In the `deck1` instance, the cards were not shuffled.",
+          "solution": {
+            "commits": [
+              "36d96a2f937e6c23df21c818866d7cc25b20b8f9"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "540",
+      "title": "Add an if statement inside the deal function",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "540.1",
+          "setup": {
+            "files": [
+              "blackjack.py"
+            ],
+            "commits": [
+              "ba4cb9472a687784146802fc06a316512eff0646"
+            ]
+          },
+          "content": "The `Deck` works. Now let's add safeguards to prevent errors. When the`deal` function is called, a card is removed from the `cards` list. You can only remove a card if there are cards to remove. So before the program tries to `pop()` a card off of `self.cards`, it should check `if` the length of `self.cards` is greater than (`>`) 0.  You can get the number of items in a list with `len()`. Here is an example: `len(self.cards)`. In the `deal` function, put all the code that is in the `for` loop inside the appropriate `if` statement.",
+          "hints": [
+            "The following lines in the `for` loop should be inside the `if` statement:  \n```  \ncard = self.cards.pop()  \ncards_dealt.append(card)  \n```",
+            "The `if` statement should look like this: `if len(self.cards) > 0:`"
+          ],
+          "solution": {
+            "commits": [
+              "016c92f7491afb0ee445e1ee8f2a91d29fc9e447"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "550",
+      "title": "Add an if statement inside the shuffle function",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "550.1",
+          "setup": {
+            "files": [
+              "blackjack.py"
+            ],
+            "commits": [
+              "a1b681877dfcac99ed0eab3f2a89f5628fc637d9"
+            ]
+          },
+          "content": "A deck with only one card does not need to be shuffled. Add the appropriate `if` statement to the `shuffle` function.",
+          "hints": [
+            "The `if` statement should check if `len(self.cards) > 1`."
+          ],
+          "solution": {
+            "commits": [
+              "f6436a40a2de45de95f253f5752dc1bb1123a70d"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "560",
+      "title": "Create a Card class",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "560.1",
+          "setup": {
+            "files": [
+              "blackjack.py"
+            ],
+            "commits": [
+              "bd3b5478d16f6f4b16bc6e69ea5fa45bba92fe26"
+            ]
+          },
+          "content": "Since a \"Card\" is a separate concept than a \"Deck\", next you'll make a `Card` class. Using the `Deck` class as an example, create a `Card` class above the `Deck` class. Add an `__init__` function and inside that function set `self.suit` to equal \"hearts\".",
+          "hints": [
+            "Check the indentation. The `__init__` function should be indented four spaces and the code inside the function should be indented four more spaces."
+          ],
+          "solution": {
+            "commits": [
+              "fc43b6dc8db03e8601944916eef8944c15d5c30c"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "570",
+      "title": "Create the self.rank variable",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "570.1",
+          "setup": {
+            "files": [
+              "blackjack.py"
+            ],
+            "commits": [
+              "f60edc31ecab4b047fc0bd905d2fc48382d90246"
+            ]
+          },
+          "content": "Also inside `__init__`, create a variable called `self.rank` and set it to \"A\".",
+          "solution": {
+            "commits": [
+              "21996f51b2e0e42357e7fe9ae6e3acfb6397aff5"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "580",
+      "title": "Initialize an object with parameters",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "580.1",
+          "setup": {
+            "files": [
+              "blackjack.py"
+            ],
+            "commits": [
+              "1b5f30388e0f4a4d2df98488f95248ae5117c99c"
+            ]
+          },
+          "content": "Currently, anytime a `Card` is created, it will be an Ace of Hearts. Refactor the code so the `suit` and `rank` are specified when a `Card` object is constructed. The `__self__` method can take additional parameters (besides `self`) that are passed into it as the object is constructed. Here is an example of a `Person` class where the `name` and `age` are specified when an object is constructed:\n```py\nclass Person:\n   def __init__(self, name, age):\n     self.name = name\n     self.age = age\n\nsally = Person(\"Sally\", 32)\nprint(\"Name: \" + sally.name + \", Age: \" + sally.age)\n```\nThat code prints out \"Sally 32\".",
+          "hints": [
+            "The `__init__` function should start like this: `def __init__(self, suit, rank):`.",
+            "Set `self.suit` and `self.rank` to the parameters `suit` and `rank`."
+          ],
+          "solution": {
+            "commits": [
+              "bba6ab5fba590de9f30fa88a9812c0d7b94d4981"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "590",
+      "title": "Create a __str__ method",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "590.1",
+          "setup": {
+            "files": [
+              "blackjack.py"
+            ],
+            "commits": [
+              "404ff431f58f9c7d90cd37ac7af50002825dc4cf"
+            ]
+          },
+          "content": "When a class has a `__str__` method, it is called when `print()` is invoked on an object from the class. In the `Card` class, add a `__str__` method. Inside the method add `return self.rank['rank'] + \" of \" + self.suit` to return what should display when a card is printed.",
+          "hints": [
+            "The `__str__` method should start like this: `def __str__(self):`."
+          ],
+          "solution": {
+            "commits": [
+              "e5a0a63d472644297381074d4abc078d0abac55e"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "600",
+      "title": "Add code to test out the __str__ method",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "600.1",
+          "setup": {
+            "files": [
+              "blackjack.py"
+            ],
+            "commits": [
+              "33ee3fa01f6c28ecb62143e73662a091cd408d91"
+            ]
+          },
+          "content": "Try out the new `__str__` method. Delete the last five lines in the code (everything after the `Deck` class). Add the following lines:\n```py\ncard1 = Card(\"diamonds\", {\"rank\": \"A\", \"value\": 11})\ncard2 = Card(\"spades\", {\"rank\": \"5\", \"value\": 5})\nprint(card1)\nprint(card2)\n```",
+          "solution": {
+            "commits": [
+              "df8b98feebedde5245449c02dd9309c9090001d6"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "610",
+      "title": "Add an f-string",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "610.1",
+          "setup": {
+            "files": [
+              "blackjack.py"
+            ],
+            "commits": [
+              "1ec2ccb3639e601e6a2bf9c8646b3833501bd2ea"
+            ]
+          },
+          "content": "F-strings allow you to include variables inside of strings so you don't have to concatenate the strings. Here is how you would create an f-string with the variables `name` and `age` inside: `f\"My name is {name} and I am {age} years old\"`. Notice it begins with \"f\" and the variables are within curly braces. Update the return statement in `__str__` to use an f-string.",
+          "hints": [
+            "`__str__` should return `f\"{self.rank['rank']} of {self.suit}\"`."
+          ],
+          "solution": {
+            "commits": [
+              "b9f4b65aaaeba6e0fbf31e53051b8f50134d8a97"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "620",
+      "title": "Append an instance of a class to a list",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "620.1",
+          "setup": {
+            "files": [
+              "blackjack.py"
+            ],
+            "commits": [
+              "97860834e9c6f49cafd73fd9419281627586a1fb"
+            ]
+          },
+          "content": "Currently, in the `Deck` class, the last line of the `__init__` method appends a list as an item to the `cards` list. Instead of appending the list (`[suit, rank]`), create and append an instance of the `Card` class (`Card(suit, rank)`). Afterwards, when a `Deck` is created, it is filled with `Card`s.",
+          "hints": [
+            "Here is the line that should be modified: `self.cards.append([suit, rank])`",
+            "Replace `[suit, rank]` with `Card(suit, rank)`"
+          ],
+          "solution": {
+            "commits": [
+              "8a5f0640edf1d55636e53b73542e7a18269ce143"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "630",
+      "title": "Create a Hand class",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "630.1",
+          "setup": {
+            "files": [
+              "blackjack.py"
+            ],
+            "commits": [
+              "f8148272dafd23df63d81893c0189e66bad24d87"
+            ]
+          },
+          "content": "The `Deck` and `Card` classes could be used for any card game. Now make a `Hand` class after the `Deck` class. This will represent a hand in the game of blackjack. Add a `__init__` method inside the `Hand` class that initializes a variable called `self.cards` that is set to an empty list. Remove the lines of code at the end that are not in a class.",
+          "hints": [
+            "The first three lines of the `Hand` class should look exactly like the `Deck` class, except for the class name.",
+            "Make sure to remove the extra lines of code at the end that are not in a class."
+          ],
+          "solution": {
+            "commits": [
+              "418b5f782e95367174c41725fa758b340008a804"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "640",
+      "title": "Create a variable to keep track of the Hand value",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "640.1",
+          "setup": {
+            "files": [
+              "blackjack.py"
+            ],
+            "commits": [
+              "e1392ac9d700a09ebc91ca81d6e41017947b782b"
+            ]
+          },
+          "content": "Besides keeping track of the `cards`, `Hand` should also keep track of the `value`. Under `self.cards`, create `self.value` and set it to 0.",
+          "hints": [
+            "Verify the indentation is correct. The new line should be indented 8 spaces from the beginning of the line so it is in the `__init__` method."
+          ],
+          "solution": {
+            "commits": [
+              "7f4eba5bbee01fa52da9da4d21fa64d11d7e0e24"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "650",
+      "title": "Add a dealer parameter",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "650.1",
+          "setup": {
+            "files": [
+              "blackjack.py"
+            ],
+            "commits": [
+              "a43635af73c2701accdb6a59086c0465440aa2ca"
+            ]
+          },
+          "content": "In this blackjack game, there will be a human-controlled player and a program-controlled dealer. Add a `dealer` parameter in the `__init__` constructor method of the `Hand` class. When a `Hand` object is created, `dealer` should be set to `True` of `False` to keep track of what type of hand it is.",
+          "hints": [
+            "Inside the parentheses of the `__init__` method should be `self, dealer`."
+          ],
+          "solution": {
+            "commits": [
+              "4a426412ac252ade5034cf40884dcf783de7518a"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "660",
+      "title": "Assign dealer parameter to a variable",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "660.1",
+          "setup": {
+            "files": [
+              "blackjack.py"
+            ],
+            "commits": [
+              "1b1ee31beb34f72d42cd78ef16acf9669ac12c7d"
+            ]
+          },
+          "content": "Inside the `__init__` method, create a `self.dealer` variable and set it equal to the `dealer` parameter.",
+          "hints": [
+            "Check the indentation."
+          ],
+          "solution": {
+            "commits": [
+              "7f2258019da93443ba543d26e2db2ab6e86e33cc"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "670",
+      "title": "Add a default value to a parameter",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "670.1",
+          "setup": {
+            "files": [
+              "blackjack.py"
+            ],
+            "commits": [
+              "0a45dc10ec694f6b7eb851fa7e83fceceb37e33b"
+            ]
+          },
+          "content": "Function parameters can have default values. Change the parameters `(self, dealer)` to `(self, dealer=False)`. That code sets the default value of `dealer` to `False`. That means a `Hand` object can be constructed with or without passing in the value of `dealer`.",
+          "solution": {
+            "commits": [
+              "b4b5e92589cb01cc6d05ee229b53cd9a52b183e1"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "680",
+      "title": "Create an add_card method",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "680.1",
+          "setup": {
+            "files": [
+              "blackjack.py"
+            ],
+            "commits": [
+              "25bde6316b0bfcc50f540f297e8b0b2a1cf4102e"
+            ]
+          },
+          "content": "Now a `Hand` can be created. Let's give it some functionality. Add an `add_card` method. The method should take a `card_list` as a parameter. Inside the method, add `self.cards.extend(card_list)`. `extend` will append each item in the `card_list` list onto `cards` (`append` would append the full `card_list` list as a single item onto `cards`).",
+          "hints": [
+            "Make sure the first parameter in the `add_card` method is `self`."
+          ],
+          "solution": {
+            "commits": [
+              "63b5bc990fcb00628f62e5b13b3e1aec34f9612e"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "690",
+      "title": "Add code to test out Deck and Hand class",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "690.1",
+          "setup": {
+            "files": [
+              "blackjack.py"
+            ],
+            "commits": [
+              "5b6ce92d24986e94c330ce49755c08071073ca28"
+            ]
+          },
+          "content": "Try out your code so far by adding the following lines of code to the bottom:\n```py\ndeck = Deck()\ndeck.shuffle()\n\nhand = Hand()\nhand.add_card(deck.deal(2))\nprint(hand.cards)\n```",
+          "hints": [
+            "Just copy and paste the lines of code into the end of your program"
+          ],
+          "solution": {
+            "commits": [
+              "075a88336de98ad5653ee9af8e77c3dc485b9ea0"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "700",
+      "title": "Create calculate_value method",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "700.1",
+          "setup": {
+            "files": [
+              "blackjack.py"
+            ],
+            "commits": [
+              "a6bbd256ab80c5abe1fc3d5e53589891dcc8783b"
+            ]
+          },
+          "content": "Now add the ability to calculate the value of a hand. Add a method called `calculate_value` to `Hand`. Inside the method, set `self.value` to 0 since you will add all the values in the hand to this variable.",
+          "solution": {
+            "commits": [
+              "f1817491d158bc53819151ee84707798b19c0f44"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "710",
+      "title": "Add an f-string",
+      "summary": "",
+      "content": "",
+      "steps": [
+        {
+          "id": "710.1",
+          "content": "Inside the `calculate_value` method, loop through each card in `self.cards` and get the value of the card. You can do that by adding the following code:\n```py\nfor card in self.cards:\n    card_value = card.rank[\"value\"]\n```",
+          "hints": [
+            "Just copy and paste the code into the end of the `calculate_value` method."
+          ]
+        }
+      ]
     }
   ]
 }
