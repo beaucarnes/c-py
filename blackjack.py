@@ -56,7 +56,7 @@ class Hand:
         self.value = 0
 
         for card in self.cards:
-            card_value = card.rank["value"]
+            card_value = int(card.rank["value"])
 
 deck = Deck()
 deck.shuffle()
