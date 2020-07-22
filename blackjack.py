@@ -74,7 +74,7 @@ class Hand:
 
     def display(self):
         print(f'''{"Dealer's" if self.dealer else "Your"} hand:''')
-        for card in self.cards:
+        for index, card in enumerate(self.cards):
             print(card)
 
         if not self.dealer:
