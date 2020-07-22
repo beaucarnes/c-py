@@ -86,4 +86,4 @@ deck.shuffle()
 
 hand = Hand()
 hand.add_card(deck.deal(2))
-print(hand.cards)
+print(hand.display())
