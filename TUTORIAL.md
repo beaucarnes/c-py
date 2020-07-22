@@ -832,3 +832,694 @@ for card in self.cards:
 
 - Just copy and paste the code into the end of the `calculate_value` method.
 
+## 720. Convert to an integer with int()
+
+### 720.1
+
+`int()` is used to convert strings to integers. For example: `int("2")` will convert the string `"2"` to the integer `2`. Make sure `card.rank["value"]` is an integer by putting it inside `int()`.
+
+#### HINTS
+
+- Put `card.rank["value"]` inside the parenthesis of `int()`.
+
+## 730. Add a value to a variable with +=
+
+### 730.1
+
+Just getting `card_value` for each card is not enough. Something must be done with that variable. The `+=` operator will add a value to a variable. For example:
+```
+num = 10
+num += 5
+```
+In the code above, `num` now equals 15. Inside the `for` loop, use the `+=` operator to add `card_value` to `self.value`.
+
+## 740. Assign a boolean to a variable
+
+### 740.1
+
+In blackjack, an Ace can have the value of either 11 or 1, depending on what is better for the player. First check if the hand has an Ace. Below `self.value = 0` create a variable called `has_ace` and set it to `False`. You don't need `self.` before the variable name since we will only use it in this method.
+
+## 750. Subtract a value from a variable with -=
+
+### 750.1
+
+After the last `for` loop you added, check `if has_ace and self.value > 21`. (Note: `if has_ace` means the same thing as `if has_ace == True`.) If the statement evaluates to true, use the `-=` operator to subtract 10 from `self.value`. (This program will not deal with the edge case of multiple Aces having a value of 1.)
+
+#### HINTS
+
+- You should be adding two lines of code: the line with the `if` statement and the contents of the `if` statement.
+
+## 760. Return the hand's value
+
+### 760.1
+
+Add another method to get the value of a hand called `get_value`. The method should return `self.value`.
+
+#### HINTS
+
+- You should be adding two lines of code: the line that defines the method and the line that returns a value from the method.
+
+## 770. Calculate value before returning it
+
+### 770.1
+
+Currently, the value that is returned could be incorrect. In the `get_value` method, before returning `self.value`, calculate the value first by calling `self.calculate_value()`.
+
+## 780. Create is_blackjack method
+
+### 780.1
+
+Create another method called `is_blackjack`. It should return `self.get_value() == 21`. That will be `True` if is a blackjack and `False` otherwise.
+
+## 790. Create display method
+
+### 790.1
+
+Now you will create the final method in the `Hand` class that will display information about the hand. Create a method called `display` that will print "Your hand:".
+
+#### HINTS
+
+- You should be adding two lines of code: the line that defines the method and the line that prints "Your hand:".
+
+## 800. Use triple quotes
+
+### 800.1
+
+You can create a string by either surrounding text with single quotes (`'`) or double quotes 
+(`"`). Whichever quote type you use, you can use the other quote type inside the string. If a string contains both single quotes and double quotes inside, you can surround it with `'''`. Change the print line you just added so it will print either "Dealer's hand:" or "Your hand:" by using this line of code: `print(f'''{"Dealer's" if self.dealer else "Your"} hand:''')`.
+
+#### HINTS
+
+- Make sure to copy and paste the code exactly. Also, think about the code until you understand what it is doing.
+
+## 810. Print every card with a for loop
+
+### 810.1
+
+In the `display` method, add a `for` loop that prints out each card in `self.cards`.
+
+#### HINTS
+
+- Look at the `for` loop in the `calculate_value` method for an example.
+- Each iteration should `print(card)`.
+
+## 820. Print value in display method
+
+### 820.1
+
+If the player is not the dealer, it should print `"Value:", self.get_value()`. To check if something is not true, just add `not` before the thing you are checking.
+
+#### HINTS
+
+- After the `for` loop and still inside the `display` method add `if not self.dealer:`. Inside, print the appropriate text.
+
+## 830. Print a blank line
+
+### 830.1
+
+Now add an empty `print()` statement so a blank line will be printed.
+
+#### HINTS
+
+- After the `if` statement you just added, add the following line: `print()`.
+
+## 840. Call the display method
+
+### 840.1
+
+Change the last line of the program from `print(hand.cards)` to `print(hands.display())`. Then, run your program.
+
+## 850. Use enumerate() in a for loop
+
+### 850.1
+
+When the dealer's cards are printed during the game, only the second one should display. The first card should display as "hidden". In the `for` loop in the `display` method, you will need to get access to the card index since that will determine which to display. Update the first line of the `for` loop to `for index, card in enumerate(self.cards):` to get access to the card and index on each iteration of the loop.
+
+## 860. Print the first dealer's card as "hidden"
+
+### 860.1
+
+Put the `print(card)` line into an `if` statement. First check `index == 0 and self.dealer`. If that evaluates to true, print "hidden". If that evaluates to false, print the card.
+
+#### HINTS
+
+- The full `for` loop should look like this:  
+```py  
+for index, card in enumerate(self.cards):  
+    if index == 0 and self.dealer:  
+        print("hidden")  
+    else:  
+        print(card)  
+```
+
+## 870. Add show_all_dealer_cards parameter
+
+### 870.1
+
+At the end of a game, all the dealers cards should be shown. Add a parameter in the `display` method called `show_all_dealer_cards` and set the default value to `False`.
+
+#### HINTS
+
+- Make sure the first parameter in the `display` method is still `self`.
+
+## 880. Add to an if statement
+
+### 880.1
+
+Now add to the `if` statement so it only prints "hidden" if `show_all_dealer_cards` is not true.
+
+#### HINTS
+
+- The `if` statement should look like: `if index == 0 and self.dealer and not show_all_dealer_cards:`
+
+## 890. Use the result of a method in an if statement
+
+### 890.1
+
+Add one final check to the `if` statement to check if is not a blackjack (`self.is_blackjack()`).
+
+#### HINTS
+
+- Now the `if` statement should look like: `if index == 0 and self.dealer and not show_all_dealer_cards and not self.is_blackjack():`
+
+## 900. Delete code used to test Hand class
+
+### 900.1
+
+You are done creating the `Hand` class so delete all the code under the `Hand` class that was used for testing.
+
+## 910. Create game class
+
+### 910.1
+
+It's time to make the final (and longest) class that runs the game. Create a class called `game`. Inside that class create a method called `play`. Inside that method create a variable called `game_number` and set it to zero.
+
+#### HINTS
+
+- Make sure the `play` method takes a `self` argument.
+
+## 920. Create games_to_play variable
+
+### 920.1
+
+Besides keeping track of the game number we also have to keep track of the number of `games_to_play`. Create that variable and start it at zero.
+
+## 930. Get input from user
+
+### 930.1
+
+A program can request a user's input in the terminal with the `input()` function. For example, the code `name = input("What's your name? ")`, will prompt the user with "What's your name? " and store the inputted text in a variable called `name`. Ask the user for input to the question "How many games do you want to play? " The result should be stored in the `games_to_play` variable. (Note: Keep the `games_to_play = 0` line of code.)
+
+#### HINTS
+
+- Make sure to add a space at the end of the question string.
+- `games_to_play` should be set to equal `input("How many games do you want to play? ")`.
+
+## 940. Cast the result of input as an int
+
+### 940.1
+
+Put the `input` function inside an `int` function to make sure the result is an integer.
+
+## 950. Test play method of the game
+
+### 950.1
+
+Add the following lines at the end of your program (not indented):
+```py
+g = Game()
+g.play()
+```
+Now you can test your program by running `python blackjack.py` in the terminal.
+
+#### HINTS
+
+- Just copy and paste the code.
+
+## 960. Use a "try-except" block
+
+### 960.1
+
+There will be an error if `int()` is called with something that is not a number. In this case, there will be an error that stops the program if a user enters something that is not a number. You can specify how to handle an exception (an error) with a "try-except" block. In this type of block, the program will `try` some code. If there is an error in that code, the program will run the code inside the `except` part of the block instead of stopping the program. Switch the last line in the `play` method with the following "try-except" block:
+```py
+try:
+    games_to_play = int(input("How many games do you want to play?: "))
+except:
+    print("You must enter a number.")
+```
+
+#### HINTS
+
+- Just copy and paste the code.
+
+## 970. Loop until input is correct
+
+### 970.1
+
+Currently, the user gets one chance to input a correct value. Let's make the program keep asking the user for a value until the user enters a number. This can be done with a `while` loop. This type of loop keeps looping "while" something is true. Keep looping until the user enters a number by putting the entire "try-catch" block into a while loop that starts like this: `while games_to_play <= 0:`.
+
+#### HINTS
+
+- Indent the try-except block inside the `while` loop.
+
+## 980. Create main game loop
+
+### 980.1
+
+Now you will create the main game loop. This will loop one time per game played. It should loop `while` `game_number` is less than `games_to_play`. The first line in the loop should increment the `game_number` by one.
+
+#### HINTS
+
+- The main game loop should be after the `while` loop containing the try-except block.
+- The loop should start: `while game_number < games_to_play:`
+- Inside the loop should be: `game_number += 1`
+
+## 990. Create a deck
+
+### 990.1
+
+Inside that loop create a `Deck` object and assign it to a variable named `deck`. Then shuffle the deck.
+
+#### HINTS
+
+- Create a deck with `Deck()` and assign it to variable `deck`.
+- Call the `shuffle()` method of `deck`.
+
+
+## 1000. Create a hand
+
+### 1000.1
+
+Create a variable called `player_hand` and set it to a `Hand` object.
+
+#### HINTS
+
+- This is vary similar to how you created a deck.
+
+## 1010. Create variable dealer_hand
+
+### 1010.1
+
+Create a variable called `dealer_hand` and set it to a `Hand` object. When creating the object, make sure to specify that `dealer=True`.
+
+#### HINTS
+
+- The variable you create should be equal to `Hand(dealer=True)`.
+
+## 1020. Deal multiple times with a loop
+
+### 1020.1
+
+Create a `for` loop that loops 2 times. Each iteration should add a card to the player's hand that is dealt from the deck and add a card to the dealer's hand that is dealt from the deck.
+
+#### HINTS
+
+- Deal cards to both hands in the loop. Here is how you deal to the first hand: `player_hand.add_card(deck.deal())`.
+
+## 1030. Print an empty line in the game loop
+
+### 1030.1
+
+Information will be printed to the console for each game. Start by printing an empty line.
+
+#### HINTS
+
+- Remember `print()`?
+- Do not indent it inside the `for` loop.
+
+## 1040. Use * to repeat a string
+
+### 1040.1
+
+Now print `*` 30 times to make a divider. You can do that with `print("*" * 30)`.
+
+#### HINTS
+
+- Just copy and paste the code.
+
+## 1050. Print current game number
+
+### 1050.1
+
+Print the current game number out of the total number of games. For instance, if the loop is on the 4th game of 10 total games to play, it should print: "Game 4 of 10".
+
+
+#### HINTS
+
+- Use an f-string to include variables inside a string.
+
+## 1060. Print 30 more *
+
+### 1060.1
+
+Print 30 more `*`.
+
+
+#### HINTS
+
+- Use the same code from two lines up
+
+## 1070. Display the player's hand
+
+### 1070.1
+
+Display the player's hand.
+
+#### HINTS
+
+- Use the `display()` method.
+
+## 1080. Display the dealer's hand
+
+### 1080.1
+
+Display the dealer's hand.
+
+#### HINTS
+
+- You actually know how to do this and don't need a hint. 😀
+
+## 1090. Create check_winner method
+
+### 1090.1
+
+At this point in the game, someone could have won if they got a blackjack. The code should check if there is a winner. Let's put the code to check if there is a winner in a separate method of the `Game` class. Create a method called `check_winner`. For now the method should just return `False`.
+
+#### HINTS
+
+- The `check_winner` method should be outside of the `play` method.
+- The method should look like this:  
+```  
+def check_winner(self):  
+    return False  
+```
+
+## 1100. Add arguments to check_winner function
+
+### 1100.1
+
+The `check_winner` should take `player_hand` and `dealer_hand` as arguments.
+
+#### HINTS
+
+- Add the arguments to the function definition, right after `self`.
+
+## 1120. Check if the player busted
+
+### 1120.1
+
+Before `return False`, check if `player_hand.get_value() > 21`. If so, print "You busted. Dealer wins! 😭" and return `True`. Once the program gets to a `return` statement, none of the following statements in the block are run.
+
+#### HINTS
+
+- Inside the `if` statement there should be two lines: one to print and one to return `True`.
+
+## 1130. Check if the dealer busted
+
+### 1130.1
+
+We'll use a few `elif` statements to check for various other conditions. Add an `elif` statement to check if `dealer_hand.get_value() > 21`. If so, print "Dealer busted. You win! 😄" and return `True`.
+
+#### HINTS
+
+- Did you forget a semi-colon after the `elif` statement?
+
+## 1140. Check if both the player and the dealer won
+
+### 1140.1
+
+Add an `elif` statement to check if both players have a blackjack. If so, print "Both players have blackjack! Tie! 🤨" and return `True`.
+
+#### HINTS
+
+- The `elif` statement should start like this: `elif player_hand.is_blackjack() and dealer_hand.is_blackjack():`.
+
+## 1150. Check if the player has a blackjack
+
+### 1150.1
+
+Add an `elif` statement to check if `player_hand` has a blackjack. If so, print "You have blackjack! You win! 😄" and return `True`.
+
+#### HINTS
+
+- Follow the pattern in the code you already have.
+
+## 1160. Check if the dealer has a blackjack
+
+### 1160.1
+
+Add an `elif` statement to check if `dealer_hand` has a blackjack. If so, print "Dealer has blackjack! Dealer wins! 😭" and return `True`.
+
+#### HINTS
+
+- You got this one by yourself.
+
+## 1170. Add a game_over parameter
+
+### 1170.1
+
+The game can also end if both players choose not to get more cards. Add this argument to the `check_winner` method with a default value: `game_over=False`.
+
+#### HINTS
+
+- The `check_winner` method definition should now look like this: `def check_winner(self, player_hand, dearler_hand, game_over=False):`.
+
+## 1180. Check if it is not game over
+
+### 1180.1
+
+Use the new argument. The string of `if` and `elif` statements should only be run `if not game_over`. Make sure the line `return False` is not in the `if` statement.
+
+#### HINTS
+
+- Indent the entire string of `if` and `elif` statements inside the new `if` statement.
+
+## 1190. Check which hand value is greater
+
+### 1190.1
+
+If `game_over` is `True`, check if the player hand's value is more than the dealer hand's value. If so, print "You win! 😄".
+
+#### HINTS
+
+- Add an `else` statement to the `if not game_over` you added in the last lesson.
+- In the `else` statement, add this `if` statement: `if player_hand.get_value() > dealer_hand.get_value():`
+- Put this inside the `if` statement: `print("You win! 😄")`
+
+## 1200. Check for a tie
+
+### 1200.1
+
+Add an `elif` statement to check if both player's hands equal the same value. If so, print "Tie! 🤨".
+
+#### HINTS
+
+- The next hint will show you what your code should look like. See if you can figure it out yourself first.
+- Here is the entire `else` statement:  
+```py  
+else:  
+    if player_hand.get_value() > dealer_hand.get_value():  
+        print("You win! 😄")  
+    elif player_hand.get_value() == dealer_hand.get_value():  
+        print("Tie! 🤨")  
+```
+## 1210. Else dealer wins
+
+### 1210.1
+
+After the `elif` statement, add an `else` statement that prints "Dealer wins! 😭"
+
+## 1220. return True if game_over equals True
+
+### 1220.1
+
+At the exact same level of indentation as the `else:` line you just added, add the line `return True`. This will make the method return `True` if `game_over` equals `True`.
+
+## 1230. Check for a winner
+
+### 1230.1
+
+Now back to the end of the `play` method inside the `while` loop. Add this code:
+```
+if self.check_winner(player_hand, dealer_hand):
+    continue
+```
+The `check_winner` method will return `True` if there is a winner. The `continue` line will continue to the next iteration of the `while` loop. Each iteration is a new game.
+
+
+#### HINTS
+
+- Copy and paste the given code right after the line: `dealer_hand.display()`. Use same level of indentation.
+
+## 1240. Get player input "Hit" or "Stand"
+
+### 1240.1
+
+The player should be able to keep choosing "Hit" or "Stand" until the value of their hand is over 21. Right under the `choice` variable, add a `while` loop that loops while `player_hand`s value is less than 21. Inside the loop add the following line: `choice = input("Please choose 'Hit' or 'Stand': ").lower()`. That line will get a choice as input from the user and convert the input to lowercase letters. 
+
+#### HINTS
+
+- Look at the other `while` loop in your code for an example.
+
+## 1250. Loop should stop if player chooses "Stand"
+
+### 1250.1
+
+The while loop you just added should also stop if the user's choice is "Stand" or "S". Update the line that starts the `while` loop to `while choice not in ["s", "stand"] and player_hand.get_value() < 21:`.
+
+#### HINTS
+
+- Copy and paste the new beginning of the `while` loop.
+
+## 1260. Print empty line after input
+
+### 1260.1
+
+After the input, print an empty line.
+
+#### HINTS
+
+- The `print` statement should be indented the same amount as `choice = input("Please choose 'Hit' or 'Stand': ").lower()`.
+
+## 1270. Keep asking for input until correct input
+
+### 1270.1
+
+The program should keep asking the user for a choice until the user enter's a valid choice. The valid choices are "h", "s", "hit", and "stand". Right after the last `print` statement (same indentation), add a `while` loop that will keep looping until the user enters a valid choice. Use the previous `while` loop as an example. Inside the loop, ask for input again with the line `choice = input("Please enter 'Hit' or 'Stand' (or H/S) ").lower()`.
+
+#### HINTS
+
+- Use this loop: `while choice not in ["h", "s", "hit", "stand"]:`.
+
+## 1280. Print empty line inside loop
+
+### 1280.1
+
+Print an empty line inside the while loop.
+
+#### HINTS
+
+- Check your indentation.
+
+## 1290. Check for hit input
+
+### 1290.1
+
+In the last `while` loop you checked if `choice` was not in a list. Outside of your recently added `while` loop but inside the loop added just before that one, add an `if` statement to check if `choice` is in the list `["hit", "h"]`. If true, add a card to the player's hand that is dealt from the deck.
+
+#### HINTS
+
+- Try again to figure this out. The next hint will show you the exact solution code.
+- Here is the solution code in context:
+```py  
+while choice not in ["s", "stand"] and player_hand.get_value() < 21:  
+    choice = input("Please choose 'Hit' or 'Stand': ").lower()  
+    print()  
+    while choice not in ["h", "s", "hit", "stand"]:  
+        choice = input("Please enter 'Hit' or 'Stand' (or H/S) ").lower()  
+        print()  
+    if choice in ["hit", "h"]:  
+        player_hand.add_card(deck.deal())  
+```
+
+## 1300. Display player's hand in if statement
+
+### 1300.1
+
+Also inside the `if` statement, display the player's hand.
+
+#### HINTS
+
+- Use the `display()` method.
+- Indent the code the same as the line `player_hand.add_card(deck.deal())`.
+
+## 1310. Check for winner after choice
+
+### 1310.1
+
+Outside of all the `while` loops about the player making a choice, check for a winner. Use the same `if` statement and `continue` statement that you used the last time you checked for a winner.
+
+#### HINTS
+
+- Make sure the code is after the `while` loop where the user inputs a choice of hit or stand.
+
+## 1320. Create player_hand_value variable
+
+### 1320.1
+
+Store the value of the player's hand in a variable named `player_hand_value`.
+
+#### HINTS
+
+- This should be indented on the same level as the `if` statement you just added. It should not be in the `if` statement.
+
+## 1330. Create dealer_hand_value variable
+
+### 1330.1
+
+Store the value of the dealer's hand in a variable named `dealer_hand_value`.
+
+## 1340. Make the dealer draw cards
+
+### 1340.1
+
+The dealer should keep drawing cards until `dealer_hand_value` is more than 17. Make this happen with a `while` loop. Inside the loop, make sure the dealer is dealt a card from the deck and `dealer_hand_value` is updated.
+
+#### HINTS
+
+- The first line in the `while` loop should `add_card` to `dealer_hand`. The card should come from `deck.deal()`.
+- Set `dealer_hand_value` just like you did a few lines up.
+
+## 1350. Display all the dealer's cards
+
+### 1350.1
+
+Outside of that last `while` loop, display the dealer's hand. When you call the `display` method, make sure to set `show_all_dealer_cards` to `True`.
+
+#### HINTS
+
+- When you call the `dislpay` method, put `show_all_dealer_cards=True` inside the parenthesis. 
+
+## 1360. Check for a winner again
+
+### 1360.1
+
+Check for a winner again, just like before.
+
+## 1370. Print "Final Results"
+
+### 1370.1
+
+Print "Final Results".
+
+## 1380. Print results for player's hand
+
+### 1380.1
+
+Now print "Your hand:" with `player_hand_value` after the string.
+
+## 1390. Print results for dealer's hand
+
+### 1390.1
+
+Print "Dealer's hand:" with the `dealer_hand_value` after the string.
+
+## 1400. Check winner after game is over
+
+### 1400.1
+
+Call `self.check_winner` one final time. This time it should not be in an `if` statement. Pass in the hands like before but this time add a third argument of `True` to indicate that the game is over.
+
+#### HINTS
+
+- The line should look like this: `self.check_winner(player_hand, dealer_hand, True)`.
+
+## 1410. Print "Thanks for playing!"
+
+### 1410.1
+
+At this point in the code, the game is over. Outside of the outer `while` loop in the `play` method, add this final line: `print("\nThanks for playing!")`. Note the `\n` in the string. That will add a new line.
+
+#### HINTS
+
+- Check your indentation.
