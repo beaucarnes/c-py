@@ -66,6 +66,7 @@ class Hand:
             self.value -= 10
 
     def get_value(self):
+        self.calculate_value()
         return self.value
 
 deck = Deck()
