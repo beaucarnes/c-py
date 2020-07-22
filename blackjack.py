@@ -54,6 +54,7 @@ class Hand:
 
     def calculate_value(self):
         self.value = 0
+        has_ace = False
 
         for card in self.cards:
             card_value = int(card.rank["value"])
