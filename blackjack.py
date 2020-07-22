@@ -73,7 +73,7 @@ class Hand:
         return self.get_value() == 21
 
     def display(self):
-        print("Your hand:")
+        print(f'''{"Dealer's" if self.dealer else "Your"} hand:''')
 
 deck = Deck()
 deck.shuffle()
