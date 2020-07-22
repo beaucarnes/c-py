@@ -62,6 +62,9 @@ class Hand:
             if card.rank["rank"] == "A":
                 has_ace = True
 
+        if has_ace and self.value > 21:
+            self.value -= 10
+
 deck = Deck()
 deck.shuffle()
 
