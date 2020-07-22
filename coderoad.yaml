@@ -460,6 +460,12 @@ levels:
         setup:
           files:
             - blackjack.py
+  - id: '745'
+    steps:
+      - id: '745.1'
+        setup:
+          files:
+            - blackjack.py
   - id: '750'
     steps:
       - id: '750.1'

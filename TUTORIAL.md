@@ -859,6 +859,20 @@ In the code above, `num` now equals 15. Inside the `for` loop, use the `+=` oper
 
 In blackjack, an Ace can have the value of either 11 or 1, depending on what is better for the player. First check if the hand has an Ace. Below `self.value = 0` create a variable called `has_ace` and set it to `False`. You don't need `self.` before the variable name since we will only use it in this method.
 
+## 745. Check if there is an ace
+
+### 745.1
+
+When looping through `self.cards` to calculate `self.value`, the code should also check if one of the cards is an ace. Inside the `for` loop, add the following code:
+```py
+if card.rank["rank"] == "A":
+    has_ace = True
+``` 
+
+#### HINTS
+
+- Copy and paste the code at the same indentation and after the line `self.value += card_value`.
+
 ## 750. Subtract a value from a variable with -=
 
 ### 750.1
