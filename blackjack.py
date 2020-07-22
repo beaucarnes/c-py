@@ -77,6 +77,9 @@ class Hand:
         for card in self.cards:
             print(card)
 
+        if not self.dealer:
+            print("Value:", self.get_value())
+
 deck = Deck()
 deck.shuffle()
 
