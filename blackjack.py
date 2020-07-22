@@ -72,6 +72,9 @@ class Hand:
     def is_blackjack(self):
         return self.get_value() == 21
 
+    def display(self):
+        print("Your hand:")
+
 deck = Deck()
 deck.shuffle()
 
