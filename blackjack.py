@@ -65,6 +65,9 @@ class Hand:
         if has_ace and self.value > 21:
             self.value -= 10
 
+    def get_value(self):
+        return self.value
+
 deck = Deck()
 deck.shuffle()
 
