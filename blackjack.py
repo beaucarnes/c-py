@@ -89,7 +89,10 @@ class Game:
         game_number = 0
         games_to_play = 0
 
-        games_to_play = int(input("How many games do you want to play? "))
+        try:
+            games_to_play = int(input("How many games do you want to play?: "))
+        except:
+            print("You must enter a number.")
 
 g = Game()
 g.play()
