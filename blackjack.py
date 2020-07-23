@@ -89,5 +89,4 @@ class Game:
         game_number = 0
         games_to_play = 0
 
-        games_to_play = input("How many games do you want to play? ")
-        
+        games_to_play = int(input("How many games do you want to play? "))
