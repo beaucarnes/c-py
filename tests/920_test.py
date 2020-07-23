@@ -1,13 +1,13 @@
-import unittest
-import sys
-sys.path.append('..')
+# import unittest
+# import sys
+# sys.path.append('..')
 
-from blackjack import *
+# from blackjack import *
 
-class PythonTest(unittest.TestCase):
-    def test_python(self):
-        text = open("blackjack.py").read()
-        text_found = text.find('games_to_play = 0') or text.find('games_to_play=0')
-        self.assertTrue(text_found > 0, "Code should contain Game class with play method and 'games_to_play = 0'.")
-if __name__ == '__main__':
-    unittest.main() 
+# class PythonTest(unittest.TestCase):
+#     def test_python(self):
+#         text = open("blackjack.py").read()
+#         text_found = text.find('games_to_play = 0') or text.find('games_to_play=0')
+#         self.assertTrue(text_found > 0, "Code should contain Game class with play method and 'games_to_play = 0'.")
+# if __name__ == '__main__':
+#     unittest.main() 
