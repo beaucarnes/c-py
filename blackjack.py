@@ -72,7 +72,7 @@ class Hand:
     def is_blackjack(self):
         return self.get_value() == 21
 
-    def display(self):
+    def display(self, show_all_dealer_cards=False):
         print(f'''{"Dealer's" if self.dealer else "Your"} hand:''')
         for index, card in enumerate(self.cards):
             if index == 0 and self.dealer:
