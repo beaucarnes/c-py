@@ -90,3 +90,6 @@ class Game:
         games_to_play = 0
 
         games_to_play = int(input("How many games do you want to play? "))
+
+g = Game()
+g.play()
