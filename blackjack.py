@@ -101,5 +101,7 @@ class Game:
             deck = Deck()
             deck.shuffle()
 
+            player_hand = Hand()
+
 g = Game()
 deck = Deck()
