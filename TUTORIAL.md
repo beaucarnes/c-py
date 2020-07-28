@@ -1258,7 +1258,7 @@ We'll use a few `elif` statements to check for various other conditions. Add an 
 
 - Did you forget a semi-colon after the `elif` statement?
 
-## 1140. Check if both the player and the dealer won
+## 1140. Check if both player and dealer won
 
 ### 1140.1
 
@@ -1375,7 +1375,7 @@ The player should be able to keep choosing "Hit" or "Stand" until the value of t
 
 - Look at the other `while` loop in your code for an example.
 
-## 1250. Loop should stop if player chooses "Stand"
+## 1250. End loop if player chooses "Stand"
 
 ### 1250.1
 
@@ -1395,7 +1395,7 @@ After the input, print an empty line.
 
 - The `print` statement should be indented the same amount as `choice = input("Please choose 'Hit' or 'Stand': ").lower()`.
 
-## 1270. Keep asking for input until correct input
+## 1270. Keep asking for input until correct
 
 ### 1270.1
 
