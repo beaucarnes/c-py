@@ -969,7 +969,7 @@ Change the last line of the program from `print(hand.cards)` to `print(hands.dis
 
 When the dealer's cards are printed during the game, only the second one should display. The first card should display as "hidden". In the `for` loop in the `display` method, you will need to get access to the card index since that will determine which to display. Update the first line of the `for` loop to `for index, card in enumerate(self.cards):` to get access to the card and index on each iteration of the loop.
 
-## 860. Print the first dealer's card as "hidden"
+## 860. Print first dealer's card as "hidden"
 
 ### 860.1
 
@@ -1006,7 +1006,7 @@ Now add to the `if` statement so it only prints "hidden" if `show_all_dealer_car
 
 - The `if` statement should look like: `if index == 0 and self.dealer and not show_all_dealer_cards:`
 
-## 890. Use the result of a method in an if statement
+## 890. Use result of a method in if statement
 
 ### 890.1
 
@@ -1130,7 +1130,7 @@ Create a variable called `player_hand` and set it to a `Hand` object.
 
 - This is vary similar to how you created a deck.
 
-<!-- ## 1010. Create variable dealer_hand
+## 1010. Create variable dealer_hand
 
 ### 1010.1
 
@@ -1536,4 +1536,4 @@ At this point in the code, the game is over. Outside of the outer `while` loop i
 
 #### HINTS
 
-- Check your indentation. -->
+- Check your indentation.
