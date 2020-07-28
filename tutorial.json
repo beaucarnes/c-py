@@ -2819,12 +2819,6 @@
       "steps": [
         {
           "id": "1010.1",
-          "setup": {
-            "files": [
-              "blackjack.py"
-            ],
-            "commits": []
-          },
           "content": "Create a variable called `dealer_hand` and set it to a `Hand` object. When creating the object, make sure to specify that `dealer=True`.",
           "hints": [
             "The variable you create should be equal to `Hand(dealer=True)`."
@@ -2840,12 +2834,6 @@
       "steps": [
         {
           "id": "1020.1",
-          "setup": {
-            "files": [
-              "blackjack.py"
-            ],
-            "commits": []
-          },
           "content": "Create a `for` loop that loops 2 times. Each iteration should add a card to the player's hand that is dealt from the deck and add a card to the dealer's hand that is dealt from the deck.",
           "hints": [
             "Deal cards to both hands in the loop. Here is how you deal to the first hand: `player_hand.add_card(deck.deal())`."
@@ -2861,12 +2849,6 @@
       "steps": [
         {
           "id": "1030.1",
-          "setup": {
-            "files": [
-              "blackjack.py"
-            ],
-            "commits": []
-          },
           "content": "Information will be printed to the console for each game. Start by printing an empty line.",
           "hints": [
             "Remember `print()`?",
@@ -2883,12 +2865,6 @@
       "steps": [
         {
           "id": "1040.1",
-          "setup": {
-            "files": [
-              "blackjack.py"
-            ],
-            "commits": []
-          },
           "content": "Now print `*` 30 times to make a divider. You can do that with `print(\"*\" * 30)`.",
           "hints": [
             "Just copy and paste the code."
@@ -2904,12 +2880,6 @@
       "steps": [
         {
           "id": "1050.1",
-          "setup": {
-            "files": [
-              "blackjack.py"
-            ],
-            "commits": []
-          },
           "content": "Print the current game number out of the total number of games. For instance, if the loop is on the 4th game of 10 total games to play, it should print: \"Game 4 of 10\".",
           "hints": [
             "Use an f-string to include variables inside a string."
@@ -2925,12 +2895,6 @@
       "steps": [
         {
           "id": "1060.1",
-          "setup": {
-            "files": [
-              "blackjack.py"
-            ],
-            "commits": []
-          },
           "content": "Print 30 more `*`.",
           "hints": [
             "Use the same code from two lines up"
@@ -2946,12 +2910,6 @@
       "steps": [
         {
           "id": "1070.1",
-          "setup": {
-            "files": [
-              "blackjack.py"
-            ],
-            "commits": []
-          },
           "content": "Display the player's hand.",
           "hints": [
             "Use the `display()` method."
@@ -2967,12 +2925,6 @@
       "steps": [
         {
           "id": "1080.1",
-          "setup": {
-            "files": [
-              "blackjack.py"
-            ],
-            "commits": []
-          },
           "content": "Display the dealer's hand.",
           "hints": [
             "You actually know how to do this and don't need a hint. 😀"
@@ -2988,12 +2940,6 @@
       "steps": [
         {
           "id": "1090.1",
-          "setup": {
-            "files": [
-              "blackjack.py"
-            ],
-            "commits": []
-          },
           "content": "At this point in the game, someone could have won if they got a blackjack. The code should check if there is a winner. Let's put the code to check if there is a winner in a separate method of the `Game` class. Create a method called `check_winner`. For now the method should just return `False`.",
           "hints": [
             "The `check_winner` method should be outside of the `play` method.",
@@ -3010,12 +2956,6 @@
       "steps": [
         {
           "id": "1100.1",
-          "setup": {
-            "files": [
-              "blackjack.py"
-            ],
-            "commits": []
-          },
           "content": "The `check_winner` should take `player_hand` and `dealer_hand` as arguments.",
           "hints": [
             "Add the arguments to the function definition, right after `self`."
@@ -3031,12 +2971,6 @@
       "steps": [
         {
           "id": "1120.1",
-          "setup": {
-            "files": [
-              "blackjack.py"
-            ],
-            "commits": []
-          },
           "content": "Before `return False`, check if `player_hand.get_value() > 21`. If so, print \"You busted. Dealer wins! 😭\" and return `True`. Once the program gets to a `return` statement, none of the following statements in the block are run.",
           "hints": [
             "Inside the `if` statement there should be two lines: one to print and one to return `True`."
@@ -3052,12 +2986,6 @@
       "steps": [
         {
           "id": "1130.1",
-          "setup": {
-            "files": [
-              "blackjack.py"
-            ],
-            "commits": []
-          },
           "content": "We'll use a few `elif` statements to check for various other conditions. Add an `elif` statement to check if `dealer_hand.get_value() > 21`. If so, print \"Dealer busted. You win! 😄\" and return `True`.",
           "hints": [
             "Did you forget a semi-colon after the `elif` statement?"
@@ -3073,12 +3001,6 @@
       "steps": [
         {
           "id": "1140.1",
-          "setup": {
-            "files": [
-              "blackjack.py"
-            ],
-            "commits": []
-          },
           "content": "Add an `elif` statement to check if both players have a blackjack. If so, print \"Both players have blackjack! Tie! 🤨\" and return `True`.",
           "hints": [
             "The `elif` statement should start like this: `elif player_hand.is_blackjack() and dealer_hand.is_blackjack():`."
@@ -3094,12 +3016,6 @@
       "steps": [
         {
           "id": "1150.1",
-          "setup": {
-            "files": [
-              "blackjack.py"
-            ],
-            "commits": []
-          },
           "content": "Add an `elif` statement to check if `player_hand` has a blackjack. If so, print \"You have blackjack! You win! 😄\" and return `True`.",
           "hints": [
             "Follow the pattern in the code you already have."
@@ -3115,12 +3031,6 @@
       "steps": [
         {
           "id": "1160.1",
-          "setup": {
-            "files": [
-              "blackjack.py"
-            ],
-            "commits": []
-          },
           "content": "Add an `elif` statement to check if `dealer_hand` has a blackjack. If so, print \"Dealer has blackjack! Dealer wins! 😭\" and return `True`.",
           "hints": [
             "You got this one by yourself."
@@ -3136,12 +3046,6 @@
       "steps": [
         {
           "id": "1170.1",
-          "setup": {
-            "files": [
-              "blackjack.py"
-            ],
-            "commits": []
-          },
           "content": "The game can also end if both players choose not to get more cards. Add this argument to the `check_winner` method with a default value: `game_over=False`.",
           "hints": [
             "The `check_winner` method definition should now look like this: `def check_winner(self, player_hand, dearler_hand, game_over=False):`."
@@ -3157,12 +3061,6 @@
       "steps": [
         {
           "id": "1180.1",
-          "setup": {
-            "files": [
-              "blackjack.py"
-            ],
-            "commits": []
-          },
           "content": "Use the new argument. The string of `if` and `elif` statements should only be run `if not game_over`. Make sure the line `return False` is not in the `if` statement.",
           "hints": [
             "Indent the entire string of `if` and `elif` statements inside the new `if` statement."
@@ -3178,12 +3076,6 @@
       "steps": [
         {
           "id": "1190.1",
-          "setup": {
-            "files": [
-              "blackjack.py"
-            ],
-            "commits": []
-          },
           "content": "If `game_over` is `True`, check if the player hand's value is more than the dealer hand's value. If so, print \"You win! 😄\".",
           "hints": [
             "Add an `else` statement to the `if not game_over` you added in the last lesson.",
@@ -3201,12 +3093,6 @@
       "steps": [
         {
           "id": "1200.1",
-          "setup": {
-            "files": [
-              "blackjack.py"
-            ],
-            "commits": []
-          },
           "content": "Add an `elif` statement to check if both player's hands equal the same value. If so, print \"Tie! 🤨\".",
           "hints": [
             "The next hint will show you what your code should look like. See if you can figure it out yourself first.",
@@ -3223,12 +3109,6 @@
       "steps": [
         {
           "id": "1210.1",
-          "setup": {
-            "files": [
-              "blackjack.py"
-            ],
-            "commits": []
-          },
           "content": "After the `elif` statement, add an `else` statement that prints \"Dealer wins! 😭\""
         }
       ]
@@ -3241,12 +3121,6 @@
       "steps": [
         {
           "id": "1220.1",
-          "setup": {
-            "files": [
-              "blackjack.py"
-            ],
-            "commits": []
-          },
           "content": "At the exact same level of indentation as the `else:` line you just added, add the line `return True`. This will make the method return `True` if `game_over` equals `True`."
         }
       ]
@@ -3259,12 +3133,6 @@
       "steps": [
         {
           "id": "1230.1",
-          "setup": {
-            "files": [
-              "blackjack.py"
-            ],
-            "commits": []
-          },
           "content": "Now back to the end of the `play` method inside the `while` loop. Add this code:\n```\nif self.check_winner(player_hand, dealer_hand):\n    continue\n```\nThe `check_winner` method will return `True` if there is a winner. The `continue` line will continue to the next iteration of the `while` loop. Each iteration is a new game.",
           "hints": [
             "Copy and paste the given code right after the line: `dealer_hand.display()`. Use same level of indentation."
@@ -3280,12 +3148,6 @@
       "steps": [
         {
           "id": "1240.1",
-          "setup": {
-            "files": [
-              "blackjack.py"
-            ],
-            "commits": []
-          },
           "content": "The player should be able to keep choosing \"Hit\" or \"Stand\" until the value of their hand is over 21. Right under the `choice` variable, add a `while` loop that loops while `player_hand`s value is less than 21. Inside the loop add the following line: `choice = input(\"Please choose 'Hit' or 'Stand': \").lower()`. That line will get a choice as input from the user and convert the input to lowercase letters.",
           "hints": [
             "Look at the other `while` loop in your code for an example."
@@ -3301,12 +3163,6 @@
       "steps": [
         {
           "id": "1250.1",
-          "setup": {
-            "files": [
-              "blackjack.py"
-            ],
-            "commits": []
-          },
           "content": "The while loop you just added should also stop if the user's choice is \"Stand\" or \"S\". Update the line that starts the `while` loop to `while choice not in [\"s\", \"stand\"] and player_hand.get_value() < 21:`.",
           "hints": [
             "Copy and paste the new beginning of the `while` loop."
@@ -3322,12 +3178,6 @@
       "steps": [
         {
           "id": "1260.1",
-          "setup": {
-            "files": [
-              "blackjack.py"
-            ],
-            "commits": []
-          },
           "content": "After the input, print an empty line.",
           "hints": [
             "The `print` statement should be indented the same amount as `choice = input(\"Please choose 'Hit' or 'Stand': \").lower()`."
@@ -3343,12 +3193,6 @@
       "steps": [
         {
           "id": "1270.1",
-          "setup": {
-            "files": [
-              "blackjack.py"
-            ],
-            "commits": []
-          },
           "content": "The program should keep asking the user for a choice until the user enter's a valid choice. The valid choices are \"h\", \"s\", \"hit\", and \"stand\". Right after the last `print` statement (same indentation), add a `while` loop that will keep looping until the user enters a valid choice. Use the previous `while` loop as an example. Inside the loop, ask for input again with the line `choice = input(\"Please enter 'Hit' or 'Stand' (or H/S) \").lower()`.",
           "hints": [
             "Use this loop: `while choice not in [\"h\", \"s\", \"hit\", \"stand\"]:`."
@@ -3364,12 +3208,6 @@
       "steps": [
         {
           "id": "1280.1",
-          "setup": {
-            "files": [
-              "blackjack.py"
-            ],
-            "commits": []
-          },
           "content": "Print an empty line inside the while loop.",
           "hints": [
             "Check your indentation."
@@ -3385,12 +3223,6 @@
       "steps": [
         {
           "id": "1290.1",
-          "setup": {
-            "files": [
-              "blackjack.py"
-            ],
-            "commits": []
-          },
           "content": "In the last `while` loop you checked if `choice` was not in a list. Outside of your recently added `while` loop but inside the loop added just before that one, add an `if` statement to check if `choice` is in the list `[\"hit\", \"h\"]`. If true, add a card to the player's hand that is dealt from the deck.",
           "hints": [
             "Try again to figure this out. The next hint will show you the exact solution code.",
@@ -3407,12 +3239,6 @@
       "steps": [
         {
           "id": "1300.1",
-          "setup": {
-            "files": [
-              "blackjack.py"
-            ],
-            "commits": []
-          },
           "content": "Also inside the `if` statement, display the player's hand.",
           "hints": [
             "Use the `display()` method.",
@@ -3429,12 +3255,6 @@
       "steps": [
         {
           "id": "1310.1",
-          "setup": {
-            "files": [
-              "blackjack.py"
-            ],
-            "commits": []
-          },
           "content": "Outside of all the `while` loops about the player making a choice, check for a winner. Use the same `if` statement and `continue` statement that you used the last time you checked for a winner.",
           "hints": [
             "Make sure the code is after the `while` loop where the user inputs a choice of hit or stand."
@@ -3450,12 +3270,6 @@
       "steps": [
         {
           "id": "1320.1",
-          "setup": {
-            "files": [
-              "blackjack.py"
-            ],
-            "commits": []
-          },
           "content": "Store the value of the player's hand in a variable named `player_hand_value`.",
           "hints": [
             "This should be indented on the same level as the `if` statement you just added. It should not be in the `if` statement."

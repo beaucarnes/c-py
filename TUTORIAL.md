@@ -1130,7 +1130,7 @@ Create a variable called `player_hand` and set it to a `Hand` object.
 
 - This is vary similar to how you created a deck.
 
-## 1010. Create variable dealer_hand
+<!-- ## 1010. Create variable dealer_hand
 
 ### 1010.1
 
@@ -1536,4 +1536,4 @@ At this point in the code, the game is over. Outside of the outer `while` loop i
 
 #### HINTS
 
-- Check your indentation.
+- Check your indentation. -->
