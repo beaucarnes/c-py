@@ -2808,17 +2808,9 @@
               "545eda6e0f78dc3e79b1c4a641a61ccd5f4b4840"
             ]
           }
-        }
-      ]
-    },
-    {
-      "id": "1010",
-      "title": "Create variable dealer_hand",
-      "summary": "",
-      "content": "",
-      "steps": [
+        },
         {
-          "id": "1010.1",
+          "id": "1000.2",
           "content": "Create a variable called `dealer_hand` and set it to a `Hand` object. When creating the object, make sure to specify that `dealer=True`.",
           "hints": [
             "The variable you create should be equal to `Hand(dealer=True)`."
