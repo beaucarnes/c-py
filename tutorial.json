@@ -2089,7 +2089,7 @@
               "blackjack.py"
             ],
             "commits": [
-              "5f50e0f5a07ee00b4f37f691b80383d7b1bdbaa6"
+              "d24455b33aa6fe8da8cd870327be913d9aecaee4"
             ]
           },
           "content": "When looping through `self.cards` to calculate `self.value`, the code should also check if one of the cards is an ace. Inside the `for` loop, add the following code:\n```py\nif card.rank[\"rank\"] == \"A\":\n    has_ace = True\n```",
@@ -2098,7 +2098,7 @@
           ],
           "solution": {
             "commits": [
-              "38154826c64e40fc16a57640e279578861761b57"
+              "96b246f244d60e071e8fdbf496da2678e404f34a"
             ]
           }
         }
@@ -2117,7 +2117,7 @@
               "blackjack.py"
             ],
             "commits": [
-              "8c2101c399a5501c297427094c8b530eb5fd79f8"
+              "0cbf4c8f1417f25479793e2d100030cd8d887d41"
             ]
           },
           "content": "After the last `for` loop you added, check `if has_ace and self.value > 21`. (Note: `if has_ace` means the same thing as `if has_ace == True`.) If the statement evaluates to true, use the `-=` operator to subtract 10 from `self.value`. (This program will not deal with the edge case of multiple Aces having a value of 1.)",
@@ -2126,7 +2126,7 @@
           ],
           "solution": {
             "commits": [
-              "5bde6ca74f5f4c0cd42d5c8fbf1d14724fdf28c3"
+              "22ec64ebcf54215850d49b62d55fd6536f5eda85"
             ]
           }
         }
@@ -2145,7 +2145,7 @@
               "blackjack.py"
             ],
             "commits": [
-              "9d1c282c8d38a9b67d5a14860312554ea64ac51a"
+              "b68bb8fc745c6ba9076b60163445f198f5b30c71"
             ]
           },
           "content": "Add another method to get the value of a hand called `get_value`. The method should return `self.value`.",
@@ -2154,7 +2154,7 @@
           ],
           "solution": {
             "commits": [
-              "95f461a2993c0621cc78d5c0a3c63129739dbc25"
+              "940b60ba9b49e47b992d91769037c9d50a6dafb3"
             ]
           }
         }
@@ -2173,13 +2173,13 @@
               "blackjack.py"
             ],
             "commits": [
-              "6d3e90c95edc3d3a5880f571b2a97b6db5a8f174"
+              "69290388a3dbcd9d42906af129a3081b6d998b3d"
             ]
           },
           "content": "Currently, the value that is returned could be incorrect. In the `get_value` method, before returning `self.value`, calculate the value first by calling `self.calculate_value()`.",
           "solution": {
             "commits": [
-              "3f3a3a08896a7a4e2e8c60c59593a314b645d084"
+              "ac08910f57262fd99d42047740f27bb573d17245"
             ]
           }
         }
@@ -2198,13 +2198,13 @@
               "blackjack.py"
             ],
             "commits": [
-              "149065e263bed0997aed6bedd36849211d806e48"
+              "c018c439052f7896291ce913ff5572568501ba1f"
             ]
           },
           "content": "Create another method called `is_blackjack`. It should return `self.get_value() == 21`. That will be `True` if is a blackjack and `False` otherwise.",
           "solution": {
             "commits": [
-              "c377adb84422c71b2e0f6121136e06230d3cb050"
+              "d4cbc316ff9a5c123f3cdfe8bc4c0b11b4343be3"
             ]
           }
         }
@@ -2223,7 +2223,7 @@
               "blackjack.py"
             ],
             "commits": [
-              "65ef38ad79dbc0946b4e0a3302939de0b73a7c20"
+              "de5af5694f767a04eea5bc7156515624bf780ffe"
             ]
           },
           "content": "Now you will create the final method in the `Hand` class that will display information about the hand. Create a method called `display` that will print \"Your hand:\".",
@@ -2232,7 +2232,7 @@
           ],
           "solution": {
             "commits": [
-              "cbe04a2f2879ace7d82f2a7af3b681606422563f"
+              "ae2b893b5b3438a73ac68eea8ef27b99025c5a78"
             ]
           }
         }
@@ -2251,7 +2251,7 @@
               "blackjack.py"
             ],
             "commits": [
-              "c59234ee516d67d13c8ab6055cecc2386756891e"
+              "8735a9343acc2fd8f3c25729eeff304857131303"
             ]
           },
           "content": "You can create a string by either surrounding text with single quotes (`'`) or double quotes \n(`\"`). Whichever quote type you use, you can use the other quote type inside the string. If a string contains both single quotes and double quotes inside, you can surround it with `'''`. Change the print line you just added so it will print either \"Dealer's hand:\" or \"Your hand:\" by using this line of code: `print(f'''{\"Dealer's\" if self.dealer else \"Your\"} hand:''')`.",
@@ -2260,7 +2260,7 @@
           ],
           "solution": {
             "commits": [
-              "1365c95ce63ec5990a0242371961f722d8b5dc09"
+              "03041042f2329afb532b329fd63dbfaeebef9835"
             ]
           }
         }
@@ -2279,7 +2279,7 @@
               "blackjack.py"
             ],
             "commits": [
-              "510e10fa203607e9194eaebb96d5868441033c6e"
+              "08f1eb079fa917a4315edff79d6b8ad77e1a5251"
             ]
           },
           "content": "In the `display` method, add a `for` loop that prints out each card in `self.cards`.",
@@ -2289,7 +2289,7 @@
           ],
           "solution": {
             "commits": [
-              "87e7469547039931ac5268af7d4f04f89e03787e"
+              "08114b7c517dffe67cb54338937d9c368899adf8"
             ]
           }
         }
@@ -2308,7 +2308,7 @@
               "blackjack.py"
             ],
             "commits": [
-              "9ab105650c82f3ddfc3aa95aa7c690fd0cfcee14"
+              "9f026b6f572d6d78a832fd1968b0a90bcdd8642c"
             ]
           },
           "content": "If the player is not the dealer, it should print `\"Value:\", self.get_value()`. To check if something is not true, just add `not` before the thing you are checking.",
@@ -2317,7 +2317,7 @@
           ],
           "solution": {
             "commits": [
-              "9fe319f9c99f97a198ebb839a1553a4e7f0be1c8"
+              "4785a106199844e4f028282065175f668a60b870"
             ]
           }
         }
@@ -2336,7 +2336,7 @@
               "blackjack.py"
             ],
             "commits": [
-              "6cae429f6bf48af73e948c6c562489b3dab77ceb"
+              "f4fd92de77eaed96da1e7211b64186a493d6139b"
             ]
           },
           "content": "Now add an empty `print()` statement so a blank line will be printed.",
@@ -2345,7 +2345,7 @@
           ],
           "solution": {
             "commits": [
-              "21e67604249a5d5ce176116f55633e784fe87673"
+              "0e40e2ea5e4965078546a317c0a3c88b311811a3"
             ]
           }
         }
@@ -2364,13 +2364,13 @@
               "blackjack.py"
             ],
             "commits": [
-              "0578036cee57374d82aebeb2b40ee0abf11e8637"
+              "e062ae49ec2d0cd43dde837714ce4e547b94dee5"
             ]
           },
           "content": "Change the last line of the program from `print(hand.cards)` to `print(hands.display())`. Then, run your program.",
           "solution": {
             "commits": [
-              "08a0cf93b054d7479766640927e87bb9dd0a9b87"
+              "558d6543c0d7e3b9354f80955a1821408711837c"
             ]
           }
         }
@@ -2389,13 +2389,13 @@
               "blackjack.py"
             ],
             "commits": [
-              "f6a6e5919a6725bdef8be594efe20c908d7a7397"
+              "6ede2a4e9f552a9c705de7144f1af849fe875e80"
             ]
           },
           "content": "When the dealer's cards are printed during the game, only the second one should display. The first card should display as \"hidden\". In the `for` loop in the `display` method, you will need to get access to the card index since that will determine which to display. Update the first line of the `for` loop to `for index, card in enumerate(self.cards):` to get access to the card and index on each iteration of the loop.",
           "solution": {
             "commits": [
-              "d6897356392709638909e1350ab6806e37cd8709"
+              "20032b89441614ca0043ad13f030bd97a3bf2eb6"
             ]
           }
         }
@@ -2414,7 +2414,7 @@
               "blackjack.py"
             ],
             "commits": [
-              "1b4db44ea318e4164453aa0289145a4485cb4e70"
+              "36987e66481f71f13e1aaac9e494f83be947c769"
             ]
           },
           "content": "Put the `print(card)` line into an `if` statement. First check `index == 0 and self.dealer`. If that evaluates to true, print \"hidden\". If that evaluates to false, print the card.",
@@ -2423,7 +2423,7 @@
           ],
           "solution": {
             "commits": [
-              "1f9cbf2212902640c5f166915bc59d1ffe7c7e86"
+              "64574e719f64245439b0cdd260826cbdac5c5bd1"
             ]
           }
         }
@@ -2442,7 +2442,7 @@
               "blackjack.py"
             ],
             "commits": [
-              "af8d97ab474a452d68b17c1697e315527f85a6ec"
+              "6027ccc7db421d1f6b94ac7283d7b08b815d2097"
             ]
           },
           "content": "At the end of a game, all the dealers cards should be shown. Add a parameter in the `display` method called `show_all_dealer_cards` and set the default value to `False`.",
@@ -2451,7 +2451,7 @@
           ],
           "solution": {
             "commits": [
-              "9a1f043cbfdee463839f8618ea68f315a902a1a7"
+              "e9792de601de4c54814d83daee7eb6a4a538a71c"
             ]
           }
         }
@@ -2470,7 +2470,7 @@
               "blackjack.py"
             ],
             "commits": [
-              "24ac2ff28326a2048ba04b1fcf625f1de63ceb10"
+              "628763c1d2823b758dfabf7a9df89a44c39d5dad"
             ]
           },
           "content": "Now add to the `if` statement so it only prints \"hidden\" if `show_all_dealer_cards` is not true.",
@@ -2479,7 +2479,7 @@
           ],
           "solution": {
             "commits": [
-              "fcfff4219d93fcfd302fa90ee6790086defbc46e"
+              "87d1490738505f8c2d1ee1295e2674da86674248"
             ]
           }
         }
@@ -2498,7 +2498,7 @@
               "blackjack.py"
             ],
             "commits": [
-              "47889552f3812caaebceab3aaa1d99d0d8e092ea"
+              "c91b10f902107c2d9c176ee39432e7c829aed66b"
             ]
           },
           "content": "Add one final check to the `if` statement to check if is not a blackjack (`self.is_blackjack()`).",
@@ -2521,13 +2521,13 @@
               "blackjack.py"
             ],
             "commits": [
-              "585d3f1d1b46b5c6ed727e0c0bc101eec0e4fe5d"
+              "188302300e44b591b77822820b48871bf93a42d0"
             ]
           },
           "content": "You are done creating the `Hand` class so delete all the code under the `Hand` class that was used for testing.",
           "solution": {
             "commits": [
-              "7085367907491746fc66859c27a0cbb2da854d1b"
+              "8a6399ea937767a3f83fa5c238d70a6160cf84ec"
             ]
           }
         }
@@ -2546,7 +2546,7 @@
               "blackjack.py"
             ],
             "commits": [
-              "fc6c7c43ded95f7375caee0dfcfbc77815c84b6f"
+              "9c2a7d25594ab03be25a5489fe570f7ed725846a"
             ]
           },
           "content": "It's time to make the final (and longest) class that runs the game. Create a class called `game`. Inside that class create a method called `play`. Inside that method create a variable called `game_number` and set it to zero.",
@@ -2555,7 +2555,7 @@
           ],
           "solution": {
             "commits": [
-              "8a5ba6d93566051b197283edeedc4b7404659fb0"
+              "3be4b5d036c9b9b007570ff92d6b2ec2aa8295ed"
             ]
           }
         }
@@ -2574,13 +2574,13 @@
               "blackjack.py"
             ],
             "commits": [
-              "c40f6d7b046c653a6d98806f2870f77c0bbc63b1"
+              "4f355dfa7578f1cfc5d85b4b789fcffa68f7d267"
             ]
           },
           "content": "Besides keeping track of the game number we also have to keep track of the number of `games_to_play`. Create that variable and start it at zero.",
           "solution": {
             "commits": [
-              "983da98811a6ca767a592c54ac975a85b5e767c6"
+              "0822fdbb38eea13c94030a21d28488f476388819"
             ]
           }
         }
@@ -2599,7 +2599,7 @@
               "blackjack.py"
             ],
             "commits": [
-              "cb97e37b67cac313db272663de6ba8b45c2edc1f"
+              "fe3af7768579dbca8898f3f42e5539d4c9341510"
             ]
           },
           "content": "A program can request a user's input in the terminal with the `input()` function. For example, the code `name = input(\"What's your name? \")`, will prompt the user with \"What's your name? \" and store the inputted text in a variable called `name`. Ask the user for input to the question \"How many games do you want to play? \" The result should be stored in the `games_to_play` variable. (Note: Keep the `games_to_play = 0` line of code.)",
@@ -2609,7 +2609,7 @@
           ],
           "solution": {
             "commits": [
-              "ed082cfac2bdc9e27213ee7e5570b574314f9a9d"
+              "79dc42262ae467c0676265ca0dffd5dfe28c8f89"
             ]
           }
         }
@@ -2628,13 +2628,13 @@
               "blackjack.py"
             ],
             "commits": [
-              "244b032b98d0a3842fd1ff2498d21af54d0b966e"
+              "02c90d157eaca6553ff1d612b40cc49c6b577d8e"
             ]
           },
           "content": "Put the `input` function inside an `int` function to make sure the result is an integer.",
           "solution": {
             "commits": [
-              "9d8ea06dc969bbcff8d797cdb6ad247fd1347dd1"
+              "03926ef10705505264da3bddd8cda0bb08458161"
             ]
           }
         }
@@ -2653,7 +2653,7 @@
               "blackjack.py"
             ],
             "commits": [
-              "1d2aac5184d1c11cd257722ccd621d807009f3c8"
+              "f50712837e17fc6cb11bd4b90c7e56f56597536e"
             ]
           },
           "content": "Add the following lines at the end of your program (not indented):\n```py\ng = Game()\ng.play()\n```\nNow you can test your program by running `python blackjack.py` in the terminal.",
@@ -2662,7 +2662,7 @@
           ],
           "solution": {
             "commits": [
-              "ac298efcdc707a2f2761455f6b281a890b68c15d"
+              "c9e46e5bb3d7881d57de28b3cd9fc656aad33736"
             ]
           }
         }
@@ -2681,7 +2681,7 @@
               "blackjack.py"
             ],
             "commits": [
-              "66c8e56802229787c143e8dc0eb23c21ed8ae796"
+              "970c0319ddf7d40899fc1d0fabf408dc63156270"
             ]
           },
           "content": "There will be an error if `int()` is called with something that is not a number. In this case, there will be an error that stops the program if a user enters something that is not a number. You can specify how to handle an exception (an error) with a \"try-except\" block. In this type of block, the program will `try` some code. If there is an error in that code, the program will run the code inside the `except` part of the block instead of stopping the program. Switch the last line in the `play` method with the following \"try-except\" block:\n```py\ntry:\n    games_to_play = int(input(\"How many games do you want to play?: \"))\nexcept:\n    print(\"You must enter a number.\")\n```",
@@ -2690,7 +2690,7 @@
           ],
           "solution": {
             "commits": [
-              "59951a15e95c5ac744622cec9d1ece469f9b8d53"
+              "4d31b86ced608296ca92deda8f68373e11c401f6"
             ]
           }
         }
@@ -2709,7 +2709,7 @@
               "blackjack.py"
             ],
             "commits": [
-              "19beade11a16c05af6d02f4f01441423e9624a9e"
+              "cfb45f74afdfaca2ff9d58da0305343752f97505"
             ]
           },
           "content": "Currently, the user gets one chance to input a correct value. Let's make the program keep asking the user for a value until the user enters a number. This can be done with a `while` loop. This type of loop keeps looping \"while\" something is true. Keep looping until the user enters a number by putting the entire \"try-catch\" block into a while loop that starts like this: `while games_to_play <= 0:`.",
@@ -2718,7 +2718,7 @@
           ],
           "solution": {
             "commits": [
-              "ca7b8651945eaaccb28a40d2e1710014a944174b"
+              "9b7eda572b45c12b7e57ff00bc0891f876cb6eb0"
             ]
           }
         }
@@ -2737,7 +2737,7 @@
               "blackjack.py"
             ],
             "commits": [
-              "85c8d8d0dce518b95b29b9b5e0ea8139a9423c10"
+              "e0a5b4960cb7069903aa1a82e42c1fa7898d0c33"
             ]
           },
           "content": "Now you will create the main game loop. This will loop one time per game played. It should loop `while` `game_number` is less than `games_to_play`. The first line in the loop should increment the `game_number` by one.",
@@ -2748,7 +2748,7 @@
           ],
           "solution": {
             "commits": [
-              "3b9496a9eebd7c681f9070f2b9497a7d37ff1fa3"
+              "56c77decb58cc6277ef0ac18835655122667626c"
             ]
           }
         }
@@ -2767,7 +2767,7 @@
               "blackjack.py"
             ],
             "commits": [
-              "a2db5c9486e6431fa66c891c8f5be97b11a1ccf4"
+              "6aaaa83dfe545b8a66e203861b4a8b755e143bdd"
             ]
           },
           "content": "Inside that loop create a `Deck` object and assign it to a variable named `deck`. Then shuffle the deck.",
@@ -2777,7 +2777,7 @@
           ],
           "solution": {
             "commits": [
-              "911234d31dbe16f629b96390bc2fa2359d0af2e3"
+              "344224a4513159b9c5b28e4b296aa2bc6517c70a"
             ]
           }
         }
@@ -2796,7 +2796,7 @@
               "blackjack.py"
             ],
             "commits": [
-              "97671ea7a02b27d8df27c13228eec83f823a5204"
+              "29790659c8badeca525c393e7e3dbe4106cdd250"
             ]
           },
           "content": "Create a variable called `player_hand` and set it to a `Hand` object.",
@@ -2805,7 +2805,7 @@
           ],
           "solution": {
             "commits": [
-              "fdd03027b629b238a46d83a4e91e8ecd915ecc19"
+              "545eda6e0f78dc3e79b1c4a641a61ccd5f4b4840"
             ]
           }
         }
@@ -3067,7 +3067,7 @@
     },
     {
       "id": "1140",
-      "title": "Check if both the player and the dealer won",
+      "title": "Check if both player and dealer won",
       "summary": "",
       "content": "",
       "steps": [
@@ -3295,7 +3295,7 @@
     },
     {
       "id": "1250",
-      "title": "Loop should stop if player chooses \"Stand\"",
+      "title": "End loop if player chooses \"Stand\"",
       "summary": "",
       "content": "",
       "steps": [
@@ -3337,7 +3337,7 @@
     },
     {
       "id": "1270",
-      "title": "Keep asking for input until correct input",
+      "title": "Keep asking for input until correct",
       "summary": "",
       "content": "",
       "steps": [
