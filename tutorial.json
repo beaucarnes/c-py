@@ -977,7 +977,7 @@
               "blackjack.py"
             ],
             "commits": [
-              "cf1e179610cab8e0403e52baf2f2743392ffd2c4"
+              "920c518ff60342162ad84baf2aacd4a55ce47001"
             ]
           },
           "content": "If `rank` does not equal \"A\", you'll want to check if it equals \"J\", \"Q\", or \"K\". That can be done with `elif`, which is an abbreviation of “else if.” For example:\n```\nif age < 13:\n    print(\"You are a kid\")\nelif age > 17:\n    print(\"You are an adult\")\n```\nNotice in that example that you can use the greater than (`>`) and less than (`<`) signs in conditional statements. Some other comparison operators include `=!` (not equal to), `<=` (less that or equal to), and `>=` (greater than or equal to).\n\nAfter the `if` statement, add the line `elif rank == \"J\":`. Then inside the `elif` statement assign 10 to `value`.",
@@ -986,7 +986,7 @@
           ],
           "solution": {
             "commits": [
-              "ff3a3c2c57992514b2801104dd3fe6da30ab761c"
+              "0042a50be516328c96eca9e75a070ada8021a94b"
             ]
           }
         }
@@ -1005,7 +1005,7 @@
               "blackjack.py"
             ],
             "commits": [
-              "8a758ec767679fac5a8ed1c35c3a8f73da671fa3"
+              "d3968c98c16f0bc5f71cbdd33bb0e62244aac6cb"
             ]
           },
           "content": "There are three logical operators: `and`, `or`, and `not`. You can use these operators in conditional statements to check multiple conditions at once. Update `elif rank == \"J\":` to `elif rank == \"J\" or rank == \"Q\" or rank == \"K\":`.",
@@ -1014,7 +1014,7 @@
           ],
           "solution": {
             "commits": [
-              "dbd83387f85ea2e2ef3689c6219989de3dd73f9e"
+              "76bcc7c67b9fb320f9c402c687f58c4e9f95ef99"
             ]
           }
         }
@@ -1033,7 +1033,7 @@
               "blackjack.py"
             ],
             "commits": [
-              "357d86cfead964c087896283747290e9d226b631"
+              "bb6bf4f2a04ab1da2e3a4d4f94f12485ea6d6e05"
             ]
           },
           "content": "There can be any number of `elif` statements after an `if` statement. At the end, there can be an `else` statement. The block of code in an `else` statement executes if the `if` and all `elif` statements evaluate to `False`. Here is an example:\n```\nif age < 13:\n    print(\"You are a kid\")\nelif age > 17:\n    print(\"You are an adult\")\nelse:\n    print(\"You are a teenager\")\n```\nAfter the `elif` statement, add an `else` statement. Inside, assign `rank` to `value`.",
@@ -1042,7 +1042,7 @@
           ],
           "solution": {
             "commits": [
-              "8b2f6ca64f553f9285b31cada7e7a280215eabee"
+              "8944ebe11762290a3b475032973926429731ebda"
             ]
           }
         }
@@ -1061,7 +1061,7 @@
               "blackjack.py"
             ],
             "commits": [
-              "02e94be0571934e15841443a7149434e65a94b8f"
+              "6f1d9d1e8a5b54b62f1d5bca8adf6cc4cb8361be"
             ]
           },
           "content": "Update the `print` statement at the end to `print(rank, value)`. Then try running the code a few times. You should see a different result each time. (Note: When multiple values in a print statement are listed with a comma separating them, both values are printed with a space in between.)",
@@ -1084,13 +1084,13 @@
               "blackjack.py"
             ],
             "commits": [
-              "5d9e945d04c26518117830c23b8459543b3c72a6"
+              "e112a41f8ba89083560b40f158662c79e5cc6d22"
             ]
           },
           "content": "A Python dictionary is like a list, but more general. You can think of a dictionary as a mapping between a set of indices (which are called keys) and a set of values. Each key maps to a value. The association of a key and a value is called a key-value pair or sometimes an item. Here is a dictionary that maps from English to Spanish. They keys are the English words and the values are the Spanish words.\n```py\neng2sp = {\"one\": \"uno\", \"two\": \"dos\", \"three\": \"tres\"}\n```\nAbove the `print` statement, create variable called `rank_dict` and assign to it this dictionary: `{\"rank\": rank, \"value\": value}`.",
           "solution": {
             "commits": [
-              "ee97fd134b587eb678781e0c39d6e432cc60cdd4"
+              "1bd52270139a81145fb543eac589edd4ed205c9f"
             ]
           }
         }
@@ -1109,7 +1109,7 @@
               "blackjack.py"
             ],
             "commits": [
-              "880ae392ed667ea78e1fb03aae98354f754b36cf"
+              "1379ea3c1aa35789aa18453a2c30f53ed10cd222"
             ]
           },
           "content": "```py\neng2sp = {\"one\": \"uno\", \"two\": \"dos\", \"three\": \"tres\"}\nprint(eng2sp[\"one\"])\n```\nThe code above will print \"uno\". Just like you access an item in a list by specifying the index inside `[]`,  you can access an item in a dictionary by specifying the key inside `[]`. Update the `print` statement so that you are accessing the rank and value from `rank_dict` instead of directly from the variables.",
@@ -1120,7 +1120,7 @@
           ],
           "solution": {
             "commits": [
-              "6966696300c03d16bf49ea0da0f1c2c2dd9d9827"
+              "50eb89111be3255b42d346c79fc21385045d9992"
             ]
           }
         }
@@ -1139,13 +1139,13 @@
               "blackjack.py"
             ],
             "commits": [
-              "ab400c19668e7ac49ce79c1494fe9753533d1bf7"
+              "29c78ff7341b2dd1ce105c5b3dd12828d818d581"
             ]
           },
           "content": "When writing a program, there are many ways to do almost everything. Now you will refactor your code to get the value of each rank without using an `if` statement. Instead, you will store both the rank name and value in the `ranks` list using dictionaries. Delete all the lines of code after `shuffle()`.",
           "solution": {
             "commits": [
-              "96bbfbaa3daee8c712dda55e02d4f671bfc8992e"
+              "41ab56205716beb9fe2bed5cd4da3cd7b766bcb2"
             ]
           }
         }
@@ -1164,7 +1164,7 @@
               "blackjack.py"
             ],
             "commits": [
-              "c88a4575f76554f95e125061a12cfdba2f4ba191"
+              "2b2dbba9202c1c999838072977d51ccb129bfc45"
             ]
           },
           "content": "Get a single card *not* in a list by adding the following line at the end of your code: `card = deal(1)[0]`.",
@@ -1173,7 +1173,7 @@
           ],
           "solution": {
             "commits": [
-              "06d5b7787f1daa79141800008aeaab740ebcb373"
+              "875e68247a94f97de50444fdb7691a71586275ba"
             ]
           }
         }
@@ -1192,7 +1192,7 @@
               "blackjack.py"
             ],
             "commits": [
-              "e2810af7f9f580c9f5316282da2f37cf923109ad"
+              "b9d46d00ae5c706bbf6788f5e41a0a4587785b52"
             ]
           },
           "content": "Now, update the `ranks` list. Each element in the list should be a dictionary. When lists or list elements are long, it is common to put each element on it's own line. Here is the beginning of the new `ranks` list:\n```py\nranks = [\n        {\"rank\": \"A\", \"value\": 11},\n        {\"rank\": \"2\", \"value\": 2},\n        {\"rank\": \"3\", \"value\": 3},\n        ...\n    ]\n```\nUpdate `ranks` in your code using the section above as a starting point. Replace \"...\" with the other ranks and values.",
@@ -1202,7 +1202,7 @@
           ],
           "solution": {
             "commits": [
-              "d9a57f17250d4ae8290abbcb1585c3ab5ec9486f"
+              "0e1b27d62db60989e772737565fc4c484e7e72b5"
             ]
           }
         }
@@ -1221,7 +1221,7 @@
               "blackjack.py"
             ],
             "commits": [
-              "d72152cceae647a7b8b29a01bdf90494d6d2482d"
+              "d0216c294e859cb9d2020eca460b1ed720ad520d"
             ]
           },
           "content": "At the end of your code, print `card`. Try running your program to see what prints now that you have updated the `ranks` list.",
@@ -1230,7 +1230,7 @@
           ],
           "solution": {
             "commits": [
-              "2a552d4cf66b699f48f13078e27940561097228c"
+              "7666cef626829cb56c30d454e1c3e94bc999c9f6"
             ]
           }
         }
@@ -1249,7 +1249,7 @@
               "blackjack.py"
             ],
             "commits": [
-              "518e4929caab752480f79303fcd6ac941c990e45"
+              "1ebd3ae02cdc780b347d20d6b81e1f59449b1201"
             ]
           },
           "content": "If you want to get just the rank of `card`, you will first have to access the second element in the list, then you will have to access the `\"rank\"` item in the dictionary. Because you are accessing something two times, there will be two sets of brackets. Look at this example:\n```py\ncard = [\"clubs\", {\"rank\": \"J\", \"value\": 10}]\nrank = card[1][\"rank\"]\n```\nIn that code, `rank` now equals \"J\". Think about the code until you understand why.\nUpdate your code so the `print` statement will print just the \"value\" in `card`.",
@@ -1258,7 +1258,7 @@
           ],
           "solution": {
             "commits": [
-              "f0e2b5b93dd59cd46440a6457365141598f42cf4"
+              "320be5ac4f356ad977bd793ae9b36425724fd665"
             ]
           }
         }
@@ -1277,7 +1277,7 @@
               "blackjack.py"
             ],
             "commits": [
-              "22deb63ce287769981aff7d1e9f81840f573e73c"
+              "851d75015899d49dfe824f2eebeb043525385be8"
             ]
           },
           "content": "Now you will start defining classes that will be used in order to separate out different aspects of the game. Classes provide a way of bundling data and functionality together. Creating a new class creates a new type of object, allowing new instances of that type to be made. An object can contain a number of functions (which we call methods) as well as data that is used by those functions (called attributes). You will use classes to model three parts of the game: Card, Deck, and Hand. So far, you've mainly worked on elements of the `Deck` class.\n\nRight after the `import` statement at the top, add this line: `class Deck:`. Then, highlight all the code after that line and hit the \"Tab\" key on your keyboard. This will indent all the code and make it part of the `Deck` class.\n\nAfter creating the `Deck` class, remove the unneeded code in the class by removing the last three lines of code (starting with the line `shuffle()`)",
@@ -1286,7 +1286,7 @@
           ],
           "solution": {
             "commits": [
-              "b98131354b6b75b010ce4e1beb345f7502c6928b"
+              "1ebaa446d3007b05f931d08cfdb4b38f961619c7"
             ]
           }
         }
@@ -1305,7 +1305,7 @@
               "blackjack.py"
             ],
             "commits": [
-              "8b64e265e9aa91544516c136d3e64a28082857ba"
+              "e02a692d9ec658ffd05ed9ee9c96bcb7e16a85ae"
             ]
           },
           "content": "A class is like a template. You can use that class to create an instance of the class, called an object. Then you can use the instance. Each instance keeps it's own state so you can update an instance created from a class and it won't impact other objects created from the same class. Soon, you will see an example of what all this means so it will be easier to understand.\n\nFirst, let's prepare our class to create an instance from it. When you create an instance of a class, Python automatically calls a function (also called a method) in the class named `__init__`. The contents of this method should be code that is run one time to initialize the instance. Define this function by adding the following line of code directly under `class Deck:`: `def __init__(self):`. Now indent all the code that is not part of the `shuffle` or `deal` functions so the code will be part of this new function.",
@@ -1314,7 +1314,7 @@
           ],
           "solution": {
             "commits": [
-              "33147ff34ac9fe9bbdc4a5d838c2ed1cce06cd86"
+              "0d2f606de895e4c01deba3fb2d132f59b82b1d07"
             ]
           }
         }
@@ -1333,7 +1333,7 @@
               "blackjack.py"
             ],
             "commits": [
-              "a381c7b48905f77dafc3a0fa52b002c3e8459c23"
+              "165e792cd71455c60c33ec02ef346984a619ef6a"
             ]
           },
           "content": "Notice the word \"self\" in the parenthesis of the function you just added. When defining a function, anything inside the parentheses is called an argument. These are variables passed in from the caller to the function. All functions in a class should receive `self` as an argument. `self` represents the instance of the class. By using the `self` keyword, the function can access the attributes and methods of the class. For example, this would allow you to call the `shuffle` function from within the `__init__` function. Add the `self` as the first item inside the parentheses on the definitions of the `shuffle` and `deal` functions.",
@@ -1343,7 +1343,7 @@
           ],
           "solution": {
             "commits": [
-              "dfb423a0c2b4ca0165bdfafd465ba6c7d216e364"
+              "18d3d2427773b443a982c3d3ae0ef88b8ac6ebf8"
             ]
           }
         }
@@ -1362,13 +1362,13 @@
               "blackjack.py"
             ],
             "commits": [
-              "67c6b685023dfe6d2222cd0b39f5b0829f76e224"
+              "9e5b41994e6fa133be6a0545c36247694ac30285"
             ]
           },
           "content": "If you look at the variables defined inside the `__init__` function, only `cards` is used in other functions. Inside a class, in order to access a variable in multiple functions (also called methods), the variable has to start with `self.`. Change all instances of `cards` in every function to `self.cards`.",
           "solution": {
             "commits": [
-              "886b2250bac3473ef396d464c038f4f590e8205b"
+              "c73680b7be0de9db82466e3313ef13e430516da0"
             ]
           }
         }
@@ -1387,13 +1387,13 @@
               "blackjack.py"
             ],
             "commits": [
-              "74b4f9446fe5c74551487e600092a5ab74959357"
+              "33d7717be2d3b80e8703f1cbfbaca38635fd3d5c"
             ]
           },
           "content": "You can now create an instance (also called object) of the deck class. At the very end of your code add the line `deck1 = Deck()` (with no indentation).",
           "solution": {
             "commits": [
-              "539693c18f3098af76c6ee116a214aeafb09ce26"
+              "235381c943ddbee8dbd505d587aca7f429aa53b9"
             ]
           }
         }
@@ -1412,13 +1412,13 @@
               "blackjack.py"
             ],
             "commits": [
-              "96f07fe9668fb6f2bff273ce372f7ba93d4e3c1c"
+              "3884c85f7c3db8f16f24704ae9da7b6cabee5790"
             ]
           },
           "content": "If you have an instance of a class named `car` with an attribute named `model`, you can access the value of the attribute with `car.model`. In your code, `cards` is an attribute of the `deck1` instance created from the `Deck` class. Print the `cards` attribute.",
           "solution": {
             "commits": [
-              "b3a001aeeecbaaa74d600cf4dc2840183c441828"
+              "b1b47389ca915ce140396e263e496b8290822a31"
             ]
           }
         }
@@ -1437,13 +1437,13 @@
               "blackjack.py"
             ],
             "commits": [
-              "a0c63118620e6cbe7152e9344ede52f6a61b624e"
+              "02b523e824da9d342ca40aa2e8d9cc3645b6ea84"
             ]
           },
           "content": "If you run the code now, you should see the `cards` list from `deck` with the cards in order. You already created an instance of the `Deck` class called `deck1`. Underneath that and before the `print` statement, create another instance of the `Deck` class called `deck2`.",
           "solution": {
             "commits": [
-              "8d6912fce7060e970d6df3f9bc37be7e62a17060"
+              "a091785b7d1250fa49a845372a07d4135b841517"
             ]
           }
         }
@@ -1462,7 +1462,7 @@
               "blackjack.py"
             ],
             "commits": [
-              "15417702c3215134dac196d3b903255d569fd69d"
+              "ae4d9f49f1ac3a14429ae4ab65e1b9e6131f754f"
             ]
           },
           "content": "If you have an instance of a class named `car` with an method named `drive`, you can call the method with `car.drive()`. In your code, `shuffle` is a method of the `deck2` instance created from the `Deck` class. Call that method right before the `print` statement.",
@@ -1471,7 +1471,7 @@
           ],
           "solution": {
             "commits": [
-              "9481bec48f664d00a02d423f79ebd731315518e5"
+              "e14a59ff16f0ec1d6243e5d30d3854bddb446ccd"
             ]
           }
         }
@@ -1490,13 +1490,13 @@
               "blackjack.py"
             ],
             "commits": [
-              "4c85d78af68dfd74e458a6ff19dbcee0247597db"
+              "c09e76e9dc2241236b809fe0c71c48066f1b8028"
             ]
           },
           "content": "At the end of your code, print the `cards` attribute from the `deck2` instance. If you run the code, you will see that the order of the `cards` list is different each time it is printed. That is because each instance stores the state of it's variables separately. In the `deck2` instance, the cards were shuffled. In the `deck1` instance, the cards were not shuffled.",
           "solution": {
             "commits": [
-              "5931567e889db027d6de8438161462cc73ea016f"
+              "624e80aca04698015a387956caae58559128a0e8"
             ]
           }
         }
@@ -1515,7 +1515,7 @@
               "blackjack.py"
             ],
             "commits": [
-              "51fdff6b840882c95234a4a26caa88f89e997360"
+              "3d3c17c22f32379dc24d7dfd44500a1f425b6f15"
             ]
           },
           "content": "The `Deck` works. Now let's add safeguards to prevent errors. When the`deal` function is called, a card is removed from the `cards` list. You can only remove a card if there are cards to remove. So before the program tries to `pop()` a card off of `self.cards`, it should check `if` the length of `self.cards` is greater than (`>`) 0.  You can get the number of items in a list with `len()`. Here is an example: `len(self.cards)`. In the `deal` function, put all the code that is in the `for` loop inside the appropriate `if` statement.",
@@ -1525,7 +1525,7 @@
           ],
           "solution": {
             "commits": [
-              "0c11456ed9cacbc62e845f41956dacc83328ba2d"
+              "f2e44dd97d86db6b3c4f3465909016a10e10df34"
             ]
           }
         }
@@ -1544,7 +1544,7 @@
               "blackjack.py"
             ],
             "commits": [
-              "16aef779c7f77d91c74b8b563ab61db840d4d868"
+              "8772aba4736d1e15025ec01832328cd45de84484"
             ]
           },
           "content": "A deck with only one card does not need to be shuffled. Add the appropriate `if` statement to the `shuffle` function.",
@@ -1553,7 +1553,7 @@
           ],
           "solution": {
             "commits": [
-              "5c7229e7033af90e5b67a4de0d167672a4c66426"
+              "d931a6520e6890d66acb789c8a8f7b580d0f2196"
             ]
           }
         }
@@ -1572,7 +1572,7 @@
               "blackjack.py"
             ],
             "commits": [
-              "21c19eca04740d8065021f1351ff443098b8e711"
+              "a111c713629655a6e01e05d5455fa505518d6693"
             ]
           },
           "content": "Since a \"Card\" is a separate concept than a \"Deck\", next you'll make a `Card` class. Using the `Deck` class as an example, create a `Card` class above the `Deck` class. Add an `__init__` function and inside that function set `self.suit` to equal \"hearts\".",
@@ -1581,7 +1581,7 @@
           ],
           "solution": {
             "commits": [
-              "0ed094654ab9a1ad58a79489aa4a0fccca5e33b8"
+              "2844a6ecacbcd6beace57156b7a16d78b965bdfd"
             ]
           }
         }
@@ -1600,13 +1600,13 @@
               "blackjack.py"
             ],
             "commits": [
-              "ccad42a984c01b03786387af232a79ea157d49a5"
+              "4c9216a3b0c1b05a20a44dc12794ad0713201742"
             ]
           },
           "content": "Also inside `__init__`, create a variable called `self.rank` and set it to \"A\".",
           "solution": {
             "commits": [
-              "a2a53cdebc9a112b4b570178fa6ea378d18bd778"
+              "470ee1693c6d73d2ef9a9e186b7e64f423449ef6"
             ]
           }
         }
@@ -1625,7 +1625,7 @@
               "blackjack.py"
             ],
             "commits": [
-              "b849f0f2893b9c0486aec497d64ee1e474b5237b"
+              "941143d77e2721de0dfa20ba65f4a8189d405704"
             ]
           },
           "content": "Currently, anytime a `Card` is created, it will be an Ace of Hearts. Refactor the code so the `suit` and `rank` are specified when a `Card` object is constructed. The `__self__` method can take additional parameters (besides `self`) that are passed into it as the object is constructed. Here is an example of a `Person` class where the `name` and `age` are specified when an object is constructed:\n```py\nclass Person:\n   def __init__(self, name, age):\n     self.name = name\n     self.age = age\n\nsally = Person(\"Sally\", 32)\nprint(\"Name: \" + sally.name + \", Age: \" + sally.age)\n```\nThat code prints out \"Sally 32\".",
@@ -1635,7 +1635,7 @@
           ],
           "solution": {
             "commits": [
-              "93f7322e92060b439e190d085f560578497c09cb"
+              "d204a1d6d21de43d2178bc6494d9e90d3723a74b"
             ]
           }
         }
@@ -1654,7 +1654,7 @@
               "blackjack.py"
             ],
             "commits": [
-              "775d2ae2d023b60b5f5daae5e096d553637ef63d"
+              "32382c5399bbdb534afea0c0cdf39e9c369956a9"
             ]
           },
           "content": "When a class has a `__str__` method, it is called when `print()` is invoked on an object from the class. In the `Card` class, add a `__str__` method. Inside the method add `return self.rank['rank'] + \" of \" + self.suit` to return what should display when a card is printed.",
@@ -1663,7 +1663,7 @@
           ],
           "solution": {
             "commits": [
-              "3168f4c53371e8b43ab21f70bbdff515215b382e"
+              "67a08f191f7c739e966baa2de3b4770a9cfcc9e1"
             ]
           }
         }
@@ -1682,13 +1682,13 @@
               "blackjack.py"
             ],
             "commits": [
-              "ce0f163b7037bc7eda983313be80b5799f019e86"
+              "39e6780407bb2fa7b13296676f8eb74351e0db32"
             ]
           },
           "content": "Try out the new `__str__` method. Delete the last five lines in the code (everything after the `Deck` class). Add the following lines:\n```py\ncard1 = Card(\"diamonds\", {\"rank\": \"A\", \"value\": 11})\ncard2 = Card(\"spades\", {\"rank\": \"5\", \"value\": 5})\nprint(card1)\nprint(card2)\n```",
           "solution": {
             "commits": [
-              "984fb780e6b4ec04a100b04b2300127b22c73094"
+              "a0a152be65ebd099c8df989900bb0901979c540b"
             ]
           }
         }
@@ -1707,7 +1707,7 @@
               "blackjack.py"
             ],
             "commits": [
-              "143afc59ce8ff10f0fe6af7d67070d69a009c833"
+              "485f218ca65dea2b1468e0d80f28adc2fdca229d"
             ]
           },
           "content": "F-strings allow you to include variables inside of strings so you don't have to concatenate the strings. Here is how you would create an f-string with the variables `name` and `age` inside: `f\"My name is {name} and I am {age} years old\"`. Notice it begins with \"f\" and the variables are within curly braces. Update the return statement in `__str__` to use an f-string.",
@@ -1716,7 +1716,7 @@
           ],
           "solution": {
             "commits": [
-              "5b6307db97725abe5e2a15390c834530b283a01b"
+              "fad15a9b3df5ef1f555e72dd7e98f00e6310c47c"
             ]
           }
         }
@@ -1735,7 +1735,7 @@
               "blackjack.py"
             ],
             "commits": [
-              "25a62a2bc2282cf8e2090bb96dcc35f75095e07d"
+              "0e7276a05f956d5dbfd0571950079d138c4098ea"
             ]
           },
           "content": "Currently, in the `Deck` class, the last line of the `__init__` method appends a list as an item to the `cards` list. Instead of appending the list (`[suit, rank]`), create and append an instance of the `Card` class (`Card(suit, rank)`). Afterwards, when a `Deck` is created, it is filled with `Card`s.",
@@ -1745,7 +1745,7 @@
           ],
           "solution": {
             "commits": [
-              "22f541eb220c57dbdf233262e9c360ca7ee2774a"
+              "f2f22ba3515405caf33442a5478e4ae4037af222"
             ]
           }
         }
@@ -1764,7 +1764,7 @@
               "blackjack.py"
             ],
             "commits": [
-              "f5e5f5c8272d6288c2ec92b6674a822260fdbd0e"
+              "f5871d5dce8bdfc3ac1542f9e6e2c1f596468364"
             ]
           },
           "content": "The `Deck` and `Card` classes could be used for any card game. Now make a `Hand` class after the `Deck` class. This will represent a hand in the game of blackjack. Add a `__init__` method inside the `Hand` class that initializes a variable called `self.cards` that is set to an empty list. Remove the lines of code at the end that are not in a class.",
@@ -1774,7 +1774,7 @@
           ],
           "solution": {
             "commits": [
-              "e0762c34b6e8d044c880bc15a77405fb153117b2"
+              "1e6f787a7358661e5242a6af2f285ac66ae24d00"
             ]
           }
         }
@@ -1793,7 +1793,7 @@
               "blackjack.py"
             ],
             "commits": [
-              "052a0da51e989d6b54067c5cd7571f53c229a4c3"
+              "4211c40ad2ac621293bbad79bb9b31386b875518"
             ]
           },
           "content": "Besides keeping track of the `cards`, `Hand` should also keep track of the `value`. Under `self.cards`, create `self.value` and set it to 0.",
@@ -1802,7 +1802,7 @@
           ],
           "solution": {
             "commits": [
-              "bbbe1aa9ef4aa79c3f90632337e94b4f229d4ebd"
+              "159657b122a2e3102e9c25c1b840b8a7d0fb32c0"
             ]
           }
         }
@@ -1821,7 +1821,7 @@
               "blackjack.py"
             ],
             "commits": [
-              "0c19b4107148fed5b12c721f6215003436530bdc"
+              "52b26ad6760b159a89e2296acd077667ea65fdaf"
             ]
           },
           "content": "In this blackjack game, there will be a human-controlled player and a program-controlled dealer. Add a `dealer` parameter in the `__init__` constructor method of the `Hand` class. When a `Hand` object is created, `dealer` should be set to `True` of `False` to keep track of what type of hand it is.",
@@ -1830,7 +1830,7 @@
           ],
           "solution": {
             "commits": [
-              "7600f45b92a23ce59ae00fddf587f1afb9049ec6"
+              "9647a431d6868240bc6c6e2d0bab0232a9eb6f22"
             ]
           }
         }
@@ -1849,7 +1849,7 @@
               "blackjack.py"
             ],
             "commits": [
-              "dc4c260ec017472e0cbbbd09e089bb3f5742b316"
+              "6dfe6a8dc25fe1415274e708013f31c9888ad42a"
             ]
           },
           "content": "Inside the `__init__` method, create a `self.dealer` variable and set it equal to the `dealer` parameter.",
@@ -1858,7 +1858,7 @@
           ],
           "solution": {
             "commits": [
-              "4a6aac44705fc41637a2b8857b885b4a2e1ac00b"
+              "466caee78b24153c52784ef77812491048b92e23"
             ]
           }
         }
@@ -1877,13 +1877,13 @@
               "blackjack.py"
             ],
             "commits": [
-              "0ee831aa7491c07bc5ede4e31ac3927a4ab01eb0"
+              "d655ddbb655de0da6ebcfc9a5bb5aa7e1a3dd33c"
             ]
           },
           "content": "Function parameters can have default values. Change the parameters `(self, dealer)` to `(self, dealer=False)`. That code sets the default value of `dealer` to `False`. That means a `Hand` object can be constructed with or without passing in the value of `dealer`.",
           "solution": {
             "commits": [
-              "4d4a02fab2bb532ae213348cb443f45cce7258b6"
+              "b944f1cb26abb505575a27cbcfbe628b5f3ae4c5"
             ]
           }
         }
@@ -1902,7 +1902,7 @@
               "blackjack.py"
             ],
             "commits": [
-              "544c054c512e15a01106c1bd6c75cd7d0372ac32"
+              "d5bcd3a831862097207b159a522cf7b0a4399fee"
             ]
           },
           "content": "Now a `Hand` can be created. Let's give it some functionality. Add an `add_card` method. The method should take a `card_list` as a parameter. Inside the method, add `self.cards.extend(card_list)`. `extend` will append each item in the `card_list` list onto `cards` (`append` would append the full `card_list` list as a single item onto `cards`).",
@@ -1911,7 +1911,7 @@
           ],
           "solution": {
             "commits": [
-              "975e0a0b0d86bef26eadb8ef0e5e51de024f633e"
+              "3dc311f01259ab7bb655dceffd7835f8c1874c4c"
             ]
           }
         }
@@ -1930,7 +1930,7 @@
               "blackjack.py"
             ],
             "commits": [
-              "6898743fa0386e64d5309ef1b2ac13cf7f3d81eb"
+              "8b404547ca2b0a07e3dd637b06d2dfd34e255b9f"
             ]
           },
           "content": "Try out your code so far by adding the following lines of code to the bottom:\n```py\ndeck = Deck()\ndeck.shuffle()\n\nhand = Hand()\nhand.add_card(deck.deal(2))\nprint(hand.cards)\n```",
@@ -1939,7 +1939,7 @@
           ],
           "solution": {
             "commits": [
-              "512f23c54e1c392e1b09d144da64e4500d3ef16b"
+              "b2bbaa9e314db22900f00db2bdae70f5a05cb54d"
             ]
           }
         }
@@ -1958,13 +1958,13 @@
               "blackjack.py"
             ],
             "commits": [
-              "098ce3f6e9981c161eb9b7c90963d4e8a6ddc90f"
+              "6a18479a6b9fa9d339718649509abcc6d4bac82c"
             ]
           },
           "content": "Now add the ability to calculate the value of a hand. Add a method called `calculate_value` to `Hand`. Inside the method, set `self.value` to 0 since you will add all the values in the hand to this variable.",
           "solution": {
             "commits": [
-              "251c127acd18d46d07f09f45d5314f2b29566955"
+              "950dd52960ff60d09c5b0a5072a4ea77d3cb6144"
             ]
           }
         }
@@ -1983,7 +1983,7 @@
               "blackjack.py"
             ],
             "commits": [
-              "311b1be7a4044373b1b75b1b118d459cf8577984"
+              "6060bc13733b6da1d427a066c13256c327c4f06c"
             ]
           },
           "content": "Inside the `calculate_value` method, loop through each card in `self.cards` and get the value of the card. You can do that by adding the following code:\n```py\nfor card in self.cards:\n    card_value = card.rank[\"value\"]\n```",
@@ -1992,7 +1992,7 @@
           ],
           "solution": {
             "commits": [
-              "1efb9aace7a87d840260d6c96e87a19e4085bc73"
+              "d2bd86baeb5fcd4bd688e5471c56a46c06a1a3d6"
             ]
           }
         }
@@ -2011,7 +2011,7 @@
               "blackjack.py"
             ],
             "commits": [
-              "c41e89288b6af0023cdb321cb34e3dfeedea332c"
+              "a21d28f31d63d936d655343891936f0ce9eda36e"
             ]
           },
           "content": "`int()` is used to convert strings to integers. For example: `int(\"2\")` will convert the string `\"2\"` to the integer `2`. Make sure `card.rank[\"value\"]` is an integer by putting it inside `int()`.",
@@ -2020,7 +2020,7 @@
           ],
           "solution": {
             "commits": [
-              "fd04a906660e1a2930426169ff15f2b401d2e599"
+              "6b76ba90bc903560d800263ecb616c0c0d3aa0ec"
             ]
           }
         }
@@ -2039,13 +2039,13 @@
               "blackjack.py"
             ],
             "commits": [
-              "41ec6c99772791f5605ed5e2ab95c9e1fafa9752"
+              "2382ab85c42a3be13012fb63323be102641b1136"
             ]
           },
           "content": "Just getting `card_value` for each card is not enough. Something must be done with that variable. The `+=` operator will add a value to a variable. For example:\n```\nnum = 10\nnum += 5\n```\nIn the code above, `num` now equals 15. Inside the `for` loop, use the `+=` operator to add `card_value` to `self.value`.",
           "solution": {
             "commits": [
-              "191053e0a0aa2e2fc0a6194a855d0d174f485313"
+              "188c249f9967941186dd4f39c110571321d41bb7"
             ]
           }
         }
@@ -2064,13 +2064,13 @@
               "blackjack.py"
             ],
             "commits": [
-              "ab371c7a68813652ac788b4c8e6dc5c98f4c73b5"
+              "f5ff8a30015476a9c8487e20fa94c70bc8f4c746"
             ]
           },
           "content": "In blackjack, an Ace can have the value of either 11 or 1, depending on what is better for the player. First check if the hand has an Ace. Below `self.value = 0` create a variable called `has_ace` and set it to `False`. You don't need `self.` before the variable name since we will only use it in this method.",
           "solution": {
             "commits": [
-              "23a335964fa4f32cdaabb33b9861794d68565aad"
+              "55481adfd53abd97f63ea1b3878ddd447119944b"
             ]
           }
         }
@@ -2089,7 +2089,7 @@
               "blackjack.py"
             ],
             "commits": [
-              "d24455b33aa6fe8da8cd870327be913d9aecaee4"
+              "74425a94a41b3699263c2c715a1bff92132317f5"
             ]
           },
           "content": "When looping through `self.cards` to calculate `self.value`, the code should also check if one of the cards is an ace. Inside the `for` loop, add the following code:\n```py\nif card.rank[\"rank\"] == \"A\":\n    has_ace = True\n```",
@@ -2098,7 +2098,7 @@
           ],
           "solution": {
             "commits": [
-              "96b246f244d60e071e8fdbf496da2678e404f34a"
+              "db237f9dfa496c527e59ca3e0703c6bc6e664f33"
             ]
           }
         }
@@ -2117,7 +2117,7 @@
               "blackjack.py"
             ],
             "commits": [
-              "0cbf4c8f1417f25479793e2d100030cd8d887d41"
+              "732782ccc0fc54023743d42046b11bc305ff0695"
             ]
           },
           "content": "After the last `for` loop you added, check `if has_ace and self.value > 21`. (Note: `if has_ace` means the same thing as `if has_ace == True`.) If the statement evaluates to true, use the `-=` operator to subtract 10 from `self.value`. (This program will not deal with the edge case of multiple Aces having a value of 1.)",
@@ -2126,7 +2126,7 @@
           ],
           "solution": {
             "commits": [
-              "22ec64ebcf54215850d49b62d55fd6536f5eda85"
+              "dc839b91828e1f50d566fa26ef1005ba16cc6645"
             ]
           }
         }
@@ -2145,7 +2145,7 @@
               "blackjack.py"
             ],
             "commits": [
-              "b68bb8fc745c6ba9076b60163445f198f5b30c71"
+              "7e97c4db0c5525d67a445a782cb6e76f361a1535"
             ]
           },
           "content": "Add another method to get the value of a hand called `get_value`. The method should return `self.value`.",
@@ -2154,7 +2154,7 @@
           ],
           "solution": {
             "commits": [
-              "940b60ba9b49e47b992d91769037c9d50a6dafb3"
+              "d8343311bbf1c5d78e1570374f56fa5284db6458"
             ]
           }
         }
@@ -2173,13 +2173,13 @@
               "blackjack.py"
             ],
             "commits": [
-              "69290388a3dbcd9d42906af129a3081b6d998b3d"
+              "d60999dfaa1bdd4b701b3b97c8864d04937db71d"
             ]
           },
           "content": "Currently, the value that is returned could be incorrect. In the `get_value` method, before returning `self.value`, calculate the value first by calling `self.calculate_value()`.",
           "solution": {
             "commits": [
-              "ac08910f57262fd99d42047740f27bb573d17245"
+              "3eb189bdeed121c1d573bd36ae60caa3ca4920e1"
             ]
           }
         }
@@ -2198,13 +2198,13 @@
               "blackjack.py"
             ],
             "commits": [
-              "c018c439052f7896291ce913ff5572568501ba1f"
+              "fb75f1b54b5b845cf5a3cf6ee9d2179693e519b6"
             ]
           },
           "content": "Create another method called `is_blackjack`. It should return `self.get_value() == 21`. That will be `True` if is a blackjack and `False` otherwise.",
           "solution": {
             "commits": [
-              "d4cbc316ff9a5c123f3cdfe8bc4c0b11b4343be3"
+              "0202bc78a84d625f93d97a5a560252eb477fb323"
             ]
           }
         }
@@ -2223,7 +2223,7 @@
               "blackjack.py"
             ],
             "commits": [
-              "de5af5694f767a04eea5bc7156515624bf780ffe"
+              "ad23b258471ccaa9b913da393f9619adde94f1ec"
             ]
           },
           "content": "Now you will create the final method in the `Hand` class that will display information about the hand. Create a method called `display` that will print \"Your hand:\".",
@@ -2232,7 +2232,7 @@
           ],
           "solution": {
             "commits": [
-              "ae2b893b5b3438a73ac68eea8ef27b99025c5a78"
+              "5cb96c54fabcf1a694f3aa95fea93cb6419140cf"
             ]
           }
         }
@@ -2251,7 +2251,7 @@
               "blackjack.py"
             ],
             "commits": [
-              "8735a9343acc2fd8f3c25729eeff304857131303"
+              "0316c5a046a7472b93b88136c679d3eea7dd8126"
             ]
           },
           "content": "You can create a string by either surrounding text with single quotes (`'`) or double quotes \n(`\"`). Whichever quote type you use, you can use the other quote type inside the string. If a string contains both single quotes and double quotes inside, you can surround it with `'''`. Change the print line you just added so it will print either \"Dealer's hand:\" or \"Your hand:\" by using this line of code: `print(f'''{\"Dealer's\" if self.dealer else \"Your\"} hand:''')`.",
@@ -2260,7 +2260,7 @@
           ],
           "solution": {
             "commits": [
-              "03041042f2329afb532b329fd63dbfaeebef9835"
+              "af1ac76fb2d16c5cc191c3483e8258e64e036308"
             ]
           }
         }
@@ -2279,7 +2279,7 @@
               "blackjack.py"
             ],
             "commits": [
-              "08f1eb079fa917a4315edff79d6b8ad77e1a5251"
+              "428163f4093e4ce9aaaefba2121bb511f8971c72"
             ]
           },
           "content": "In the `display` method, add a `for` loop that prints out each card in `self.cards`.",
@@ -2289,7 +2289,7 @@
           ],
           "solution": {
             "commits": [
-              "08114b7c517dffe67cb54338937d9c368899adf8"
+              "139f63e2efac9688fc39a6ae6b49312c07eb11f8"
             ]
           }
         }
@@ -2308,7 +2308,7 @@
               "blackjack.py"
             ],
             "commits": [
-              "9f026b6f572d6d78a832fd1968b0a90bcdd8642c"
+              "97d0a83c387a9aea6f9c096d2b30692c0037efae"
             ]
           },
           "content": "If the player is not the dealer, it should print `\"Value:\", self.get_value()`. To check if something is not true, just add `not` before the thing you are checking.",
@@ -2317,7 +2317,7 @@
           ],
           "solution": {
             "commits": [
-              "4785a106199844e4f028282065175f668a60b870"
+              "f6ecc8254dfa5f6fc86b3c885b2412412e7c300f"
             ]
           }
         }
@@ -2336,7 +2336,7 @@
               "blackjack.py"
             ],
             "commits": [
-              "f4fd92de77eaed96da1e7211b64186a493d6139b"
+              "c6760f491be78885600d3fb6e68f3549144a45e6"
             ]
           },
           "content": "Now add an empty `print()` statement so a blank line will be printed.",
@@ -2345,7 +2345,7 @@
           ],
           "solution": {
             "commits": [
-              "0e40e2ea5e4965078546a317c0a3c88b311811a3"
+              "41fa95f906d59d0912124db29b115962b05e32e6"
             ]
           }
         }
@@ -2364,13 +2364,13 @@
               "blackjack.py"
             ],
             "commits": [
-              "e062ae49ec2d0cd43dde837714ce4e547b94dee5"
+              "2e77dc36944c0ad26d7760837620bb0afed75a01"
             ]
           },
           "content": "Change the last line of the program from `print(hand.cards)` to `print(hands.display())`. Then, run your program.",
           "solution": {
             "commits": [
-              "558d6543c0d7e3b9354f80955a1821408711837c"
+              "ea1d99d33061c618f5789cb26b18e73bdaec04c6"
             ]
           }
         }
@@ -2389,13 +2389,13 @@
               "blackjack.py"
             ],
             "commits": [
-              "6ede2a4e9f552a9c705de7144f1af849fe875e80"
+              "ef2ac102dd9049e05d0a01b19f215c4e2d7965af"
             ]
           },
           "content": "When the dealer's cards are printed during the game, only the second one should display. The first card should display as \"hidden\". In the `for` loop in the `display` method, you will need to get access to the card index since that will determine which to display. Update the first line of the `for` loop to `for index, card in enumerate(self.cards):` to get access to the card and index on each iteration of the loop.",
           "solution": {
             "commits": [
-              "20032b89441614ca0043ad13f030bd97a3bf2eb6"
+              "385380cd32e32a3cffbe98b138bccf95a59beae3"
             ]
           }
         }
@@ -2414,7 +2414,7 @@
               "blackjack.py"
             ],
             "commits": [
-              "36987e66481f71f13e1aaac9e494f83be947c769"
+              "9afca0eec244ee6214bbcd320727ec3ad1bd2aa0"
             ]
           },
           "content": "Put the `print(card)` line into an `if` statement. First check `index == 0 and self.dealer`. If that evaluates to true, print \"hidden\". If that evaluates to false, print the card.",
@@ -2423,7 +2423,7 @@
           ],
           "solution": {
             "commits": [
-              "64574e719f64245439b0cdd260826cbdac5c5bd1"
+              "f1b4b97f0092c74773fdf1234e3d50c659e73ca0"
             ]
           }
         }
@@ -2442,7 +2442,7 @@
               "blackjack.py"
             ],
             "commits": [
-              "6027ccc7db421d1f6b94ac7283d7b08b815d2097"
+              "358e003faa0be1d06eac0af3dbbd98114c1ca03b"
             ]
           },
           "content": "At the end of a game, all the dealers cards should be shown. Add a parameter in the `display` method called `show_all_dealer_cards` and set the default value to `False`.",
@@ -2451,7 +2451,7 @@
           ],
           "solution": {
             "commits": [
-              "e9792de601de4c54814d83daee7eb6a4a538a71c"
+              "d374e3d8f9347550d52063ac6f92208796942d53"
             ]
           }
         }
@@ -2470,7 +2470,7 @@
               "blackjack.py"
             ],
             "commits": [
-              "628763c1d2823b758dfabf7a9df89a44c39d5dad"
+              "84c41efb884662768be3c1d9d4bbfb3e3df78682"
             ]
           },
           "content": "Now add to the `if` statement so it only prints \"hidden\" if `show_all_dealer_cards` is not true.",
@@ -2479,7 +2479,7 @@
           ],
           "solution": {
             "commits": [
-              "87d1490738505f8c2d1ee1295e2674da86674248"
+              "0c3da21f44099c99bdf12ec60c99be48e8947ba2"
             ]
           }
         }
@@ -2498,7 +2498,7 @@
               "blackjack.py"
             ],
             "commits": [
-              "c91b10f902107c2d9c176ee39432e7c829aed66b"
+              "d4035b077ba72a1c0993b8e32cb249fbcefd0ba2"
             ]
           },
           "content": "Add one final check to the `if` statement to check if is not a blackjack (`self.is_blackjack()`).",
@@ -2521,13 +2521,13 @@
               "blackjack.py"
             ],
             "commits": [
-              "188302300e44b591b77822820b48871bf93a42d0"
+              "63a9a0b9a681ba23ffe1fdf7c52b9f31106c0e39"
             ]
           },
           "content": "You are done creating the `Hand` class so delete all the code under the `Hand` class that was used for testing.",
           "solution": {
             "commits": [
-              "8a6399ea937767a3f83fa5c238d70a6160cf84ec"
+              "fe139a56c572eb411642ababda276fd116730a91"
             ]
           }
         }
@@ -2546,7 +2546,7 @@
               "blackjack.py"
             ],
             "commits": [
-              "9c2a7d25594ab03be25a5489fe570f7ed725846a"
+              "8ddb9752fdcb9a5ad7a3e3438102bddcec4d9b9c"
             ]
           },
           "content": "It's time to make the final (and longest) class that runs the game. Create a class called `game`. Inside that class create a method called `play`. Inside that method create a variable called `game_number` and set it to zero.",
@@ -2555,7 +2555,7 @@
           ],
           "solution": {
             "commits": [
-              "3be4b5d036c9b9b007570ff92d6b2ec2aa8295ed"
+              "0806bb233f8491511d6fc06c3f126cfcfebf0998"
             ]
           }
         }
@@ -2574,13 +2574,13 @@
               "blackjack.py"
             ],
             "commits": [
-              "4f355dfa7578f1cfc5d85b4b789fcffa68f7d267"
+              "40984e3c6422d8fd1546a442256952544cdcdf2e"
             ]
           },
           "content": "Besides keeping track of the game number we also have to keep track of the number of `games_to_play`. Create that variable and start it at zero.",
           "solution": {
             "commits": [
-              "0822fdbb38eea13c94030a21d28488f476388819"
+              "b0da70d8d47c01855875ec1b9763de7a1fd89bbc"
             ]
           }
         }
@@ -2599,7 +2599,7 @@
               "blackjack.py"
             ],
             "commits": [
-              "fe3af7768579dbca8898f3f42e5539d4c9341510"
+              "e438451f12ac7bdb217b646ac32039ade7934929"
             ]
           },
           "content": "A program can request a user's input in the terminal with the `input()` function. For example, the code `name = input(\"What's your name? \")`, will prompt the user with \"What's your name? \" and store the inputted text in a variable called `name`. Ask the user for input to the question \"How many games do you want to play? \" The result should be stored in the `games_to_play` variable. (Note: Keep the `games_to_play = 0` line of code.)",
@@ -2609,7 +2609,7 @@
           ],
           "solution": {
             "commits": [
-              "79dc42262ae467c0676265ca0dffd5dfe28c8f89"
+              "9dc36f89fba6ce24035a8c0ea754e759d8de131d"
             ]
           }
         }
@@ -2628,13 +2628,13 @@
               "blackjack.py"
             ],
             "commits": [
-              "02c90d157eaca6553ff1d612b40cc49c6b577d8e"
+              "b613caccb5364b2c461b6629967124fd0b098caf"
             ]
           },
           "content": "Put the `input` function inside an `int` function to make sure the result is an integer.",
           "solution": {
             "commits": [
-              "03926ef10705505264da3bddd8cda0bb08458161"
+              "369a9e29f21fcf0ab3d0cc4a5e167355810267ec"
             ]
           }
         }
@@ -2653,7 +2653,7 @@
               "blackjack.py"
             ],
             "commits": [
-              "f50712837e17fc6cb11bd4b90c7e56f56597536e"
+              "0bb4939b034e82f7a7cd4035df2524206c0d5b72"
             ]
           },
           "content": "Add the following lines at the end of your program (not indented):\n```py\ng = Game()\ng.play()\n```\nNow you can test your program by running `python blackjack.py` in the terminal.",
@@ -2662,7 +2662,7 @@
           ],
           "solution": {
             "commits": [
-              "c9e46e5bb3d7881d57de28b3cd9fc656aad33736"
+              "187fdac0b03e7ff347e40d6410eb0717b2970d18"
             ]
           }
         }
@@ -2681,7 +2681,7 @@
               "blackjack.py"
             ],
             "commits": [
-              "970c0319ddf7d40899fc1d0fabf408dc63156270"
+              "da5d0d878d826909863937b43368d5f7f7300364"
             ]
           },
           "content": "There will be an error if `int()` is called with something that is not a number. In this case, there will be an error that stops the program if a user enters something that is not a number. You can specify how to handle an exception (an error) with a \"try-except\" block. In this type of block, the program will `try` some code. If there is an error in that code, the program will run the code inside the `except` part of the block instead of stopping the program. Switch the last line in the `play` method with the following \"try-except\" block:\n```py\ntry:\n    games_to_play = int(input(\"How many games do you want to play?: \"))\nexcept:\n    print(\"You must enter a number.\")\n```",
@@ -2690,7 +2690,7 @@
           ],
           "solution": {
             "commits": [
-              "4d31b86ced608296ca92deda8f68373e11c401f6"
+              "e57cb76442dc85ca4bbc178ffdca39375594405c"
             ]
           }
         }
@@ -2709,7 +2709,7 @@
               "blackjack.py"
             ],
             "commits": [
-              "cfb45f74afdfaca2ff9d58da0305343752f97505"
+              "edad40e0e201457ebfa99611d4e237e92072794c"
             ]
           },
           "content": "Currently, the user gets one chance to input a correct value. Let's make the program keep asking the user for a value until the user enters a number. This can be done with a `while` loop. This type of loop keeps looping \"while\" something is true. Keep looping until the user enters a number by putting the entire \"try-catch\" block into a while loop that starts like this: `while games_to_play <= 0:`.",
@@ -2718,7 +2718,7 @@
           ],
           "solution": {
             "commits": [
-              "9b7eda572b45c12b7e57ff00bc0891f876cb6eb0"
+              "e4d9b2cea7f5628ffb18b597798e8e786e87d6dc"
             ]
           }
         }
@@ -2737,7 +2737,7 @@
               "blackjack.py"
             ],
             "commits": [
-              "e0a5b4960cb7069903aa1a82e42c1fa7898d0c33"
+              "14ae316d061afbef39ebb9aee3eeb17e2acaea7d"
             ]
           },
           "content": "Now you will create the main game loop. This will loop one time per game played. It should loop `while` `game_number` is less than `games_to_play`. The first line in the loop should increment the `game_number` by one.",
@@ -2748,7 +2748,7 @@
           ],
           "solution": {
             "commits": [
-              "56c77decb58cc6277ef0ac18835655122667626c"
+              "8a6563998c3270cf422f68b7be5865c01ddd7af1"
             ]
           }
         }
@@ -2767,7 +2767,7 @@
               "blackjack.py"
             ],
             "commits": [
-              "6aaaa83dfe545b8a66e203861b4a8b755e143bdd"
+              "b5b4d895be76d64fb4e54291c284e8c7b75c974d"
             ]
           },
           "content": "Inside that loop create a `Deck` object and assign it to a variable named `deck`. Then shuffle the deck.",
@@ -2777,7 +2777,7 @@
           ],
           "solution": {
             "commits": [
-              "344224a4513159b9c5b28e4b296aa2bc6517c70a"
+              "b42f2bf80df7a717bba7d11f4a06582873189fb6"
             ]
           }
         }
@@ -2796,7 +2796,7 @@
               "blackjack.py"
             ],
             "commits": [
-              "29790659c8badeca525c393e7e3dbe4106cdd250"
+              "a8e5d6b447a24a636d7c8f2cd3336b83ced3bed7"
             ]
           },
           "content": "Create a variable called `player_hand` and set it to a `Hand` object.",
@@ -2805,7 +2805,7 @@
           ],
           "solution": {
             "commits": [
-              "545eda6e0f78dc3e79b1c4a641a61ccd5f4b4840"
+              "8c1db8dcc000405c9d15d1faf24c5498f6414785"
             ]
           }
         }
